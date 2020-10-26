@@ -3,7 +3,7 @@
 
 ## Basic Idea
 
-This project explores a computational model of international relations, in which the international system is represented as an abstract power structure, like this:
+This project explores a computational model of international relations, called **quantitative realism**, in which the international system is represented as an abstract power structure, like this:
 
 [image]
 
