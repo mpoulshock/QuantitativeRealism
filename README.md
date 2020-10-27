@@ -1,4 +1,4 @@
-# QuantitativeRealism
+# Quantitative Realism
  A computational social science project that explores the behavior of political power structures
 
 ## Basic Idea
