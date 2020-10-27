@@ -5,7 +5,7 @@
 
 This project explores a computational model of international relations, called **quantitative realism**, in which the international system is represented as an abstract power structure, like this:
 
-[image]
+<img src="https://github.com/mpoulshock/QuantitativeRealism/blob/main/Supplementary%20Materials/Wiki%20Images/Introduction/Random%20power%20structure.png" width="250" />
 
 The basic questions are:
 
