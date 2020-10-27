@@ -1,5 +1,5 @@
 # Quantitative Realism
- A computational social science project that explores the behavior of political power structures
+This is a computational social science project that explores the behavior of political power structures.
 
 ## Basic Idea
 
@@ -15,7 +15,7 @@ The major questions are:
 1. Does the abstract model say anything meaningful about historical power struggles?
 1. What is the nature of the current world power structure?
 
-This project uses the Wolfram Language and C++ to explore these questions.
+The project uses the Wolfram Language and C++ to investigate these questions.
 
 ## More Information
 
