@@ -1,0 +1,2264 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     88587,       2256]
+NotebookOptionsPosition[     85141,       2182]
+NotebookOutlinePosition[     85537,       2198]
+CellTagsIndexPosition[     85494,       2195]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Polarity", "Section",
+ CellChangeTimes->{{3.812837238783051*^9, 
+  3.812837239840414*^9}},ExpressionUUID->"969c41a1-7e9b-4d92-a003-\
+fc900cabb440"],
+
+Cell[CellGroupData[{
+
+Cell["Polarity - Singer concentration", "Subsubsection",
+ CellChangeTimes->{{3.812837269824991*^9, 3.8128372734241467`*^9}, 
+   3.81283733330593*^9},ExpressionUUID->"30a716e7-fb53-4e79-a60b-\
+948b9b02c849"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TraditionalForm", "[", 
+  RowBox[{"SingerConcentration", " ", "==", 
+   RowBox[{"Sqrt", "[", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"Total", "[", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"s", "/", 
+           RowBox[{"Total", "[", "s", "]"}]}], ")"}], "^", "2"}], "]"}], "-", 
+       
+       RowBox[{"1", "/", "n"}]}], ")"}], "/", 
+     RowBox[{"(", 
+      RowBox[{"1", "-", 
+       RowBox[{"1", "/", "n"}]}], ")"}]}], "]"}]}], "]"}]], "Input",
+ CellMargins->{{0, Inherited}, {0, 5}},
+ CellChangeTimes->{{3.8054641218461123`*^9, 3.805464197916463*^9}, 
+   3.805464350440428*^9, {3.805464726691197*^9, 3.8054647476979322`*^9}, {
+   3.805464865293158*^9, 3.805464866136388*^9}, {3.805464898875222*^9, 
+   3.805464901053587*^9}},
+ CellLabel->
+  "In[814]:=",ExpressionUUID->"cd93ca0e-0931-4a2a-a596-5a879a7016f5"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"SingerConcentration", "\[LongEqual]", 
+   SqrtBox[
+    FractionBox[
+     RowBox[{
+      RowBox[{"Total", "[", 
+       FractionBox[
+        SuperscriptBox["s", "2"], 
+        SuperscriptBox[
+         RowBox[{"Total", "[", "s", "]"}], "2"]], "]"}], "-", 
+      FractionBox["1", "n"]}], 
+     RowBox[{"1", "-", 
+      FractionBox["1", "n"]}]]]}], TraditionalForm]], "Output",
+ CellMargins->{{0, Inherited}, {0, 5}},
+ CellChangeTimes->{{3.805464130424287*^9, 3.805464198542684*^9}, 
+   3.8054643521462708`*^9, {3.8054647307510757`*^9, 3.805464759332364*^9}, 
+   3.80546486647038*^9, 3.80546490158991*^9},
+ TextAlignment->Center,
+ CellLabel->
+  "Out[814]//TraditionalForm=",ExpressionUUID->"655bb177-6beb-4983-baee-\
+cf3b8f5ffd37"]
+}, {2}]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Polarity - modified HHI", "Subsubsection",
+ CellChangeTimes->{{3.812837285689671*^9, 3.812837288047016*^9}, {
+  3.812837331935112*^9, 
+  3.812837335291136*^9}},ExpressionUUID->"7501332c-7763-409e-a3f2-\
+e875af49f2f8"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"Clear", "[", "i", "]"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Clear", "[", "s", "]"}], ";", 
+  RowBox[{"TraditionalForm", "[", 
+   RowBox[{"ModifiedHHI", "\[Equal]", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        FractionBox[
+         RowBox[{
+          SubscriptBox["ms", "i"], "  "}], "\"\<Max[ms]\>\""], ")"}], "^", 
+       "2"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", "n"}], "}"}]}], "]"}], "\[Equal]", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["s", "i"], "^", "2"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", "n"}], "}"}]}], "]"}]}], "]"}]}]}], "Input",\
+
+ CellMargins->{{0, Inherited}, {0, 5}},
+ CellChangeTimes->{{3.8054641218461123`*^9, 3.805464197916463*^9}, 
+   3.805464350440428*^9, {3.805464726691197*^9, 3.8054647476979322`*^9}, {
+   3.805464865293158*^9, 3.805464866136388*^9}, {3.805464898875222*^9, 
+   3.805464901053587*^9}, {3.8054824117373466`*^9, 3.8054825472641487`*^9}, {
+   3.805491212051313*^9, 3.805491250259861*^9}, {3.8054913517532463`*^9, 
+   3.8054913553724403`*^9}, {3.805494106175684*^9, 3.8054941501665154`*^9}},
+ CellLabel->
+  "In[1211]:=",ExpressionUUID->"d113d300-8aa5-43a6-82a4-2e0952829521"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"ModifiedHHI", "\[LongEqual]", 
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{"i", "=", "1"}], "n"], 
+    FractionBox[
+     SubsuperscriptBox["ms", "i", "2"], 
+     SuperscriptBox["\<\"Max[ms]\"\>", "2"]]}], "\[LongEqual]", 
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{"i", "=", "1"}], "n"], 
+    SubsuperscriptBox["s", "i", "2"]}]}], TraditionalForm]], "Output",
+ CellMargins->{{0, 0}, {0, 0}},
+ CellChangeTimes->{{3.805482457028636*^9, 3.805482547672639*^9}, {
+   3.805491218475692*^9, 3.805491250697371*^9}, 3.805491357717133*^9, {
+   3.8054941095625134`*^9, 3.805494150863242*^9}},
+ TextAlignment->Center,
+ CellLabel->
+  "Out[1212]//TraditionalForm=",ExpressionUUID->"3862ce3b-fcc2-4d64-a052-\
+d3fc6ca7bb9c"]
+}, {2}]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Polarity - need", "Subsubsection",
+ CellChangeTimes->{{3.8128373161994333`*^9, 
+  3.8128373276342*^9}},ExpressionUUID->"cc01b93f-1715-4566-8e63-fb581dc11f01"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"SetParameters", "[", 
+    RowBox[{"\[LeftAssociation]", 
+     RowBox[{
+      RowBox[{"\"\<\[Beta]\>\"", "\[Rule]", "2"}], ",", 
+      RowBox[{"\"\<\[Mu]\>\"", "\[Rule]", "3"}], ",", 
+      RowBox[{"\"\<\[Lambda]\>\"", "\[Rule]", "1"}], ",", 
+      RowBox[{"\"\<\[Rho]\>\"", "\[Rule]", "0.9"}], ",", 
+      RowBox[{"\"\<\[Delta]\>\"", "\[Rule]", "0.9"}], ",", 
+      RowBox[{"\"\<\[Alpha]\>\"", "\[Rule]", "2.25"}]}], 
+     "\[RightAssociation]"}], "]"}], ";", 
+   RowBox[{
+    RowBox[{"f", "[", "x_", "]"}], ":=", 
+    RowBox[{"ShowPowerStructure", "[", 
+     RowBox[{
+      RowBox[{"PowerStructure", "[", 
+       RowBox[{"s", ",", 
+        RowBox[{"NormalizeTernaryT", "[", "x", "]"}]}], "]"}], ",", 
+      RowBox[{"<|", 
+       RowBox[{
+        RowBox[{"\"\<circular\>\"", "\[Rule]", "True"}], ",", 
+        RowBox[{"\"\<size\>\"", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"75", ",", "65"}], "}"}]}]}], "|>"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{"s", "=", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", ".5", ",", ".8", ",", ".88", ",", ".5", ",", ".9"}], 
+    "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"SpacedRow", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     TagBox[
+      RowBox[{"f", "[", 
+       TagBox[
+        RowBox[{"(", "\[NoBreak]", GridBox[{
+           {"0", "1", "1", "1", "1", "1"},
+           {"1", "0", "0", "0", "0", "0"},
+           {"1", "0", "0", "0", "0", "0"},
+           {"1", "0", "0", "0", "0", "0"},
+           {"1", "0", "0", "0", "0", "0"},
+           {"1", "0", "0", "0", "0", "0"}
+          },
+          GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+          
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.7]}, 
+              Offset[0.27999999999999997`]}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}}], "\[NoBreak]", ")"}],
+        Function[BoxForm`e$, 
+         MatrixForm[BoxForm`e$]]], "]"}],
+      Function[BoxForm`e$, 
+       MatrixForm[BoxForm`e$]]], ",", 
+     TagBox[
+      RowBox[{"f", "[", 
+       TagBox[
+        RowBox[{"(", "\[NoBreak]", GridBox[{
+           {"0", "1", "0", "0", "0", "0"},
+           {"1", "0", "0", "0", "0", "0"},
+           {"0", "0", "0", "1", "0", "0"},
+           {"0", "0", "1", "0", "1", "1"},
+           {"0", "0", "0", "1", "0", "0"},
+           {"0", "0", "0", "1", "0", "0"}
+          },
+          GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+          
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.7]}, 
+              Offset[0.27999999999999997`]}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}}], "\[NoBreak]", ")"}],
+        Function[BoxForm`e$, 
+         MatrixForm[BoxForm`e$]]], "]"}],
+      Function[BoxForm`e$, 
+       MatrixForm[BoxForm`e$]]]}], "}"}], ",", "50"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Clear", "[", "f", "]"}]}], "Input",
+ CellChangeTimes->{{3.812837345467359*^9, 3.8128373502061777`*^9}},
+ CellLabel->
+  "In[722]:=",ExpressionUUID->"e9191fb3-10f5-4ecc-a7cb-ac050600ac03"],
+
+Cell[BoxData[
+ TemplateBox[{
+   GraphicsBox[
+    NamespaceBox[{{
+       Directive[
+        Opacity[0.7], 
+        Hue[0.6, 0.7, 0.5]], 
+       Directive[
+        GrayLevel[0]], 
+       LineBox[{{
+          DynamicLocation["VertexID$1", Automatic, Center], 
+          DynamicLocation["VertexID$2", Automatic, Center]}, {
+          DynamicLocation["VertexID$1", Automatic, Center], 
+          DynamicLocation["VertexID$3", Automatic, Center]}, {
+          DynamicLocation["VertexID$1", Automatic, Center], 
+          DynamicLocation["VertexID$4", Automatic, Center]}, {
+          DynamicLocation["VertexID$1", Automatic, Center], 
+          DynamicLocation["VertexID$5", Automatic, Center]}, {
+          DynamicLocation["VertexID$1", Automatic, Center], 
+          DynamicLocation["VertexID$6", Automatic, Center]}}]}, {
+       Directive[
+        Hue[0.6, 0.2, 0.8], 
+        EdgeForm[
+         Directive[
+          GrayLevel[0], 
+          Opacity[0.7]]]], 
+       Directive[
+        GrayLevel[0]], 
+       TagBox[
+        StyleBox[
+         DiskBox[{-1., 0.}, 0.23570226039551584`], {
+          RGBColor[0.914809, 0.897673, 0.350652]}, StripOnInput -> False], 
+        "DynamicName", BoxID -> "VertexID$1"], 
+       TagBox[
+        StyleBox[
+         DiskBox[{-0.5, 0.8660254037844386}, 0.11785113019775792`], {
+          RGBColor[
+          0.11435860454275379`, 0.06401334075798773, 0.4209878940088254]}, 
+         StripOnInput -> False], "DynamicName", BoxID -> "VertexID$2"], 
+       TagBox[
+        StyleBox[
+         DiskBox[{0.5, 0.8660254037844386}, 0.14907119849998596`], {
+          RGBColor[
+          0.11084117390343744`, 0.08899166427920467, 0.43131068694923186`]}, 
+         StripOnInput -> False], "DynamicName", BoxID -> "VertexID$3"], 
+       TagBox[
+        StyleBox[
+         DiskBox[{1., 0.}, 0.15634719199411432`], {
+          RGBColor[
+          0.10968704494759089`, 0.09718747804227072, 0.4346977712898763]}, 
+         StripOnInput -> False], "DynamicName", BoxID -> "VertexID$4"], 
+       TagBox[
+        StyleBox[
+         DiskBox[{0.5, -0.8660254037844386}, 0.11785113019775792`], {
+          RGBColor[
+          0.11435860454275379`, 0.06401334075798773, 0.4209878940088254]}, 
+         StripOnInput -> False], "DynamicName", BoxID -> "VertexID$5"], 
+       TagBox[
+        StyleBox[
+         DiskBox[{-0.5, -0.8660254037844386}, 0.15811388300841894`], {
+          RGBColor[
+          0.10938382560192116`, 0.09934072900602037, 0.43558764541728273`]}, 
+         StripOnInput -> False], "DynamicName", BoxID -> "VertexID$6"]}}], {
+    ImageSize -> {75, 65}, BaseStyle -> GrayLevel[0], FormatType -> 
+     TraditionalForm, FrameTicks -> None}], 
+   TemplateBox[{50}, "Spacer1"], 
+   GraphicsBox[
+    NamespaceBox[{{
+       Directive[
+        Opacity[0.7], 
+        Hue[0.6, 0.7, 0.5]], 
+       Directive[
+        GrayLevel[0]], 
+       LineBox[{{
+          DynamicLocation["VertexID$1", Automatic, Center], 
+          DynamicLocation["VertexID$2", Automatic, Center]}, {
+          DynamicLocation["VertexID$3", Automatic, Center], 
+          DynamicLocation["VertexID$4", Automatic, Center]}, {
+          DynamicLocation["VertexID$4", Automatic, Center], 
+          DynamicLocation["VertexID$5", Automatic, Center]}, {
+          DynamicLocation["VertexID$4", Automatic, Center], 
+          DynamicLocation["VertexID$6", Automatic, Center]}}]}, {
+       Directive[
+        Hue[0.6, 0.2, 0.8], 
+        EdgeForm[
+         Directive[
+          GrayLevel[0], 
+          Opacity[0.7]]]], 
+       Directive[
+        GrayLevel[0]], 
+       TagBox[
+        StyleBox[
+         DiskBox[{-1., 0.}, 0.23570226039551584`], {
+          RGBColor[
+          0.14251884049167377`, 0.5869220348707984, 0.5368350410930659]}, 
+         StripOnInput -> False], "DynamicName", BoxID -> "VertexID$1"], 
+       TagBox[
+        StyleBox[
+         DiskBox[{-0.5, 0.8660254037844386}, 0.11785113019775792`], {
+          RGBColor[
+          0.09494160474502013, 0.45417482827516054`, 0.540507144716333]}, 
+         StripOnInput -> False], "DynamicName", BoxID -> "VertexID$2"], 
+       TagBox[
+        StyleBox[
+         DiskBox[{0.5, 0.8660254037844386}, 0.14907119849998596`], {
+          RGBColor[
+          0.10845269155462924`, 0.10595298944831806`, 0.43832029460232114`]}, 
+         StripOnInput -> False], "DynamicName", BoxID -> "VertexID$3"], 
+       TagBox[
+        StyleBox[
+         DiskBox[{1., 0.}, 0.15634719199411432`], {
+          RGBColor[
+          0.17664053039788902`, 0.6530820863094289, 0.5280993133026041]}, 
+         StripOnInput -> False], "DynamicName", BoxID -> "VertexID$4"], 
+       TagBox[
+        StyleBox[
+         DiskBox[{0.5, -0.8660254037844386}, 0.11785113019775792`], {
+          RGBColor[
+          0.11286935875550107`, 0.07458891903970702, 0.425358463744401]}, 
+         StripOnInput -> False], "DynamicName", BoxID -> "VertexID$5"], 
+       TagBox[
+        StyleBox[
+         DiskBox[{-0.5, -0.8660254037844386}, 0.15811388300841894`], {
+          RGBColor[
+          0.10660906070013906`, 0.11904516173521883`, 0.44373089726118287`]}, 
+         StripOnInput -> False], "DynamicName", BoxID -> "VertexID$6"]}}], {
+    ImageSize -> {75, 65}, BaseStyle -> GrayLevel[0], FormatType -> 
+     TraditionalForm, FrameTicks -> None}]},
+  "RowDefault"]], "Output",
+ CellChangeTimes->{3.812837351216895*^9},
+ CellLabel->
+  "Out[724]=",ExpressionUUID->"9d74d2d5-93c4-413b-a4cf-520354427991"]
+}, {2}]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Polarity - examples 1", "Subsubsection",
+ CellChangeTimes->{{3.812837372111719*^9, 3.812837375115838*^9}, {
+  3.812837462439073*^9, 
+  3.812837463236795*^9}},ExpressionUUID->"9c788aff-7322-4e4c-9c41-\
+819275a5070b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SetParameters", "[", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\"\<\[Beta]\>\"", "\[Rule]", "2"}], ",", 
+     RowBox[{"\"\<\[Mu]\>\"", "\[Rule]", "3"}], ",", 
+     RowBox[{"\"\<\[Lambda]\>\"", "\[Rule]", "1"}], ",", 
+     RowBox[{"\"\<\[Rho]\>\"", "\[Rule]", "0.9"}], ",", 
+     RowBox[{"\"\<\[Delta]\>\"", "\[Rule]", "0.9"}], ",", 
+     RowBox[{"\"\<\[Alpha]\>\"", "\[Rule]", "2.25"}]}], 
+    "\[RightAssociation]"}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"s", "=", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", ".5", ",", ".8", ",", ".88", ",", ".5", ",", "1"}], 
+    "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"f", "[", "x_", "]"}], ":=", 
+    RowBox[{"With", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"ps", "=", 
+        RowBox[{"PowerStructure", "[", 
+         RowBox[{"s", ",", 
+          RowBox[{"NormalizeTernaryT", "[", "x", "]"}]}], "]"}]}], "}"}], ",", 
+      RowBox[{"AddCaption", "[", 
+       RowBox[{
+        RowBox[{"ShowPowerStructure", "[", 
+         RowBox[{"ps", ",", 
+          RowBox[{"<|", 
+           RowBox[{
+            RowBox[{"\"\<circular\>\"", "\[Rule]", "True"}], ",", 
+            RowBox[{"\"\<size\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"65", ",", "55"}], "}"}]}]}], "|>"}]}], "]"}], ",", 
+        RowBox[{"\"\<Polarity = \>\"", "<>", 
+         RowBox[{"ToString", "[", 
+          RowBox[{"DeDecimalize", "[", 
+           RowBox[{"Round", "[", 
+            RowBox[{
+             RowBox[{"Polarity", "[", "ps", "]"}], ",", ".01"}], "]"}], "]"}],
+           "]"}]}]}], "]"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\n", 
+ RowBox[{"SpacedRow", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     TagBox[
+      RowBox[{"f", "[", 
+       TagBox[
+        RowBox[{"(", "\[NoBreak]", GridBox[{
+           {"0", "1", "1", "1", "1", "1"},
+           {"1", "0", "0", "0", "0", "0"},
+           {"1", "0", "0", "0", "0", "0"},
+           {"1", "0", "0", "0", "0", "0"},
+           {"1", "0", "0", "0", "0", "0"},
+           {"1", "0", "0", "0", "0", "0"}
+          },
+          GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+          
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.7]}, 
+              Offset[0.27999999999999997`]}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}}], "\[NoBreak]", ")"}],
+        Function[BoxForm`e$, 
+         MatrixForm[BoxForm`e$]]], "]"}],
+      Function[BoxForm`e$, 
+       MatrixForm[BoxForm`e$]]], ",", 
+     TagBox[
+      RowBox[{"f", "[", 
+       TagBox[
+        RowBox[{"(", "\[NoBreak]", GridBox[{
+           {"0", "1", "0", "0", "0", "0"},
+           {"1", "0", "0", "0", "0", "0"},
+           {"0", "0", "0", "1", "0", "0"},
+           {"0", "0", "1", "0", "1", "1"},
+           {"0", "0", "0", "1", "0", "0"},
+           {"0", "0", "0", "1", "0", "0"}
+          },
+          GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+          
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.7]}, 
+              Offset[0.27999999999999997`]}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}}], "\[NoBreak]", ")"}],
+        Function[BoxForm`e$, 
+         MatrixForm[BoxForm`e$]]], "]"}],
+      Function[BoxForm`e$, 
+       MatrixForm[BoxForm`e$]]]}], "}"}], ",", "45"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Clear", "[", "f", "]"}], ";", 
+  RowBox[{"Clear", "[", "s", "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.812837379927224*^9, 3.812837383805805*^9}, {
+  3.812837418743615*^9, 3.81283744588622*^9}},
+ CellLabel->
+  "In[736]:=",ExpressionUUID->"b61a861c-ab9e-4404-af53-66f2e038122f"],
+
+Cell[BoxData[
+ TemplateBox[{
+   TagBox[
+    GridBox[{{
+       GraphicsBox[
+        NamespaceBox[{{
+           Directive[
+            Opacity[0.7], 
+            Hue[0.6, 0.7, 0.5]], 
+           Directive[
+            GrayLevel[0]], 
+           LineBox[{{
+              DynamicLocation["VertexID$1", Automatic, Center], 
+              DynamicLocation["VertexID$2", Automatic, Center]}, {
+              DynamicLocation["VertexID$1", Automatic, Center], 
+              DynamicLocation["VertexID$3", Automatic, Center]}, {
+              DynamicLocation["VertexID$1", Automatic, Center], 
+              DynamicLocation["VertexID$4", Automatic, Center]}, {
+              DynamicLocation["VertexID$1", Automatic, Center], 
+              DynamicLocation["VertexID$5", Automatic, Center]}, {
+              DynamicLocation["VertexID$1", Automatic, Center], 
+              DynamicLocation["VertexID$6", Automatic, Center]}}]}, {
+           Directive[
+            Hue[0.6, 0.2, 0.8], 
+            EdgeForm[
+             Directive[
+              GrayLevel[0], 
+              Opacity[0.7]]]], 
+           Directive[
+            GrayLevel[0]], 
+           TagBox[
+            StyleBox[
+             DiskBox[{-1., 0.}, 0.23570226039551584`], {
+              RGBColor[0.914809, 0.897673, 0.350652]}, StripOnInput -> False],
+             "DynamicName", BoxID -> "VertexID$1"], 
+           TagBox[
+            StyleBox[
+             DiskBox[{-0.5, 0.8660254037844386}, 0.11785113019775792`], {
+              RGBColor[
+              0.11443466257394427`, 0.06347323000548918, 0.4207646824126511]},
+              StripOnInput -> False], "DynamicName", BoxID -> "VertexID$2"], 
+           TagBox[
+            StyleBox[
+             DiskBox[{0.5, 0.8660254037844386}, 0.14907119849998596`], {
+              RGBColor[
+              0.111011243540943, 0.08778394908525965, 0.43081157443403495`]}, 
+             StripOnInput -> False], "DynamicName", BoxID -> "VertexID$3"], 
+           TagBox[
+            StyleBox[
+             DiskBox[{1., 0.}, 0.15634719199411432`], {
+              RGBColor[
+              0.10988871414703553`, 0.09575536493911879, 0.4341059218401515]},
+              StripOnInput -> False], "DynamicName", BoxID -> "VertexID$4"], 
+           TagBox[
+            StyleBox[
+             DiskBox[{0.5, -0.8660254037844386}, 0.11785113019775792`], {
+              RGBColor[
+              0.11443466257394427`, 0.06347323000548918, 0.4207646824126511]},
+              StripOnInput -> False], "DynamicName", BoxID -> "VertexID$5"], 
+           TagBox[
+            StyleBox[
+             DiskBox[{-0.5, -0.8660254037844386}, 0.16666666666666666`], {
+              RGBColor[
+              0.10803276897679766`, 0.10893498485306019`, 
+               0.4395526639839672]}, StripOnInput -> False], "DynamicName", 
+            BoxID -> "VertexID$6"]}}], {
+        ImageSize -> {65, 55}, BaseStyle -> GrayLevel[0], FormatType -> 
+         TraditionalForm, FrameTicks -> None}]}, {
+       InterpretationBox[
+        Cell[
+         BoxData[
+          FormBox[
+           StyleBox[
+           "\"Polarity = 1.01\"", 11, FontFamily -> "Source Serif Pro", 
+            StripOnInput -> False], TextForm]], "InlineText"], 
+        Text[
+         Style["Polarity = 1.01", 11, FontFamily -> "Source Serif Pro"]]]}}, 
+     GridBoxAlignment -> {"Columns" -> {Center}, "Rows" -> {Center}}, 
+     DefaultBaseStyle -> "Column", 
+     GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+      GridBoxSpacings -> {"Columns" -> {{0}}, "Rows" -> {{0.75}}}], "Column"], 
+   TemplateBox[{45}, "Spacer1"], 
+   TagBox[
+    GridBox[{{
+       GraphicsBox[
+        NamespaceBox[{{
+           Directive[
+            Opacity[0.7], 
+            Hue[0.6, 0.7, 0.5]], 
+           Directive[
+            GrayLevel[0]], 
+           LineBox[{{
+              DynamicLocation["VertexID$1", Automatic, Center], 
+              DynamicLocation["VertexID$2", Automatic, Center]}, {
+              DynamicLocation["VertexID$3", Automatic, Center], 
+              DynamicLocation["VertexID$4", Automatic, Center]}, {
+              DynamicLocation["VertexID$4", Automatic, Center], 
+              DynamicLocation["VertexID$5", Automatic, Center]}, {
+              DynamicLocation["VertexID$4", Automatic, Center], 
+              DynamicLocation["VertexID$6", Automatic, Center]}}]}, {
+           Directive[
+            Hue[0.6, 0.2, 0.8], 
+            EdgeForm[
+             Directive[
+              GrayLevel[0], 
+              Opacity[0.7]]]], 
+           Directive[
+            GrayLevel[0]], 
+           TagBox[
+            StyleBox[
+             DiskBox[{-1., 0.}, 0.23570226039551584`], {
+              RGBColor[
+              0.13635329104091737`, 0.5747078157944947, 0.5383936236571586]}, 
+             StripOnInput -> False], "DynamicName", BoxID -> "VertexID$1"], 
+           TagBox[
+            StyleBox[
+             DiskBox[{-0.5, 0.8660254037844386}, 0.11785113019775792`], {
+              RGBColor[
+              0.09416579956902037, 0.4418072863767505, 0.5383525737474462]}, 
+             StripOnInput -> False], "DynamicName", BoxID -> "VertexID$2"], 
+           TagBox[
+            StyleBox[
+             DiskBox[{0.5, 0.8660254037844386}, 0.14907119849998596`], {
+              RGBColor[
+              0.10842144819378109`, 0.10617485786739418`, 
+               0.4384119861743433]}, StripOnInput -> False], "DynamicName", 
+            BoxID -> "VertexID$3"], 
+           TagBox[
+            StyleBox[
+             DiskBox[{1., 0.}, 0.15634719199411432`], {
+              RGBColor[
+              0.1932344116367489, 0.6649263934013725, 0.5222921713345706]}, 
+             StripOnInput -> False], "DynamicName", BoxID -> "VertexID$4"], 
+           TagBox[
+            StyleBox[
+             DiskBox[{0.5, -0.8660254037844386}, 0.11785113019775792`], {
+              RGBColor[
+              0.11274715890794022`, 0.07545669658519726, 0.4257170902115785]},
+              StripOnInput -> False], "DynamicName", BoxID -> "VertexID$5"], 
+           TagBox[
+            StyleBox[
+             DiskBox[{-0.5, -0.8660254037844386}, 0.16666666666666666`], {
+              RGBColor[
+              0.10462791572131193`, 0.13311386281220625`, 
+               0.4495450700192086]}, StripOnInput -> False], "DynamicName", 
+            BoxID -> "VertexID$6"]}}], {
+        ImageSize -> {65, 55}, BaseStyle -> GrayLevel[0], FormatType -> 
+         TraditionalForm, FrameTicks -> None}]}, {
+       InterpretationBox[
+        Cell[
+         BoxData[
+          FormBox[
+           StyleBox[
+           "\"Polarity = 2\"", 11, FontFamily -> "Source Serif Pro", 
+            StripOnInput -> False], TextForm]], "InlineText"], 
+        Text[
+         Style["Polarity = 2", 11, FontFamily -> "Source Serif Pro"]]]}}, 
+     GridBoxAlignment -> {"Columns" -> {Center}, "Rows" -> {Center}}, 
+     DefaultBaseStyle -> "Column", 
+     GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+      GridBoxSpacings -> {"Columns" -> {{0}}, "Rows" -> {{0.75}}}], "Column"]},
+  "RowDefault"]], "Output",
+ CellChangeTimes->{
+  3.81283738422169*^9, {3.812837421101268*^9, 3.812837446337232*^9}},
+ CellLabel->
+  "Out[739]=",ExpressionUUID->"a4d05b3f-cb2e-4451-b83c-c0b28f3be707"]
+}, {2}]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Polarity - examples 2", "Subsubsection",
+ CellChangeTimes->{{3.812837466420689*^9, 
+  3.8128374701002903`*^9}},ExpressionUUID->"9e1284e8-bbde-4b4f-8395-\
+aeeeb723ee88"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SetParameters", "[", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\"\<\[Beta]\>\"", "\[Rule]", "2"}], ",", 
+     RowBox[{"\"\<\[Mu]\>\"", "\[Rule]", "3"}], ",", 
+     RowBox[{"\"\<\[Lambda]\>\"", "\[Rule]", "1"}], ",", 
+     RowBox[{"\"\<\[Rho]\>\"", "\[Rule]", "0.9"}], ",", 
+     RowBox[{"\"\<\[Delta]\>\"", "\[Rule]", "0.9"}], ",", 
+     RowBox[{"\"\<\[Alpha]\>\"", "\[Rule]", "2.25"}]}], 
+    "\[RightAssociation]"}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "ps_", "]"}], ":=", 
+   RowBox[{"AddCaption", "[", 
+    RowBox[{
+     RowBox[{"ShowPowerStructure", "[", 
+      RowBox[{"ps", ",", 
+       RowBox[{"<|", 
+        RowBox[{
+         RowBox[{"\"\<circular\>\"", "\[Rule]", "True"}], ",", 
+         RowBox[{"\"\<size\>\"", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"60", ",", "60"}], "}"}]}]}], "|>"}]}], "]"}], ",", 
+     RowBox[{"\"\<Polarity = \>\"", "<>", 
+      RowBox[{"ToString", "[", 
+       RowBox[{"DeDecimalize", "[", 
+        RowBox[{"Round", "[", 
+         RowBox[{
+          RowBox[{"Polarity", "[", "ps", "]"}], ",", ".01"}], "]"}], "]"}], 
+       "]"}]}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Grid", "[", 
+  RowBox[{
+   RowBox[{"Partition", "[", 
+    RowBox[{
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"f", "[", 
+        RowBox[{"PowerStructure", "[", 
+         TagBox[
+          TagBox[
+           TagBox[
+            RowBox[{" ", 
+             RowBox[{"NormalizeTernaryT", "[", 
+              RowBox[{"(", GridBox[{
+                 {"0", "1"},
+                 {"1", "0"}
+                },
+                
+                GridBoxAlignment->{
+                 "Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+                GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.7]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.4]}, 
+                    Offset[0.2]}}], ")"}], "]"}]}],
+            Function[BoxForm`e$, 
+             MatrixForm[BoxForm`e$]]],
+           Function[BoxForm`e$, 
+            MatrixForm[BoxForm`e$]]],
+          Function[BoxForm`e$, 
+           MatrixForm[BoxForm`e$]]], "]"}], "]"}], ",", 
+       RowBox[{"f", "[", 
+        RowBox[{"PowerStructure", "[", 
+         RowBox[{"NormalizeTernaryT", "[", 
+          TagBox[
+           TagBox[
+            TagBox[
+             RowBox[{"(", "\[NoBreak]", GridBox[{
+                {"0", "0", "1", "1", "1"},
+                {"0", "0", "0", "0", "0"},
+                {"1", 
+                 RowBox[{"-", "1"}], "0", "0", "0"},
+                {"1", "0", "0", "0", "0"},
+                {"1", "0", "0", "0", "0"}
+               },
+               
+               GridBoxAlignment->{
+                "Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+               GridBoxSpacings->{"Columns" -> {
+                   Offset[0.27999999999999997`], {
+                    Offset[0.7]}, 
+                   Offset[0.27999999999999997`]}, "Rows" -> {
+                   Offset[0.2], {
+                    Offset[0.4]}, 
+                   Offset[0.2]}}], "\[NoBreak]", ")"}],
+             Function[BoxForm`e$, 
+              MatrixForm[BoxForm`e$]]],
+            Function[BoxForm`e$, 
+             MatrixForm[BoxForm`e$]]],
+           Function[BoxForm`e$, 
+            MatrixForm[BoxForm`e$]]], "]"}], "]"}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"f", "[", 
+        RowBox[{"PowerStructure", "[", 
+         RowBox[{"NormalizeTernaryT", "[", 
+          TagBox[
+           TagBox[
+            TagBox[
+             TagBox[
+              TagBox[
+               RowBox[{"(", "\[NoBreak]", GridBox[{
+                  {"0", "0", "0", "1", "1"},
+                  {"0", "0", "1", "0", "0"},
+                  {"0", "1", "0", "0", "0"},
+                  {"1", "0", "0", "0", "0"},
+                  {"1", "0", "0", "0", "0"}
+                 },
+                 
+                 GridBoxAlignment->{
+                  "Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.7]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.4]}, 
+                    Offset[0.2]}}], "\[NoBreak]", ")"}],
+               Function[BoxForm`e$, 
+                MatrixForm[BoxForm`e$]]],
+              Function[BoxForm`e$, 
+               MatrixForm[BoxForm`e$]]],
+             Function[BoxForm`e$, 
+              MatrixForm[BoxForm`e$]]],
+            Function[BoxForm`e$, 
+             MatrixForm[BoxForm`e$]]],
+           Function[BoxForm`e$, 
+            MatrixForm[BoxForm`e$]]], "]"}], "]"}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"f", "[", 
+        RowBox[{"PowerStructure", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"2", ",", "1", ",", "1", ",", "1", ",", "1"}], "}"}], "/",
+            "2."}], ",", 
+          RowBox[{"NormalizeTernaryT", "[", " ", 
+           RowBox[{"(", GridBox[{
+              {".95", "0", "0", ".1", ".1"},
+              {"0", ".9", ".1", "0", "0"},
+              {"0", ".1", ".9", "0", "0"},
+              {".025", "0", "0", ".9", "0"},
+              {".025", "0", "0", "0", ".9"}
+             },
+             
+             GridBoxAlignment->{
+              "Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+             GridBoxSpacings->{"Columns" -> {
+                 Offset[0.27999999999999997`], {
+                  Offset[0.7]}, 
+                 Offset[0.27999999999999997`]}, "Rows" -> {
+                 Offset[0.2], {
+                  Offset[0.4]}, 
+                 Offset[0.2]}}], ")"}], "]"}]}], "]"}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"f", "[", 
+        RowBox[{"PowerStructure", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+           "2", ",", ".5", ",", ".5", ",", "2", ",", "1", ",", ".5", ",", 
+            ".7", ",", "1.2"}], "}"}], ",", 
+          RowBox[{"NormalizeTernaryT", "[", " ", 
+           TagBox[
+            RowBox[{"(", "\[NoBreak]", GridBox[{
+               {"0", "1", "1", "0", "0", "0", "0", "1"},
+               {"1", "0", "0", "0", "0", "0", "0", "0"},
+               {"1", "0", "0", "0", "0", "0", "0", "1"},
+               {"0", "0", "0", "0", "1", "1", "1", "0"},
+               {"0", "0", "0", "1", "0", "1", "0", "0"},
+               {"0", "0", "0", "1", "1", "0", "0", "0"},
+               {"0", "0", "0", "1", "0", "0", "0", "0"},
+               {"1", "0", "1", "0", "0", "0", "0", "0"}
+              },
+              
+              GridBoxAlignment->{
+               "Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.27999999999999997`], {
+                   Offset[0.7]}, 
+                  Offset[0.27999999999999997`]}, "Rows" -> {
+                  Offset[0.2], {
+                   Offset[0.4]}, 
+                  Offset[0.2]}}], "\[NoBreak]", ")"}],
+            Function[BoxForm`e$, 
+             MatrixForm[BoxForm`e$]]], "]"}]}], "]"}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"f", "[", 
+        RowBox[{"PowerStructure", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+           ".5", ",", "2.2", ",", ".5", ",", "1.3", ",", "1", ",", "2", ",", 
+            ".9", ",", ".5"}], "}"}], ",", 
+          RowBox[{"NormalizeTernaryT", "[", " ", 
+           TagBox[
+            RowBox[{"(", "\[NoBreak]", GridBox[{
+               {"0", "1", "0", "0", "0", "0", "0", "0"},
+               {"1", "0", "1", "0", "0", "0", "0", "1"},
+               {"0", "1", "0", "0", "0", "0", "0", "0"},
+               {"0", "0", "0", "0", "0", "0", "0", "0"},
+               {"0", "0", "0", "0", "0", "1", "0", "0"},
+               {"0", "0", "0", "0", "1", "0", "0", "0"},
+               {"0", "0", "0", "0", "0", "0", "0", "0"},
+               {"0", "1", "0", "0", "0", "0", "0", "0"}
+              },
+              
+              GridBoxAlignment->{
+               "Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+              GridBoxSpacings->{"Columns" -> {
+                  Offset[0.27999999999999997`], {
+                   Offset[0.7]}, 
+                  Offset[0.27999999999999997`]}, "Rows" -> {
+                  Offset[0.2], {
+                   Offset[0.4]}, 
+                  Offset[0.2]}}], "\[NoBreak]", ")"}],
+            Function[BoxForm`e$, 
+             MatrixForm[BoxForm`e$]]], "]"}]}], "]"}], "]"}]}], 
+      "\[IndentingNewLine]", "}"}], ",", "3"}], "]"}], ",", 
+   RowBox[{"Spacings", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"1.5", ",", "1.5"}], "}"}]}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Clear", "[", "f", "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.8128374912129307`*^9, 3.812837670978416*^9}},
+ CellLabel->
+  "In[758]:=",ExpressionUUID->"de609265-509b-4664-ba24-6b5d4b544a8d"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     TagBox[GridBox[{
+        {
+         GraphicsBox[
+          NamespaceBox[{
+            {GrayLevel[0], Opacity[0.7], 
+             LineBox[{
+              DynamicLocation["VertexID$1", Automatic, Center], 
+               DynamicLocation["VertexID$2", Automatic, Center]}]}, 
+            {GrayLevel[0], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+             TagBox[
+              {RGBColor[
+               0.3294424039071231, 0.7621483311508942, 0.474625255023121], 
+               DiskBox[{-1., 0.}, 0.3333333333333333]},
+              "DynamicName",
+              BoxID -> "VertexID$1"], 
+             TagBox[
+              {RGBColor[
+               0.3294424039071231, 0.7621483311508942, 0.474625255023121], 
+               DiskBox[{1., 0.}, 0.3333333333333333]},
+              "DynamicName",
+              BoxID -> "VertexID$2"]}}],
+          BaseStyle->GrayLevel[0],
+          FormatType->TraditionalForm,
+          FrameTicks->None,
+          ImageSize->{60, 60}]},
+        {
+         InterpretationBox[Cell[BoxData[
+           FormBox[
+            StyleBox["\<\"Polarity = 2\"\>",
+             StripOnInput->False,
+             FontFamily->"Source Serif Pro",
+             FontSize->11], TextForm]], "InlineText",ExpressionUUID->
+           "697776ca-e9b9-4bdc-9fff-c38885fbd100"],
+          Text[
+           Style["Polarity = 2", 11, FontFamily -> "Source Serif Pro"]]]}
+       },
+       DefaultBaseStyle->"Column",
+       GridBoxAlignment->{"Columns" -> {Center}, "Rows" -> {Center}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       
+       GridBoxSpacings->{"Columns" -> {{0}}, "Rows" -> {{0.75}}}],
+      "Column"], 
+     TagBox[GridBox[{
+        {
+         GraphicsBox[
+          NamespaceBox[{
+            {GrayLevel[0], Opacity[0.7], 
+             LineBox[{
+              DynamicLocation["VertexID$1", Automatic, Center], 
+               DynamicLocation["VertexID$3", Automatic, Center]}], 
+             LineBox[{
+              DynamicLocation["VertexID$1", Automatic, Center], 
+               DynamicLocation["VertexID$4", Automatic, Center]}], 
+             LineBox[{
+              DynamicLocation["VertexID$1", Automatic, Center], 
+               DynamicLocation["VertexID$5", Automatic, Center]}], 
+             {Dashing[{Small, Small}], 
+              LineBox[{
+               DynamicLocation["VertexID$2", Automatic, Center], 
+                DynamicLocation["VertexID$3", Automatic, Center]}]}}, 
+            {GrayLevel[0], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+             TagBox[
+              {RGBColor[0.914809, 0.897673, 0.350652], 
+               DiskBox[{-1., 0.}, 0.19592841743082437]},
+              "DynamicName",
+              BoxID -> "VertexID$1"], 
+             TagBox[
+              {RGBColor[
+               0.11229775834137307`, 0.07864802397538406, 
+                0.42703597023272816`], 
+               DiskBox[{-0.30901699437494745, 0.9510565162951535}, 
+                0.19592841743082437]},
+              "DynamicName",
+              BoxID -> "VertexID$2"], 
+             TagBox[
+              {RGBColor[
+               0.1159344380908901, 0.052822876974290715`, 0.4163632105128293],
+                DiskBox[{0.8090169943749475, 0.5877852522924731}, 
+                0.19592841743082437]},
+              "DynamicName",
+              BoxID -> "VertexID$3"], 
+             TagBox[
+              {RGBColor[
+               0.08846358305203059, 0.2479016077089639, 0.49698340676982894`],
+                DiskBox[{0.8090169943749475, -0.5877852522924731}, 
+                0.19592841743082437]},
+              "DynamicName",
+              BoxID -> "VertexID$4"], 
+             TagBox[
+              {RGBColor[
+               0.08846358305203059, 0.2479016077089639, 0.49698340676982894`],
+                DiskBox[{-0.30901699437494745, -0.9510565162951535}, 
+                0.19592841743082437]},
+              "DynamicName",
+              BoxID -> "VertexID$5"]}}],
+          BaseStyle->GrayLevel[0],
+          FormatType->TraditionalForm,
+          FrameTicks->None,
+          ImageSize->{60, 60}]},
+        {
+         InterpretationBox[Cell[BoxData[
+           FormBox[
+            StyleBox["\<\"Polarity = 1.05\"\>",
+             StripOnInput->False,
+             FontFamily->"Source Serif Pro",
+             FontSize->11], TextForm]], "InlineText",ExpressionUUID->
+           "96f56598-bc16-443a-aa16-f57e2d10d8fb"],
+          Text[
+           Style["Polarity = 1.05", 11, FontFamily -> "Source Serif Pro"]]]}
+       },
+       DefaultBaseStyle->"Column",
+       GridBoxAlignment->{"Columns" -> {Center}, "Rows" -> {Center}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       
+       GridBoxSpacings->{"Columns" -> {{0}}, "Rows" -> {{0.75}}}],
+      "Column"], 
+     TagBox[GridBox[{
+        {
+         GraphicsBox[
+          NamespaceBox[{
+            {GrayLevel[0], Opacity[0.7], 
+             LineBox[{{
+               DynamicLocation["VertexID$1", Automatic, Center], 
+                DynamicLocation["VertexID$4", Automatic, Center]}, {
+               DynamicLocation["VertexID$1", Automatic, Center], 
+                DynamicLocation["VertexID$5", Automatic, Center]}, {
+               DynamicLocation["VertexID$2", Automatic, Center], 
+                DynamicLocation["VertexID$3", Automatic, Center]}}]}, 
+            {GrayLevel[0], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+             TagBox[
+              {RGBColor[
+               0.238555347554399, 0.6972753704113963, 0.5064318005623845], 
+               DiskBox[{-1., 0.}, 0.19592841743082437]},
+              "DynamicName",
+              BoxID -> "VertexID$1"], 
+             TagBox[
+              {RGBColor[
+               0.0909960753458773, 0.39127694918789496`, 0.5295495958841435], 
+               DiskBox[{-0.30901699437494745, 0.9510565162951535}, 
+                0.19592841743082437]},
+              "DynamicName",
+              BoxID -> "VertexID$2"], 
+             TagBox[
+              {RGBColor[
+               0.0909960753458773, 0.39127694918789496`, 0.5295495958841435], 
+               DiskBox[{0.8090169943749475, 0.5877852522924731}, 
+                0.19592841743082437]},
+              "DynamicName",
+              BoxID -> "VertexID$3"], 
+             TagBox[
+              {RGBColor[
+               0.08858767812822316, 0.24702037157998935`, 
+                0.49661921827321975`], 
+               DiskBox[{0.8090169943749475, -0.5877852522924731}, 
+                0.19592841743082437]},
+              "DynamicName",
+              BoxID -> "VertexID$4"], 
+             TagBox[
+              {RGBColor[
+               0.08858767812822316, 0.24702037157998935`, 
+                0.49661921827321975`], 
+               DiskBox[{-0.30901699437494745, -0.9510565162951535}, 
+                0.19592841743082437]},
+              "DynamicName",
+              BoxID -> "VertexID$5"]}}],
+          BaseStyle->GrayLevel[0],
+          FormatType->TraditionalForm,
+          FrameTicks->None,
+          ImageSize->{60, 60}]},
+        {
+         InterpretationBox[Cell[BoxData[
+           FormBox[
+            StyleBox["\<\"Polarity = 1.53\"\>",
+             StripOnInput->False,
+             FontFamily->"Source Serif Pro",
+             FontSize->11], TextForm]], "InlineText",ExpressionUUID->
+           "63ec3a33-8057-4979-b56a-328cb83b7a27"],
+          Text[
+           Style["Polarity = 1.53", 11, FontFamily -> "Source Serif Pro"]]]}
+       },
+       DefaultBaseStyle->"Column",
+       GridBoxAlignment->{"Columns" -> {Center}, "Rows" -> {Center}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       
+       GridBoxSpacings->{"Columns" -> {{0}}, "Rows" -> {{0.75}}}],
+      "Column"]},
+    {
+     TagBox[GridBox[{
+        {
+         GraphicsBox[
+          NamespaceBox[{
+            {GrayLevel[0], Opacity[0.7], 
+             LineBox[{{
+               DynamicLocation["VertexID$1", Automatic, Center], 
+                DynamicLocation["VertexID$4", Automatic, Center]}, {
+               DynamicLocation["VertexID$1", Automatic, Center], 
+                DynamicLocation["VertexID$5", Automatic, Center]}, {
+               DynamicLocation["VertexID$2", Automatic, Center], 
+                DynamicLocation["VertexID$3", Automatic, Center]}}]}, 
+            {GrayLevel[0], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+             TagBox[
+              {RGBColor[
+               0.15886062467357695`, 0.6192958133457976, 0.5327040191792028], 
+               DiskBox[{-1., 0.}, 0.19592841743082437]},
+              "DynamicName",
+              BoxID -> "VertexID$1"], 
+             TagBox[
+              {RGBColor[
+               0.09931741323944862, 0.1708253240047967, 0.4651300873659741], 
+               DiskBox[{-0.30901699437494745, 0.9510565162951535}, 
+                0.13854231259248448]},
+              "DynamicName",
+              BoxID -> "VertexID$2"], 
+             TagBox[
+              {RGBColor[
+               0.09931741323944862, 0.1708253240047967, 0.4651300873659741], 
+               DiskBox[{0.8090169943749475, 0.5877852522924731}, 
+                0.13854231259248448]},
+              "DynamicName",
+              BoxID -> "VertexID$3"], 
+             TagBox[
+              {RGBColor[
+               0.10294666654167269`, 0.14505291441976598`, 
+                0.45447912244050026`], 
+               DiskBox[{0.8090169943749475, -0.5877852522924731}, 
+                0.13854231259248448]},
+              "DynamicName",
+              BoxID -> "VertexID$4"], 
+             TagBox[
+              {RGBColor[
+               0.10294666654167269`, 0.14505291441976598`, 
+                0.45447912244050026`], 
+               DiskBox[{-0.30901699437494745, -0.9510565162951535}, 
+                0.13854231259248448]},
+              "DynamicName",
+              BoxID -> "VertexID$5"]}}],
+          BaseStyle->GrayLevel[0],
+          FormatType->TraditionalForm,
+          FrameTicks->None,
+          ImageSize->{60, 60}]},
+        {
+         InterpretationBox[Cell[BoxData[
+           FormBox[
+            StyleBox["\<\"Polarity = 1.16\"\>",
+             StripOnInput->False,
+             FontFamily->"Source Serif Pro",
+             FontSize->11], TextForm]], "InlineText",ExpressionUUID->
+           "e0524b22-f01e-44a3-892e-d552415ab818"],
+          Text[
+           Style["Polarity = 1.16", 11, FontFamily -> "Source Serif Pro"]]]}
+       },
+       DefaultBaseStyle->"Column",
+       GridBoxAlignment->{"Columns" -> {Center}, "Rows" -> {Center}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       
+       GridBoxSpacings->{"Columns" -> {{0}}, "Rows" -> {{0.75}}}],
+      "Column"], 
+     TagBox[GridBox[{
+        {
+         GraphicsBox[
+          NamespaceBox[{
+            {GrayLevel[0], Opacity[0.7], 
+             LineBox[{{
+               DynamicLocation["VertexID$1", Automatic, Center], 
+                DynamicLocation["VertexID$2", Automatic, Center]}, {
+               DynamicLocation["VertexID$1", Automatic, Center], 
+                DynamicLocation["VertexID$3", Automatic, Center]}, {
+               DynamicLocation["VertexID$1", Automatic, Center], 
+                DynamicLocation["VertexID$8", Automatic, Center]}, {
+               DynamicLocation["VertexID$3", Automatic, Center], 
+                DynamicLocation["VertexID$8", Automatic, Center]}, {
+               DynamicLocation["VertexID$4", Automatic, Center], 
+                DynamicLocation["VertexID$5", Automatic, Center]}, {
+               DynamicLocation["VertexID$4", Automatic, Center], 
+                DynamicLocation["VertexID$6", Automatic, Center]}, {
+               DynamicLocation["VertexID$4", Automatic, Center], 
+                DynamicLocation["VertexID$7", Automatic, Center]}, {
+               DynamicLocation["VertexID$5", Automatic, Center], 
+                DynamicLocation["VertexID$6", Automatic, Center]}}]}, 
+            {GrayLevel[0], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+             TagBox[
+              {RGBColor[
+               0.13464912955826644`, 0.5713317984813997, 0.5388244167915697], 
+               DiskBox[{-1., 0.}, 0.18039870004873232]},
+              "DynamicName",
+              BoxID -> "VertexID$1"], 
+             TagBox[
+              {RGBColor[
+               0.11437136024679587`, 0.06392275870109017, 
+                0.42095045915789653`], 
+               DiskBox[{-0.7071067811865475, 0.7071067811865475}, 
+                0.09019935002436616]},
+              "DynamicName",
+              BoxID -> "VertexID$2"], 
+             TagBox[
+              {RGBColor[
+               0.09565972791817628, 0.1967996378327173, 0.4758644932674354], 
+               DiskBox[{0., 1.}, 0.09019935002436616]},
+              "DynamicName",
+              BoxID -> "VertexID$3"], 
+             TagBox[
+              {RGBColor[
+               0.14010937759960254`, 0.5821487850809728, 0.537444126606434], 
+               DiskBox[{0.7071067811865475, 0.7071067811865475}, 
+                0.18039870004873232]},
+              "DynamicName",
+              BoxID -> "VertexID$4"], 
+             TagBox[
+              {RGBColor[
+               0.09175306830264343, 0.22454199234379824`, 0.4873295774254649],
+                DiskBox[{1., 0.}, 0.12756114412169658]},
+              "DynamicName",
+              BoxID -> "VertexID$5"], 
+             TagBox[
+              {RGBColor[
+               0.09696602454482262, 0.18752323607788748`, 
+                0.47203083427643894`], 
+               DiskBox[{0.7071067811865475, -0.7071067811865475}, 
+                0.09019935002436616]},
+              "DynamicName",
+              BoxID -> "VertexID$6"], 
+             TagBox[
+              {RGBColor[
+               0.11220031470208296`, 0.0793400003060804, 
+                0.42732194332357126`], DiskBox[{0., -1.}, 0.1067253102255757]},
+              "DynamicName",
+              BoxID -> "VertexID$7"], 
+             TagBox[
+              {RGBColor[
+               0.08757868125212001, 0.25418555918070346`, 0.499580375691111], 
+               DiskBox[{-0.7071067811865475, -0.7071067811865475}, 
+                0.13973623219324147]},
+              "DynamicName",
+              BoxID -> "VertexID$8"]}}],
+          BaseStyle->GrayLevel[0],
+          FormatType->TraditionalForm,
+          FrameTicks->None,
+          ImageSize->{60, 60}]},
+        {
+         InterpretationBox[Cell[BoxData[
+           FormBox[
+            StyleBox["\<\"Polarity = 2.33\"\>",
+             StripOnInput->False,
+             FontFamily->"Source Serif Pro",
+             FontSize->11], TextForm]], "InlineText",ExpressionUUID->
+           "0b5a0ae7-53fa-4699-9dbf-e1de014fbff6"],
+          Text[
+           Style["Polarity = 2.33", 11, FontFamily -> "Source Serif Pro"]]]}
+       },
+       DefaultBaseStyle->"Column",
+       GridBoxAlignment->{"Columns" -> {Center}, "Rows" -> {Center}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       
+       GridBoxSpacings->{"Columns" -> {{0}}, "Rows" -> {{0.75}}}],
+      "Column"], 
+     TagBox[GridBox[{
+        {
+         GraphicsBox[
+          NamespaceBox[{
+            {GrayLevel[0], Opacity[0.7], 
+             LineBox[{{
+               DynamicLocation["VertexID$1", Automatic, Center], 
+                DynamicLocation["VertexID$2", Automatic, Center]}, {
+               DynamicLocation["VertexID$2", Automatic, Center], 
+                DynamicLocation["VertexID$3", Automatic, Center]}, {
+               DynamicLocation["VertexID$2", Automatic, Center], 
+                DynamicLocation["VertexID$8", Automatic, Center]}, {
+               DynamicLocation["VertexID$5", Automatic, Center], 
+                DynamicLocation["VertexID$6", Automatic, Center]}}]}, 
+            {GrayLevel[0], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+             TagBox[
+              {RGBColor[
+               0.11221303007521216`, 0.07924970465101788, 
+                0.42728462683394225`], 
+               DiskBox[{-1., 0.}, 0.09019935002436616]},
+              "DynamicName",
+              BoxID -> "VertexID$1"], 
+             TagBox[
+              {RGBColor[
+               0.2367068814533066, 0.6959559804606527, 0.5070786838874864], 
+               DiskBox[{-0.7071067811865475, 0.7071067811865475}, 
+                0.1892037528095036]},
+              "DynamicName",
+              BoxID -> "VertexID$2"], 
+             TagBox[
+              {RGBColor[
+               0.11221303007521216`, 0.07924970465101788, 
+                0.42728462683394225`], DiskBox[{0., 1.}, 0.09019935002436616]},
+              "DynamicName",
+              BoxID -> "VertexID$3"], 
+             TagBox[
+              {RGBColor[
+               0.10815321118506002`, 0.10807968882818342`, 
+                0.43919919575540267`], 
+               DiskBox[{0.7071067811865475, 0.7071067811865475}, 
+                0.14544208172508782]},
+              "DynamicName",
+              BoxID -> "VertexID$4"], 
+             TagBox[
+              {RGBColor[
+               0.09565329168402828, 0.4655202256881026, 0.5424836461179212], 
+               DiskBox[{1., 0.}, 0.12756114412169658]},
+              "DynamicName",
+              BoxID -> "VertexID$5"], 
+             TagBox[
+              {RGBColor[
+               0.11377334760887503`, 0.5299759751025551, 0.5441015830876136], 
+               DiskBox[{0.7071067811865475, -0.7071067811865475}, 
+                0.18039870004873232]},
+              "DynamicName",
+              BoxID -> "VertexID$6"], 
+             TagBox[
+              {RGBColor[
+               0.1160042513294729, 0.05232711235568152, 0.4161583258455003], 
+               DiskBox[{0., -1.}, 0.12101512690846802]},
+              "DynamicName",
+              BoxID -> "VertexID$7"], 
+             TagBox[
+              {RGBColor[
+               0.11221303007521216`, 0.07924970465101788, 
+                0.42728462683394225`], 
+               DiskBox[{-0.7071067811865475, -0.7071067811865475}, 
+                0.09019935002436616]},
+              "DynamicName",
+              BoxID -> "VertexID$8"]}}],
+          BaseStyle->GrayLevel[0],
+          FormatType->TraditionalForm,
+          FrameTicks->None,
+          ImageSize->{60, 60}]},
+        {
+         InterpretationBox[Cell[BoxData[
+           FormBox[
+            StyleBox["\<\"Polarity = 1.75\"\>",
+             StripOnInput->False,
+             FontFamily->"Source Serif Pro",
+             FontSize->11], TextForm]], "InlineText",ExpressionUUID->
+           "ead3bcd8-255b-4d5a-a96a-b9557e24e207"],
+          Text[
+           Style["Polarity = 1.75", 11, FontFamily -> "Source Serif Pro"]]]}
+       },
+       DefaultBaseStyle->"Column",
+       GridBoxAlignment->{"Columns" -> {Center}, "Rows" -> {Center}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       
+       GridBoxSpacings->{"Columns" -> {{0}}, "Rows" -> {{0.75}}}],
+      "Column"]}
+   },
+   AutoDelete->False,
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+   GridBoxSpacings->{"Columns" -> {{1.5}}, "Rows" -> {{1.5}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{{3.812837537457111*^9, 3.812837549708584*^9}, {
+  3.812837630175997*^9, 3.81283767144421*^9}},
+ CellLabel->
+  "Out[760]=",ExpressionUUID->"f1f31d31-6fc1-48f1-b2ee-321ce568f0d7"]
+}, {2}]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Polarity - example 3", "Subsubsection",
+ CellChangeTimes->{{3.8128377036756783`*^9, 
+  3.812837706235908*^9}},ExpressionUUID->"5145c26d-afe4-406f-a4f9-\
+3f1bf9bc7314"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SetParameters", "[", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\"\<\[Beta]\>\"", "\[Rule]", "2"}], ",", 
+     RowBox[{"\"\<\[Mu]\>\"", "\[Rule]", "3"}], ",", 
+     RowBox[{"\"\<\[Lambda]\>\"", "\[Rule]", "1"}], ",", 
+     RowBox[{"\"\<\[Rho]\>\"", "\[Rule]", "0.9"}], ",", 
+     RowBox[{"\"\<\[Delta]\>\"", "\[Rule]", "0.9"}], ",", 
+     RowBox[{"\"\<\[Alpha]\>\"", "\[Rule]", "2.25"}]}], 
+    "\[RightAssociation]"}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "x_", "]"}], ":=", 
+   RowBox[{"With", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"ps", "=", 
+       RowBox[{"PowerStructure", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+          "1", ",", ".4", ",", ".4", ",", ".4", ",", ".4", ",", ".4"}], "}"}],
+          ",", 
+         RowBox[{"NormalizeTernaryT", "[", "x", "]"}]}], "]"}]}], "}"}], ",", 
+     
+     RowBox[{"AddCaption", "[", 
+      RowBox[{
+       RowBox[{"ShowPowerStructure", "[", 
+        RowBox[{"ps", ",", 
+         RowBox[{"<|", 
+          RowBox[{
+           RowBox[{"\"\<circular\>\"", "\[Rule]", "True"}], ",", 
+           RowBox[{"\"\<size\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"65", ",", "55"}], "}"}]}]}], "|>"}]}], "]"}], ",", 
+       RowBox[{"\"\<Polarity = \>\"", "<>", 
+        RowBox[{"ToString", "[", 
+         RowBox[{"DeDecimalize", "[", 
+          RowBox[{"Round", "[", 
+           RowBox[{
+            RowBox[{"Polarity", "[", "ps", "]"}], ",", ".01"}], "]"}], "]"}], 
+         "]"}]}]}], "]"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{"f", "[", 
+  TagBox[
+   RowBox[{"(", "\[NoBreak]", GridBox[{
+      {"0", 
+       RowBox[{"-", "1"}], 
+       RowBox[{"-", "1"}], 
+       RowBox[{"-", "1"}], 
+       RowBox[{"-", "1"}], 
+       RowBox[{"-", "1"}]},
+      {
+       RowBox[{"-", "1"}], "0", "0", "0", "0", "0"},
+      {
+       RowBox[{"-", "1"}], "0", "0", "0", "0", "0"},
+      {
+       RowBox[{"-", "1"}], "0", "0", "0", "0", "0"},
+      {
+       RowBox[{"-", "1"}], "0", "0", "0", "0", "0"},
+      {
+       RowBox[{"-", "1"}], "0", "0", "0", "0", "0"}
+     },
+     GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.7]}, 
+         Offset[0.27999999999999997`]}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}}], "\[NoBreak]", ")"}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Clear", "[", "f", "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.812837715597817*^9, 3.812837728110111*^9}},
+ CellLabel->
+  "In[766]:=",ExpressionUUID->"15feb177-b08c-4070-85d1-dfa3dccbedbb"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     GraphicsBox[
+      NamespaceBox[{
+        {GrayLevel[0], Opacity[0.7], 
+         {Dashing[{Small, Small}], 
+          LineBox[{
+           DynamicLocation["VertexID$1", Automatic, Center], DynamicLocation[
+            "VertexID$2", Automatic, Center]}]}, 
+         {Dashing[{Small, Small}], 
+          LineBox[{
+           DynamicLocation["VertexID$1", Automatic, Center], DynamicLocation[
+            "VertexID$3", Automatic, Center]}]}, 
+         {Dashing[{Small, Small}], 
+          LineBox[{
+           DynamicLocation["VertexID$1", Automatic, Center], DynamicLocation[
+            "VertexID$4", Automatic, Center]}]}, 
+         {Dashing[{Small, Small}], 
+          LineBox[{
+           DynamicLocation["VertexID$1", Automatic, Center], DynamicLocation[
+            "VertexID$5", Automatic, Center]}]}, 
+         {Dashing[{Small, Small}], 
+          LineBox[{
+           DynamicLocation["VertexID$1", Automatic, Center], DynamicLocation[
+            "VertexID$6", Automatic, Center]}]}}, 
+        {GrayLevel[0], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         TagBox[
+          {RGBColor[
+           0.11893002911574764`, 0.03155029211652979, 0.40757188836475294`], 
+           DiskBox[{-1., 0.}, 0.16666666666666666]},
+          "DynamicName",
+          BoxID -> "VertexID$1"], 
+         TagBox[
+          {RGBColor[
+           0.09300931686162957, 0.2156209968368287, 0.4836427971912942], 
+           DiskBox[{-0.5, 0.8660254037844386}, 0.10540925533894598]},
+          "DynamicName",
+          BoxID -> "VertexID$2"], 
+         TagBox[
+          {RGBColor[
+           0.09300931686162957, 0.2156209968368287, 0.4836427971912942], 
+           DiskBox[{0.5, 0.8660254037844386}, 0.10540925533894598]},
+          "DynamicName",
+          BoxID -> "VertexID$3"], 
+         TagBox[
+          {RGBColor[
+           0.09300931686162957, 0.2156209968368287, 0.4836427971912942], 
+           DiskBox[{1., 0.}, 0.10540925533894598]},
+          "DynamicName",
+          BoxID -> "VertexID$4"], 
+         TagBox[
+          {RGBColor[
+           0.09300931686162957, 0.2156209968368287, 0.4836427971912942], 
+           DiskBox[{0.5, -0.8660254037844386}, 0.10540925533894598]},
+          "DynamicName",
+          BoxID -> "VertexID$5"], 
+         TagBox[
+          {RGBColor[
+           0.09300931686162957, 0.2156209968368287, 0.4836427971912942], 
+           DiskBox[{-0.5, -0.8660254037844386}, 0.10540925533894598]},
+          "DynamicName",
+          BoxID -> "VertexID$6"]}}],
+      BaseStyle->GrayLevel[0],
+      FormatType->TraditionalForm,
+      FrameTicks->None,
+      ImageSize->{65, 55}]},
+    {
+     InterpretationBox[Cell[BoxData[
+       FormBox[
+        StyleBox["\<\"Polarity = 5.01\"\>",
+         StripOnInput->False,
+         FontFamily->"Source Serif Pro",
+         FontSize->11], TextForm]], "InlineText",ExpressionUUID->
+       "927f961a-0947-47e6-88bb-67ee7117fb00"],
+      Text[
+       Style["Polarity = 5.01", 11, FontFamily -> "Source Serif Pro"]]]}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {Center}, "Rows" -> {Center}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+   GridBoxSpacings->{"Columns" -> {{0}}, "Rows" -> {{0.75}}}],
+  "Column"]], "Output",
+ CellChangeTimes->{{3.812837721075473*^9, 3.8128377284776077`*^9}},
+ CellLabel->
+  "Out[768]=",ExpressionUUID->"513e1923-92ad-4e69-9281-3cc3b9c8f22e"]
+}, {2}]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Polarity - example 4", "Subsubsection",
+ CellChangeTimes->{{3.812837755932185*^9, 
+  3.812837758556261*^9}},ExpressionUUID->"a399b035-50f1-4106-9727-\
+87f5b1db56dc"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SetParameters", "[", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\"\<\[Beta]\>\"", "\[Rule]", "2"}], ",", 
+     RowBox[{"\"\<\[Mu]\>\"", "\[Rule]", "3"}], ",", 
+     RowBox[{"\"\<\[Lambda]\>\"", "\[Rule]", "1"}], ",", 
+     RowBox[{"\"\<\[Rho]\>\"", "\[Rule]", "0.9"}], ",", 
+     RowBox[{"\"\<\[Delta]\>\"", "\[Rule]", "0.9"}], ",", 
+     RowBox[{"\"\<\[Alpha]\>\"", "\[Rule]", "2.25"}]}], 
+    "\[RightAssociation]"}], "]"}], ";", 
+  RowBox[{
+   RowBox[{"f", "[", "x_", "]"}], ":=", 
+   RowBox[{"AddCaption", "[", 
+    RowBox[{
+     RowBox[{"ShowPowerStructure", "[", 
+      RowBox[{
+       RowBox[{"PowerStructure", "[", 
+        RowBox[{
+         RowBox[{"Table", "[", 
+          RowBox[{"1", ",", "6"}], "]"}], ",", 
+         RowBox[{"NormalizeTernaryT", "[", "x", "]"}]}], "]"}], ",", 
+       RowBox[{"<|", 
+        RowBox[{
+         RowBox[{"\"\<circular\>\"", "\[Rule]", "True"}], ",", 
+         RowBox[{"\"\<size\>\"", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"60", ",", "60"}], "}"}]}]}], "|>"}]}], "]"}], ",", 
+     RowBox[{"\"\<Polarity = \>\"", "<>", 
+      RowBox[{"ToString", "[", 
+       RowBox[{"DeDecimalize", "[", 
+        RowBox[{"Round", "[", 
+         RowBox[{
+          RowBox[{"Polarity", "[", 
+           RowBox[{"PowerStructure", "[", 
+            RowBox[{
+             RowBox[{"Table", "[", 
+              RowBox[{"1", ",", "6"}], "]"}], ",", "x"}], "]"}], "]"}], ",", 
+          ".01"}], "]"}], "]"}], "]"}]}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"SpacedRow", "[", 
+  RowBox[{
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     TagBox[
+      RowBox[{"f", "[", 
+       TagBox[
+        RowBox[{"(", "\[NoBreak]", GridBox[{
+           {"0", "0", "0", "0", "0", "0"},
+           {"0", "0", "0", "0", "0", "0"},
+           {"0", "0", "0", "0", "0", "0"},
+           {"0", "0", "0", "0", "0", "0"},
+           {"0", "0", "0", "0", "0", "0"},
+           {"0", "0", "0", "0", "0", "0"}
+          },
+          GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+          
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.7]}, 
+              Offset[0.27999999999999997`]}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}}], "\[NoBreak]", ")"}],
+        Function[BoxForm`e$, 
+         MatrixForm[BoxForm`e$]]], "]"}],
+      Function[BoxForm`e$, 
+       MatrixForm[BoxForm`e$]]], ",", 
+     TagBox[
+      RowBox[{"f", "[", 
+       TagBox[
+        RowBox[{"(", "\[NoBreak]", GridBox[{
+           {"0", "0", "0", "0", "0", 
+            RowBox[{"-", "1"}]},
+           {"0", "0", "0", "0", "0", "0"},
+           {"0", "0", "0", "1", "0", "0"},
+           {"0", "0", "1", "0", "0", "0"},
+           {"0", "0", "0", "0", "0", "0"},
+           {
+            RowBox[{"-", "1"}], "0", "0", "0", "0", "0"}
+          },
+          GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+          
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.7]}, 
+              Offset[0.27999999999999997`]}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}}], "\[NoBreak]", ")"}],
+        Function[BoxForm`e$, 
+         MatrixForm[BoxForm`e$]]], "]"}],
+      Function[BoxForm`e$, 
+       MatrixForm[BoxForm`e$]]], ",", 
+     RowBox[{"f", "[", 
+      TagBox[
+       TagBox[
+        RowBox[{"(", "\[NoBreak]", GridBox[{
+           {"0", "0", "0", "0", "0", 
+            RowBox[{"-", "1"}]},
+           {"0", "0", "0", "0", "0", "0"},
+           {"0", "0", "0", "1", "0", "0"},
+           {"0", "0", "1", "0", "1", "0"},
+           {"0", "0", "0", "1", "0", "0"},
+           {
+            RowBox[{"-", "1"}], "0", "0", "0", "0", "0"}
+          },
+          GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+          
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.7]}, 
+              Offset[0.27999999999999997`]}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}}], "\[NoBreak]", ")"}],
+        Function[BoxForm`e$, 
+         MatrixForm[BoxForm`e$]]],
+       Function[BoxForm`e$, 
+        MatrixForm[BoxForm`e$]]], "]"}]}], "\[IndentingNewLine]", "}"}], ",", 
+   "35"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Clear", "[", "f", "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.812837763884364*^9, 3.8128377849314613`*^9}},
+ CellLabel->
+  "In[773]:=",ExpressionUUID->"3ba9db99-daa4-4d0e-b084-b48cbbb3cad4"],
+
+Cell[BoxData[
+ TemplateBox[{
+   TagBox[
+    GridBox[{{
+       GraphicsBox[
+        NamespaceBox[{{}, {
+           Directive[
+            Hue[0.6, 0.2, 0.8], 
+            EdgeForm[
+             Directive[
+              GrayLevel[0], 
+              Opacity[0.7]]]], 
+           Directive[
+            GrayLevel[0]], 
+           TagBox[
+            StyleBox[
+             DiskBox[{-1., 0.}, 0.16666666666666666`], {
+              RGBColor[
+              0.08900457056251124, 0.24405989412784, 0.49539574161685723`]}, 
+             StripOnInput -> False], "DynamicName", BoxID -> "VertexID$1"], 
+           TagBox[
+            StyleBox[
+             DiskBox[{-0.5, 0.8660254037844386}, 0.16666666666666666`], {
+              RGBColor[
+              0.08900457056251124, 0.24405989412784, 0.49539574161685723`]}, 
+             StripOnInput -> False], "DynamicName", BoxID -> "VertexID$2"], 
+           TagBox[
+            StyleBox[
+             DiskBox[{0.5, 0.8660254037844386}, 0.16666666666666666`], {
+              RGBColor[
+              0.08900457056251124, 0.24405989412784, 0.49539574161685723`]}, 
+             StripOnInput -> False], "DynamicName", BoxID -> "VertexID$3"], 
+           TagBox[
+            StyleBox[
+             DiskBox[{1., 0.}, 0.16666666666666666`], {
+              RGBColor[
+              0.08900457056251124, 0.24405989412784, 0.49539574161685723`]}, 
+             StripOnInput -> False], "DynamicName", BoxID -> "VertexID$4"], 
+           TagBox[
+            StyleBox[
+             DiskBox[{0.5, -0.8660254037844386}, 0.16666666666666666`], {
+              RGBColor[
+              0.08900457056251124, 0.24405989412784, 0.49539574161685723`]}, 
+             StripOnInput -> False], "DynamicName", BoxID -> "VertexID$5"], 
+           TagBox[
+            StyleBox[
+             DiskBox[{-0.5, -0.8660254037844386}, 0.16666666666666666`], {
+              RGBColor[
+              0.08900457056251124, 0.24405989412784, 0.49539574161685723`]}, 
+             StripOnInput -> False], "DynamicName", BoxID -> 
+            "VertexID$6"]}}], {
+        ImageSize -> {60, 60}, BaseStyle -> GrayLevel[0], FormatType -> 
+         TraditionalForm, FrameTicks -> None}]}, {
+       InterpretationBox[
+        Cell[
+         BoxData[
+          FormBox[
+           StyleBox[
+           "\"Polarity = 0\"", 11, FontFamily -> "Source Serif Pro", 
+            StripOnInput -> False], TextForm]], "InlineText"], 
+        Text[
+         Style["Polarity = 0", 11, FontFamily -> "Source Serif Pro"]]]}}, 
+     GridBoxAlignment -> {"Columns" -> {Center}, "Rows" -> {Center}}, 
+     DefaultBaseStyle -> "Column", 
+     GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+      GridBoxSpacings -> {"Columns" -> {{0}}, "Rows" -> {{0.75}}}], "Column"], 
+   TemplateBox[{35}, "Spacer1"], 
+   TagBox[
+    GridBox[{{
+       GraphicsBox[
+        NamespaceBox[{{
+           Directive[
+            Opacity[0.7], 
+            Hue[0.6, 0.7, 0.5]], 
+           Directive[
+            GrayLevel[0]], 
+           StyleBox[
+            LineBox[{
+              DynamicLocation["VertexID$1", Automatic, Center], 
+              DynamicLocation["VertexID$6", Automatic, Center]}], {{
+              Dashing[{Small, Small}]}}, StripOnInput -> False], 
+           LineBox[{
+             DynamicLocation["VertexID$3", Automatic, Center], 
+             DynamicLocation["VertexID$4", Automatic, Center]}]}, {
+           Directive[
+            Hue[0.6, 0.2, 0.8], 
+            EdgeForm[
+             Directive[
+              GrayLevel[0], 
+              Opacity[0.7]]]], 
+           Directive[
+            GrayLevel[0]], 
+           TagBox[
+            StyleBox[
+             DiskBox[{-1., 0.}, 0.16666666666666666`], {
+              RGBColor[
+              0.11991186617301271`, 0.024577974485768272`, 
+               0.40469043832844603`]}, StripOnInput -> False], "DynamicName", 
+            BoxID -> "VertexID$1"], 
+           TagBox[
+            StyleBox[
+             DiskBox[{-0.5, 0.8660254037844386}, 0.16666666666666666`], {
+              RGBColor[
+              0.09579813492924596, 0.19581676838777073`, 
+               0.47545830276553813`]}, StripOnInput -> False], "DynamicName", 
+            BoxID -> "VertexID$2"], 
+           TagBox[
+            StyleBox[
+             DiskBox[{0.5, 0.8660254037844386}, 0.16666666666666666`], {
+              RGBColor[
+              0.1994666369007148, 0.6693748035611196, 0.5201111615778019]}, 
+             StripOnInput -> False], "DynamicName", BoxID -> "VertexID$3"], 
+           TagBox[
+            StyleBox[
+             DiskBox[{1., 0.}, 0.16666666666666666`], {
+              RGBColor[
+              0.1994666369007148, 0.6693748035611196, 0.5201111615778019]}, 
+             StripOnInput -> False], "DynamicName", BoxID -> "VertexID$4"], 
+           TagBox[
+            StyleBox[
+             DiskBox[{0.5, -0.8660254037844386}, 0.16666666666666666`], {
+              RGBColor[
+              0.09579813492924596, 0.19581676838777073`, 
+               0.47545830276553813`]}, StripOnInput -> False], "DynamicName", 
+            BoxID -> "VertexID$5"], 
+           TagBox[
+            StyleBox[
+             DiskBox[{-0.5, -0.8660254037844386}, 0.16666666666666666`], {
+              RGBColor[
+              0.11991186617301271`, 0.024577974485768272`, 
+               0.40469043832844603`]}, StripOnInput -> False], "DynamicName", 
+            BoxID -> "VertexID$6"]}}], {
+        ImageSize -> {60, 60}, BaseStyle -> GrayLevel[0], FormatType -> 
+         TraditionalForm, FrameTicks -> None}]}, {
+       InterpretationBox[
+        Cell[
+         BoxData[
+          FormBox[
+           StyleBox[
+           "\"Polarity = 2\"", 11, FontFamily -> "Source Serif Pro", 
+            StripOnInput -> False], TextForm]], "InlineText"], 
+        Text[
+         Style["Polarity = 2", 11, FontFamily -> "Source Serif Pro"]]]}}, 
+     GridBoxAlignment -> {"Columns" -> {Center}, "Rows" -> {Center}}, 
+     DefaultBaseStyle -> "Column", 
+     GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+      GridBoxSpacings -> {"Columns" -> {{0}}, "Rows" -> {{0.75}}}], "Column"], 
+   TemplateBox[{35}, "Spacer1"], 
+   TagBox[
+    GridBox[{{
+       GraphicsBox[
+        NamespaceBox[{{
+           Directive[
+            Opacity[0.7], 
+            Hue[0.6, 0.7, 0.5]], 
+           Directive[
+            GrayLevel[0]], 
+           StyleBox[
+            LineBox[{
+              DynamicLocation["VertexID$1", Automatic, Center], 
+              DynamicLocation["VertexID$6", Automatic, Center]}], {{
+              Dashing[{Small, Small}]}}, StripOnInput -> False], 
+           LineBox[{
+             DynamicLocation["VertexID$3", Automatic, Center], 
+             DynamicLocation["VertexID$4", Automatic, Center]}], 
+           LineBox[{
+             DynamicLocation["VertexID$4", Automatic, Center], 
+             DynamicLocation["VertexID$5", Automatic, Center]}]}, {
+           Directive[
+            Hue[0.6, 0.2, 0.8], 
+            EdgeForm[
+             Directive[
+              GrayLevel[0], 
+              Opacity[0.7]]]], 
+           Directive[
+            GrayLevel[0]], 
+           TagBox[
+            StyleBox[
+             DiskBox[{-1., 0.}, 0.16666666666666666`], {
+              RGBColor[
+              0.12007012401373236`, 0.023454138381914562`, 
+               0.4042259905287696]}, StripOnInput -> False], "DynamicName", 
+            BoxID -> "VertexID$1"], 
+           TagBox[
+            StyleBox[
+             DiskBox[{-0.5, 0.8660254037844386}, 0.16666666666666666`], {
+              RGBColor[
+              0.10091385628497423`, 0.1594885060364156, 0.4604449200691668]}, 
+             StripOnInput -> False], "DynamicName", BoxID -> "VertexID$2"], 
+           TagBox[
+            StyleBox[
+             DiskBox[{0.5, 0.8660254037844386}, 0.16666666666666666`], {
+              RGBColor[
+              0.08755900267095851, 0.33648466160079615`, 0.520004136234701]}, 
+             StripOnInput -> False], "DynamicName", BoxID -> "VertexID$3"], 
+           TagBox[
+            StyleBox[
+             DiskBox[{1., 0.}, 0.16666666666666666`], {
+              RGBColor[
+              0.5782825488557023, 0.8410631465298765, 0.407034165699154]}, 
+             StripOnInput -> False], "DynamicName", BoxID -> "VertexID$4"], 
+           TagBox[
+            StyleBox[
+             DiskBox[{0.5, -0.8660254037844386}, 0.16666666666666666`], {
+              RGBColor[
+              0.08755900267095851, 0.33648466160079615`, 0.520004136234701]}, 
+             StripOnInput -> False], "DynamicName", BoxID -> "VertexID$5"], 
+           TagBox[
+            StyleBox[
+             DiskBox[{-0.5, -0.8660254037844386}, 0.16666666666666666`], {
+              RGBColor[
+              0.12007012401373236`, 0.023454138381914562`, 
+               0.4042259905287696]}, StripOnInput -> False], "DynamicName", 
+            BoxID -> "VertexID$6"]}}], {
+        ImageSize -> {60, 60}, BaseStyle -> GrayLevel[0], FormatType -> 
+         TraditionalForm, FrameTicks -> None}]}, {
+       InterpretationBox[
+        Cell[
+         BoxData[
+          FormBox[
+           StyleBox[
+           "\"Polarity = 1.37\"", 11, FontFamily -> "Source Serif Pro", 
+            StripOnInput -> False], TextForm]], "InlineText"], 
+        Text[
+         Style["Polarity = 1.37", 11, FontFamily -> "Source Serif Pro"]]]}}, 
+     GridBoxAlignment -> {"Columns" -> {Center}, "Rows" -> {Center}}, 
+     DefaultBaseStyle -> "Column", 
+     GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+      GridBoxSpacings -> {"Columns" -> {{0}}, "Rows" -> {{0.75}}}], "Column"]},
+  "RowDefault"]], "Output",
+ CellChangeTimes->{{3.8128377779419928`*^9, 3.812837785821396*^9}},
+ CellLabel->
+  "Out[774]=",ExpressionUUID->"53ddcc47-ae71-4e32-b810-04e334ec0336"]
+}, {2}]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Polarity - example 5", "Subsubsection",
+ CellChangeTimes->{{3.812837755932185*^9, 3.812837758556261*^9}, 
+   3.812837795790237*^9},ExpressionUUID->"be1fa31a-0c2c-4f27-951d-\
+5cd2d3ca40ce"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SetParameters", "[", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\"\<\[Beta]\>\"", "\[Rule]", "2"}], ",", 
+     RowBox[{"\"\<\[Mu]\>\"", "\[Rule]", "3"}], ",", 
+     RowBox[{"\"\<\[Lambda]\>\"", "\[Rule]", "1"}], ",", 
+     RowBox[{"\"\<\[Rho]\>\"", "\[Rule]", "0.9"}], ",", 
+     RowBox[{"\"\<\[Delta]\>\"", "\[Rule]", "0.9"}], ",", 
+     RowBox[{"\"\<\[Alpha]\>\"", "\[Rule]", "2.25"}]}], 
+    "\[RightAssociation]"}], "]"}], ";", 
+  RowBox[{
+   RowBox[{"f", "[", "ps_", "]"}], ":=", 
+   RowBox[{"AddCaption", "[", 
+    RowBox[{
+     RowBox[{"ShowPowerStructure", "[", 
+      RowBox[{"ps", ",", 
+       RowBox[{"<|", 
+        RowBox[{
+         RowBox[{"\"\<circular\>\"", "\[Rule]", "True"}], ",", 
+         RowBox[{"\"\<size\>\"", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"50", ",", "50"}], "}"}]}]}], "|>"}]}], "]"}], ",", 
+     RowBox[{"\"\<Polarity = \>\"", "<>", 
+      RowBox[{"ToString", "[", 
+       RowBox[{"DeDecimalize", "[", 
+        RowBox[{"Round", "[", 
+         RowBox[{
+          RowBox[{"Polarity", "[", "ps", "]"}], ",", ".01"}], "]"}], "]"}], 
+       "]"}]}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"s", "=", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", ".5", ",", ".8", ",", ".865", ",", ".5", ",", "1"}], 
+    "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"SpacedRow", "[", 
+  RowBox[{
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"f", "[", 
+      RowBox[{"PowerStructure", "[", 
+       RowBox[{"NormalizeTernaryT", "[", 
+        RowBox[{"ZeroMatrix", "[", "3", "]"}], "]"}], "]"}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"f", "[", 
+      RowBox[{"PowerStructure", "[", 
+       RowBox[{"NormalizeTernaryT", "[", 
+        RowBox[{"ZeroMatrix", "[", "4", "]"}], "]"}], "]"}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"f", "[", 
+      RowBox[{"PowerStructure", "[", 
+       RowBox[{"NormalizeTernaryT", "[", 
+        RowBox[{"ZeroMatrix", "[", "5", "]"}], "]"}], "]"}], "]"}]}], 
+    "\[IndentingNewLine]", "}"}], ",", "45"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Clear", "[", "f", "]"}]}], "Input",
+ CellChangeTimes->{{3.8128378128943367`*^9, 3.8128378723218117`*^9}},
+ CellLabel->
+  "In[792]:=",ExpressionUUID->"dd3e98cf-b1d8-4168-bd4d-506c7f33c12d"],
+
+Cell[BoxData[
+ TemplateBox[{
+   TagBox[
+    GridBox[{{
+       GraphicsBox[
+        NamespaceBox[{{}, {
+           Directive[
+            Hue[0.6, 0.2, 0.8], 
+            EdgeForm[
+             Directive[
+              GrayLevel[0], 
+              Opacity[0.7]]]], 
+           Directive[
+            GrayLevel[0]], 
+           TagBox[
+            StyleBox[
+             DiskBox[{-1., 0.}, 0.28867513459481287`], {
+              RGBColor[
+              0.09409468991487699, 0.44067368782107397`, 0.5381550875728696]},
+              StripOnInput -> False], "DynamicName", BoxID -> "VertexID$1"], 
+           TagBox[
+            StyleBox[
+             DiskBox[{0.5, 0.8660254037844386}, 0.28867513459481287`], {
+              RGBColor[
+              0.09409468991487699, 0.44067368782107397`, 0.5381550875728696]},
+              StripOnInput -> False], "DynamicName", BoxID -> "VertexID$2"], 
+           TagBox[
+            StyleBox[
+             DiskBox[{0.5, -0.8660254037844386}, 0.28867513459481287`], {
+              RGBColor[
+              0.09409468991487699, 0.44067368782107397`, 0.5381550875728696]},
+              StripOnInput -> False], "DynamicName", BoxID -> 
+            "VertexID$3"]}}], {
+        ImageSize -> {50, 50}, BaseStyle -> GrayLevel[0], FormatType -> 
+         TraditionalForm, FrameTicks -> None}]}, {
+       InterpretationBox[
+        Cell[
+         BoxData[
+          FormBox[
+           StyleBox[
+           "\"Polarity = 3\"", 11, FontFamily -> "Source Serif Pro", 
+            StripOnInput -> False], TextForm]], "InlineText"], 
+        Text[
+         Style["Polarity = 3", 11, FontFamily -> "Source Serif Pro"]]]}}, 
+     GridBoxAlignment -> {"Columns" -> {Center}, "Rows" -> {Center}}, 
+     DefaultBaseStyle -> "Column", 
+     GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+      GridBoxSpacings -> {"Columns" -> {{0}}, "Rows" -> {{0.75}}}], "Column"], 
+   TemplateBox[{45}, "Spacer1"], 
+   TagBox[
+    GridBox[{{
+       GraphicsBox[
+        NamespaceBox[{{}, {
+           Directive[
+            Hue[0.6, 0.2, 0.8], 
+            EdgeForm[
+             Directive[
+              GrayLevel[0], 
+              Opacity[0.7]]]], 
+           Directive[
+            GrayLevel[0]], 
+           TagBox[
+            StyleBox[
+             DiskBox[{-1., 0.}, 0.23570226039551584`], {
+              RGBColor[
+              0.08814301743615774, 0.3457947658658055, 0.5216260656796522]}, 
+             StripOnInput -> False], "DynamicName", BoxID -> "VertexID$1"], 
+           TagBox[
+            StyleBox[
+             DiskBox[{0., 1.}, 0.23570226039551584`], {
+              RGBColor[
+              0.08814301743615774, 0.3457947658658055, 0.5216260656796522]}, 
+             StripOnInput -> False], "DynamicName", BoxID -> "VertexID$2"], 
+           TagBox[
+            StyleBox[
+             DiskBox[{1., 0.}, 0.23570226039551584`], {
+              RGBColor[
+              0.08814301743615774, 0.3457947658658055, 0.5216260656796522]}, 
+             StripOnInput -> False], "DynamicName", BoxID -> "VertexID$3"], 
+           TagBox[
+            StyleBox[
+             DiskBox[{0., -1.}, 0.23570226039551584`], {
+              RGBColor[
+              0.08814301743615774, 0.3457947658658055, 0.5216260656796522]}, 
+             StripOnInput -> False], "DynamicName", BoxID -> 
+            "VertexID$4"]}}], {
+        ImageSize -> {50, 50}, BaseStyle -> GrayLevel[0], FormatType -> 
+         TraditionalForm, FrameTicks -> None}]}, {
+       InterpretationBox[
+        Cell[
+         BoxData[
+          FormBox[
+           StyleBox[
+           "\"Polarity = 4\"", 11, FontFamily -> "Source Serif Pro", 
+            StripOnInput -> False], TextForm]], "InlineText"], 
+        Text[
+         Style["Polarity = 4", 11, FontFamily -> "Source Serif Pro"]]]}}, 
+     GridBoxAlignment -> {"Columns" -> {Center}, "Rows" -> {Center}}, 
+     DefaultBaseStyle -> "Column", 
+     GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+      GridBoxSpacings -> {"Columns" -> {{0}}, "Rows" -> {{0.75}}}], "Column"], 
+   TemplateBox[{45}, "Spacer1"], 
+   TagBox[
+    GridBox[{{
+       GraphicsBox[
+        NamespaceBox[{{}, {
+           Directive[
+            Hue[0.6, 0.2, 0.8], 
+            EdgeForm[
+             Directive[
+              GrayLevel[0], 
+              Opacity[0.7]]]], 
+           Directive[
+            GrayLevel[0]], 
+           TagBox[
+            StyleBox[
+             DiskBox[{-1., 0.}, 0.19592841743082437`], {
+              RGBColor[
+              0.08457201394892619, 0.2888674126926444, 0.5117086525437218]}, 
+             StripOnInput -> False], "DynamicName", BoxID -> "VertexID$1"], 
+           TagBox[
+            StyleBox[
+             
+             DiskBox[{-0.30901699437494745`, 0.9510565162951535}, 
+              0.19592841743082437`], {
+              RGBColor[
+              0.08457201394892619, 0.2888674126926444, 0.5117086525437218]}, 
+             StripOnInput -> False], "DynamicName", BoxID -> "VertexID$2"], 
+           TagBox[
+            StyleBox[
+             
+             DiskBox[{0.8090169943749475, 0.5877852522924731}, 
+              0.19592841743082437`], {
+              RGBColor[
+              0.08457201394892619, 0.2888674126926444, 0.5117086525437218]}, 
+             StripOnInput -> False], "DynamicName", BoxID -> "VertexID$3"], 
+           TagBox[
+            StyleBox[
+             
+             DiskBox[{0.8090169943749475, -0.5877852522924731}, 
+              0.19592841743082437`], {
+              RGBColor[
+              0.08457201394892619, 0.2888674126926444, 0.5117086525437218]}, 
+             StripOnInput -> False], "DynamicName", BoxID -> "VertexID$4"], 
+           TagBox[
+            StyleBox[
+             
+             DiskBox[{-0.30901699437494745`, -0.9510565162951535}, 
+              0.19592841743082437`], {
+              RGBColor[
+              0.08457201394892619, 0.2888674126926444, 0.5117086525437218]}, 
+             StripOnInput -> False], "DynamicName", BoxID -> 
+            "VertexID$5"]}}], {
+        ImageSize -> {50, 50}, BaseStyle -> GrayLevel[0], FormatType -> 
+         TraditionalForm, FrameTicks -> None}]}, {
+       InterpretationBox[
+        Cell[
+         BoxData[
+          FormBox[
+           StyleBox[
+           "\"Polarity = 5\"", 11, FontFamily -> "Source Serif Pro", 
+            StripOnInput -> False], TextForm]], "InlineText"], 
+        Text[
+         Style["Polarity = 5", 11, FontFamily -> "Source Serif Pro"]]]}}, 
+     GridBoxAlignment -> {"Columns" -> {Center}, "Rows" -> {Center}}, 
+     DefaultBaseStyle -> "Column", 
+     GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+      GridBoxSpacings -> {"Columns" -> {{0}}, "Rows" -> {{0.75}}}], "Column"]},
+  "RowDefault"]], "Output",
+ CellChangeTimes->{{3.812837817953079*^9, 3.812837873179762*^9}},
+ CellLabel->
+  "Out[794]=",ExpressionUUID->"ddfbe85d-b5f6-4743-95ac-e9355a5086dd"]
+}, {2}]]
+}, Open  ]]
+}, Open  ]],
+
+Cell["Stability", "Section",
+ CellChangeTimes->{{3.8128372479651117`*^9, 
+  3.812837249186035*^9}},ExpressionUUID->"345bb281-cc57-467b-aaff-\
+8aaefecb180f"],
+
+Cell["Destructive Potential", "Section",
+ CellChangeTimes->{{3.812837251895966*^9, 
+  3.812837254658142*^9}},ExpressionUUID->"3d0fa0ce-09a1-468d-90aa-\
+bf55f2294d29"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{Automatic, -1269}, {42, Automatic}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"5985e3db-cd2b-41cb-8564-9fa0a9437986"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 153, 3, 67, "Section",ExpressionUUID->"969c41a1-7e9b-4d92-a003-fc900cabb440"],
+Cell[CellGroupData[{
+Cell[758, 29, 206, 3, 45, "Subsubsection",ExpressionUUID->"30a716e7-fb53-4e79-a60b-948b9b02c849"],
+Cell[CellGroupData[{
+Cell[989, 36, 875, 23, 31, "Input",ExpressionUUID->"cd93ca0e-0931-4a2a-a596-5a879a7016f5"],
+Cell[1867, 61, 761, 21, 71, "Output",ExpressionUUID->"655bb177-6beb-4983-baee-cf3b8f5ffd37"]
+}, {2}]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2674, 88, 223, 4, 45, "Subsubsection",ExpressionUUID->"7501332c-7763-409e-a3f2-e875af49f2f8"],
+Cell[CellGroupData[{
+Cell[2922, 96, 1331, 34, 94, "Input",ExpressionUUID->"d113d300-8aa5-43a6-82a4-2e0952829521"],
+Cell[4256, 132, 774, 20, 43, "Output",ExpressionUUID->"3862ce3b-fcc2-4d64-a052-d3fc6ca7bb9c"]
+}, {2}]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5076, 158, 164, 2, 45, "Subsubsection",ExpressionUUID->"cc01b93f-1715-4566-8e63-fb581dc11f01"],
+Cell[CellGroupData[{
+Cell[5265, 164, 3275, 88, 258, "Input",ExpressionUUID->"e9191fb3-10f5-4ecc-a7cb-ac050600ac03"],
+Cell[8543, 254, 5422, 131, 84, "Output",ExpressionUUID->"9d74d2d5-93c4-413b-a4cf-520354427991"]
+}, {2}]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14011, 391, 221, 4, 45, "Subsubsection",ExpressionUUID->"9c788aff-7322-4e4c-9c41-819275a5070b"],
+Cell[CellGroupData[{
+Cell[14257, 399, 3899, 105, 300, "Input",ExpressionUUID->"b61a861c-ab9e-4404-af53-66f2e038122f"],
+Cell[18159, 506, 7241, 165, 99, "Output",ExpressionUUID->"a4d05b3f-cb2e-4451-b83c-c0b28f3be707"]
+}, {2}]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25446, 677, 174, 3, 45, "Subsubsection",ExpressionUUID->"9e1284e8-bbde-4b4f-8395-aeeeb723ee88"],
+Cell[CellGroupData[{
+Cell[25645, 684, 9115, 229, 871, "Input",ExpressionUUID->"de609265-509b-4664-ba24-6b5d4b544a8d"],
+Cell[34763, 915, 19314, 457, 211, "Output",ExpressionUUID->"f1f31d31-6fc1-48f1-b2ee-321ce568f0d7"]
+}, {2}]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[54123, 1378, 173, 3, 45, "Subsubsection",ExpressionUUID->"5145c26d-afe4-406f-a4f9-3f1bf9bc7314"],
+Cell[CellGroupData[{
+Cell[54321, 1385, 2771, 78, 237, "Input",ExpressionUUID->"15feb177-b08c-4070-85d1-dfa3dccbedbb"],
+Cell[57095, 1465, 3430, 85, 99, "Output",ExpressionUUID->"513e1923-92ad-4e69-9281-3cc3b9c8f22e"]
+}, {2}]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[60571, 1556, 171, 3, 45, "Subsubsection",ExpressionUUID->"a399b035-50f1-4106-9727-87f5b1db56dc"],
+Cell[CellGroupData[{
+Cell[60767, 1563, 4695, 126, 356, "Input",ExpressionUUID->"3ba9db99-daa4-4d0e-b084-b48cbbb3cad4"],
+Cell[65465, 1691, 9802, 232, 105, "Output",ExpressionUUID->"53ddcc47-ae71-4e32-b810-04e334ec0336"]
+}, {2}]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[75313, 1929, 194, 3, 45, "Subsubsection",ExpressionUUID->"be1fa31a-0c2c-4f27-951d-5cd2d3ca40ce"],
+Cell[CellGroupData[{
+Cell[75532, 1936, 2317, 58, 220, "Input",ExpressionUUID->"dd3e98cf-b1d8-4168-bd4d-506c7f33c12d"],
+Cell[77852, 1996, 6924, 171, 95, "Output",ExpressionUUID->"ddfbe85d-b5f6-4743-95ac-e9355a5086dd"]
+}, {2}]]
+}, Open  ]]
+}, Open  ]],
+Cell[84812, 2172, 156, 3, 67, "Section",ExpressionUUID->"345bb281-cc57-467b-aaff-8aaefecb180f"],
+Cell[84971, 2177, 166, 3, 53, "Section",ExpressionUUID->"3d0fa0ce-09a1-468d-90aa-bf55f2294d29"]
+}
+]
+*)
+
