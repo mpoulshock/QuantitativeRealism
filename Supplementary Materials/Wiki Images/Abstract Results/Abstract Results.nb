@@ -1,0 +1,2515 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    111177,       2507]
+NotebookOptionsPosition[    108490,       2447]
+NotebookOutlinePosition[    108919,       2464]
+CellTagsIndexPosition[    108876,       2461]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Types of Moves", "Section",
+ CellChangeTimes->{{3.813005388251524*^9, 
+  3.813005395838517*^9}},ExpressionUUID->"535848ef-cc80-429e-89ae-\
+7487116d82d0"],
+
+Cell[CellGroupData[{
+
+Cell["Centralizing and appeasing", "Subsubsection",
+ CellChangeTimes->{{3.8130053983112497`*^9, 
+  3.813005402645355*^9}},ExpressionUUID->"a2e07a00-6ff2-44c0-b421-\
+99e265ddeb9c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SetParameters", "[", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\"\<\[Beta]\>\"", "\[Rule]", "2.`"}], ",", 
+     RowBox[{"\"\<\[Mu]\>\"", "\[Rule]", "5.`"}], ",", 
+     RowBox[{"\"\<\[Lambda]\>\"", "\[Rule]", "0.995`"}], ",", 
+     RowBox[{"\"\<\[Alpha]\>\"", "\[Rule]", "2.25`"}], ",", 
+     RowBox[{"\"\<\[Delta]\>\"", "\[Rule]", "0.8`"}], ",", 
+     RowBox[{"\"\<\[Rho]\>\"", "\[Rule]", "0.985`"}], ",", 
+     RowBox[{"\"\<k\>\"", "\[Rule]", "9"}], ",", 
+     RowBox[{"\"\<\[CapitalDelta]\>\"", "\[Rule]", "0.05`"}]}], 
+    "\[RightAssociation]"}], "]"}], ";", 
+  RowBox[{"SpacedRow", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"AddCaption", "[", 
+       RowBox[{
+        RowBox[{"Framed", "[", 
+         RowBox[{"ShowMoveSequence", "[", 
+          RowBox[{"\[LeftAssociation]", 
+           RowBox[{
+            RowBox[{"\"\<sim\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"\[LeftAssociation]", 
+                RowBox[{
+                 RowBox[{"\"\<s\>\"", "\[Rule]", 
+                  RowBox[{"{", 
+                   RowBox[{
+                   "1.`", ",", "0.05365578074365848`", ",", 
+                    "0.43251495521847083`", ",", "0.17275490163641088`"}], 
+                   "}"}]}], ",", 
+                 RowBox[{"\"\<T\>\"", "\[Rule]", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    "0.985`", ",", "0.015000000000000013`", ",", 
+                    "0.015000000000000013`", ",", "0.015000000000000013`"}], 
+                    "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    "0.0050000000000000044`", ",", "0.985`", ",", "0.`", ",", 
+                    "0.`"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    "0.0050000000000000044`", ",", "0.`", ",", "0.985`", ",", 
+                    "0.`"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    "0.0050000000000000044`", ",", "0.`", ",", "0.`", ",", 
+                    "0.985`"}], "}"}]}], "}"}]}], ",", 
+                 RowBox[{"\"\<pr\>\"", "\[Rule]", 
+                  RowBox[{"{", 
+                   RowBox[{
+                   "0.5608546805977482`", ",", "0.002292633069617385`", ",", 
+                    "0.08664298654726788`", ",", "0.014227051626844175`"}], 
+                   "}"}]}], ",", 
+                 RowBox[{"\"\<i\>\"", "\[Rule]", "4"}]}], 
+                "\[RightAssociation]"}], ",", 
+               RowBox[{"\[LeftAssociation]", 
+                RowBox[{
+                 RowBox[{"\"\<s\>\"", "\[Rule]", 
+                  RowBox[{"{", 
+                   RowBox[{
+                   "1.`", ",", "0.06317014639150367`", ",", 
+                    "0.44055753040545287`", ",", "0.18753258780050353`"}], 
+                   "}"}]}], ",", 
+                 RowBox[{"\"\<T\>\"", "\[Rule]", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    "0.985`", ",", "0.015000000000000013`", ",", 
+                    "0.007500000000000007`", ",", "0.007500000000000007`"}], 
+                    "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    "0.0050000000000000044`", ",", "0.985`", ",", "0.`", ",", 
+                    "0.`"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    "0.0050000000000000044`", ",", "0.`", ",", "0.985`", ",", 
+                    "0.007500000000000007`"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    "0.0050000000000000044`", ",", "0.`", ",", 
+                    "0.007500000000000007`", ",", "0.985`"}], "}"}]}], 
+                   "}"}]}], ",", 
+                 RowBox[{"\"\<pr\>\"", "\[Rule]", 
+                  RowBox[{"{", 
+                   RowBox[{
+                   "0.5339496087111893`", ",", "0.0028485153944795244`", ",", 
+                    "0.09657174213538836`", ",", "0.021599686769675466`"}], 
+                   "}"}]}], ",", 
+                 RowBox[{"\"\<i\>\"", "\[Rule]", "3"}]}], 
+                "\[RightAssociation]"}]}], "}"}]}], ",", 
+            RowBox[{"\"\<seq\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", 
+               RowBox[{"{", "3", "}"}]}], "}"}]}], ",", 
+            RowBox[{"\"\<plies\>\"", "\[Rule]", "5"}], ",", 
+            RowBox[{"\"\<b\>\"", "\[Rule]", "8"}], ",", 
+            RowBox[{"\"\<params\>\"", "\[Rule]", 
+             RowBox[{"\[LeftAssociation]", 
+              RowBox[{
+               RowBox[{"\"\<\[Beta]\>\"", "\[Rule]", "2.`"}], ",", 
+               RowBox[{"\"\<\[Mu]\>\"", "\[Rule]", "5.`"}], ",", 
+               RowBox[{"\"\<\[Lambda]\>\"", "\[Rule]", "0.995`"}], ",", 
+               RowBox[{"\"\<\[Alpha]\>\"", "\[Rule]", "2.25`"}], ",", 
+               RowBox[{"\"\<\[Delta]\>\"", "\[Rule]", "0.8`"}], ",", 
+               RowBox[{"\"\<\[Rho]\>\"", "\[Rule]", "0.985`"}], ",", 
+               RowBox[{"\"\<k\>\"", "\[Rule]", "9"}], ",", 
+               RowBox[{"\"\<\[CapitalDelta]\>\"", "\[Rule]", "0.05`"}]}], 
+              "\[RightAssociation]"}]}]}], "\[RightAssociation]"}], "]"}], 
+         "]"}], ",", "\"\<Centralizing\>\""}], "]"}], ",", 
+      RowBox[{"AddCaption", "[", 
+       RowBox[{
+        RowBox[{"Framed", "[", 
+         RowBox[{"ShowMoveSequence", "[", 
+          RowBox[{"\[LeftAssociation]", 
+           RowBox[{
+            RowBox[{"\"\<sim\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"\[LeftAssociation]", 
+                RowBox[{
+                 RowBox[{"\"\<s\>\"", "\[Rule]", 
+                  RowBox[{"{", 
+                   RowBox[{
+                   "1.`", ",", "0.17059785072543768`", ",", 
+                    "0.4244235605767863`", ",", "0.08513029433294535`"}], 
+                   "}"}]}], ",", 
+                 RowBox[{"\"\<T\>\"", "\[Rule]", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0.985`", ",", 
+                    RowBox[{"-", "0.015000000000000013`"}], ",", 
+                    "0.015000000000000013`", ",", 
+                    RowBox[{"-", "0.015000000000000013`"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "0.0050000000000000044`"}], ",", "0.985`", 
+                    ",", "0.`", ",", "0.`"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    "0.0050000000000000044`", ",", "0.`", ",", "0.985`", ",", 
+                    "0.`"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "0.0050000000000000044`"}], ",", "0.`", ",", 
+                    "0.`", ",", "0.985`"}], "}"}]}], "}"}]}], ",", 
+                 RowBox[{"\"\<pr\>\"", "\[Rule]", 
+                  RowBox[{"{", 
+                   RowBox[{
+                   "0.5531733208927172`", ",", "0.003218434257735887`", ",", 
+                    "0.09591235150489348`", ",", "0.00028643049265584706`"}], 
+                   "}"}]}], ",", 
+                 RowBox[{"\"\<i\>\"", "\[Rule]", "3"}]}], 
+                "\[RightAssociation]"}], ",", 
+               RowBox[{"\[LeftAssociation]", 
+                RowBox[{
+                 RowBox[{"\"\<s\>\"", "\[Rule]", 
+                  RowBox[{"{", 
+                   RowBox[{
+                   "1.`", ",", "0.14472165342963897`", ",", 
+                    "0.43352465315485367`", ",", "0.09509183031669087`"}], 
+                   "}"}]}], ",", 
+                 RowBox[{"\"\<T\>\"", "\[Rule]", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0.985`", ",", 
+                    RowBox[{"-", "0.015000000000000013`"}], ",", 
+                    "0.015000000000000013`", ",", "0.015000000000000013`"}], 
+                    "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "0.0050000000000000044`"}], ",", "0.985`", 
+                    ",", "0.`", ",", "0.`"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    "0.0050000000000000044`", ",", "0.`", ",", "0.985`", ",", 
+                    "0.`"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    "0.0050000000000000044`", ",", "0.`", ",", "0.`", ",", 
+                    "0.985`"}], "}"}]}], "}"}]}], ",", 
+                 RowBox[{"\"\<pr\>\"", "\[Rule]", 
+                  RowBox[{"{", 
+                   RowBox[{
+                   "0.5563707193628302`", ",", "0.0017957945709662576`", ",", 
+                    "0.09405397875484171`", ",", "0.005526172016640747`"}], 
+                   "}"}]}], ",", 
+                 RowBox[{"\"\<i\>\"", "\[Rule]", "4"}]}], 
+                "\[RightAssociation]"}]}], "}"}]}], ",", 
+            RowBox[{"\"\<seq\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", 
+               RowBox[{"{", "4", "}"}]}], "}"}]}], ",", 
+            RowBox[{"\"\<plies\>\"", "\[Rule]", "5"}], ",", 
+            RowBox[{"\"\<b\>\"", "\[Rule]", "8"}], ",", 
+            RowBox[{"\"\<params\>\"", "\[Rule]", 
+             RowBox[{"\[LeftAssociation]", 
+              RowBox[{
+               RowBox[{"\"\<\[Beta]\>\"", "\[Rule]", "2.`"}], ",", 
+               RowBox[{"\"\<\[Mu]\>\"", "\[Rule]", "5.`"}], ",", 
+               RowBox[{"\"\<\[Lambda]\>\"", "\[Rule]", "0.995`"}], ",", 
+               RowBox[{"\"\<\[Alpha]\>\"", "\[Rule]", "2.25`"}], ",", 
+               RowBox[{"\"\<\[Delta]\>\"", "\[Rule]", "0.8`"}], ",", 
+               RowBox[{"\"\<\[Rho]\>\"", "\[Rule]", "0.985`"}], ",", 
+               RowBox[{"\"\<k\>\"", "\[Rule]", "9"}], ",", 
+               RowBox[{"\"\<\[CapitalDelta]\>\"", "\[Rule]", "0.05`"}]}], 
+              "\[RightAssociation]"}]}]}], "\[RightAssociation]"}], "]"}], 
+         "]"}], ",", "\"\<Appeasing\>\""}], "]"}]}], "}"}], ",", "50"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.81300502780768*^9, 3.8130050290680447`*^9}, {
+  3.813005322592443*^9, 3.813005374380074*^9}},
+ CellLabel->
+  "In[801]:=",ExpressionUUID->"8a68ba77-2a4d-452e-baaf-b3cc39850f10"],
+
+Cell[BoxData[
+ TemplateBox[{
+   TagBox[
+    GridBox[{{
+       FrameBox[
+        TemplateBox[{
+          TagBox[
+           GridBox[{{
+              TagBox[
+               TooltipBox[
+                GraphicsBox[
+                 NamespaceBox[{{
+                    Directive[
+                    Opacity[0.7], 
+                    Hue[0.6, 0.7, 0.5]], 
+                    Directive[
+                    GrayLevel[0]], 
+                    LineBox[{{
+                    DynamicLocation["VertexID$1", Automatic, Center], 
+                    DynamicLocation["VertexID$2", Automatic, Center]}, {
+                    DynamicLocation["VertexID$1", Automatic, Center], 
+                    DynamicLocation["VertexID$3", Automatic, Center]}, {
+                    DynamicLocation["VertexID$1", Automatic, Center], 
+                    DynamicLocation["VertexID$4", Automatic, Center]}}]}, {
+                    Directive[
+                    Hue[0.6, 0.2, 0.8], 
+                    EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.7]]]], 
+                    Directive[
+                    GrayLevel[0]], 
+                    TagBox[
+                    StyleBox[
+                    DiskBox[{-1., 0.}, 0.23570226039551584`], {
+                    RGBColor[
+                    0.37973161668743527`, 0.778319457828308, 
+                    0.4608228712079052]}, StripOnInput -> False], 
+                    "DynamicName", BoxID -> "VertexID$1"], 
+                    TagBox[
+                    StyleBox[
+                    DiskBox[{0., 1.}, 0.054597405689107856`], {
+                    RGBColor[
+                    0.12144760407262803`, 0.0136722418547927, 
+                    0.4001834256893724]}, StripOnInput -> False], 
+                    "DynamicName", BoxID -> "VertexID$2"], 
+                    TagBox[
+                    StyleBox[
+                    DiskBox[{1., 0.}, 0.1550116402830716], {
+                    RGBColor[
+                    0.09733433497856184, 0.18490775389400396`, 
+                    0.4709499338308739]}, StripOnInput -> False], 
+                    "DynamicName", BoxID -> "VertexID$3"], 
+                    TagBox[
+                    StyleBox[
+                    DiskBox[{0., -1.}, 0.09796680323127913], {
+                    RGBColor[
+                    0.11803590709345796`, 0.03789971913594562, 
+                    0.41019591636871316`]}, StripOnInput -> False], 
+                    "DynamicName", BoxID -> "VertexID$4"]}}], {
+                 ImageSize -> 48, BaseStyle -> GrayLevel[0], FormatType -> 
+                  TraditionalForm, FrameTicks -> None}], 
+                RowBox[{"\[LeftAssociation]", 
+                  RowBox[{
+                    RowBox[{"\"s\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    TagBox[
+                    
+                    GridBox[{{"1.`"}, {"0.054`"}, {"0.433`"}, {
+                    "0.17300000000000001`"}}, ColumnAlignments -> Center, 
+                    RowSpacings -> 1, ColumnAlignments -> Left], Column], 
+                    "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                    RowBox[{"\"T\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    
+                    GridBox[{{"0.985`", "0.015`", "0.015`", "0.015`"}, {
+                    "0.005`", "0.985`", "0.`", "0.`"}, {
+                    "0.005`", "0.`", "0.985`", "0.`"}, {
+                    "0.005`", "0.`", "0.`", "0.985`"}}, RowSpacings -> 1, 
+                    ColumnSpacings -> 1, RowAlignments -> Baseline, 
+                    ColumnAlignments -> Center], "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                    RowBox[{"\"pr\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    TagBox[
+                    
+                    GridBox[{{"0.561`"}, {"0.002`"}, {
+                    "0.08700000000000001`"}, {"0.014`"}}, ColumnAlignments -> 
+                    Center, RowSpacings -> 1, ColumnAlignments -> Left], 
+                    Column], "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                    RowBox[{"\"i\"", "\[Rule]", 
+                    TagBox["4", 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}]}], "\[RightAssociation]"}]], 
+               Annotation[#, 
+                Association[
+                "s" -> MatrixForm[{1., 0.054, 0.433, 0.17300000000000001`}], 
+                 "T" -> MatrixForm[{{0.985, 0.015, 0.015, 0.015}, {0.005, 
+                   0.985, 0., 0.}, {0.005, 0., 0.985, 0.}, {0.005, 0., 0., 
+                   0.985}}], "pr" -> 
+                 MatrixForm[{0.561, 0.002, 0.08700000000000001, 0.014}], "i" -> 
+                 MatrixForm[4]], "Tooltip"]& ]}, {
+              InterpretationBox[
+               Cell[
+                BoxData[
+                 FormBox[
+                  StyleBox[
+                  "\"t=0\"", 11, FontFamily -> "Source Serif Pro", 
+                   StripOnInput -> False], TextForm]], "InlineText"], 
+               Text[
+                Style["t=0", 11, FontFamily -> "Source Serif Pro"]]]}}, 
+            GridBoxAlignment -> {"Columns" -> {Center}, "Rows" -> {Center}}, 
+            DefaultBaseStyle -> "Column", 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+            GridBoxSpacings -> {"Columns" -> {{0}}, "Rows" -> {{0.75}}}], 
+           "Column"], 
+          TemplateBox[{15}, "Spacer1"], 
+          TagBox[
+           GridBox[{{
+              TagBox[
+               TooltipBox[
+                GraphicsBox[
+                 NamespaceBox[{{
+                    Directive[
+                    Opacity[0.7], 
+                    Hue[0.6, 0.7, 0.5]], 
+                    Directive[
+                    GrayLevel[0]], 
+                    LineBox[{{
+                    DynamicLocation["VertexID$1", Automatic, Center], 
+                    DynamicLocation["VertexID$2", Automatic, Center]}, {
+                    DynamicLocation["VertexID$1", Automatic, Center], 
+                    DynamicLocation["VertexID$3", Automatic, Center]}, {
+                    DynamicLocation["VertexID$1", Automatic, Center], 
+                    DynamicLocation["VertexID$4", Automatic, Center]}, {
+                    DynamicLocation["VertexID$3", Automatic, Center], 
+                    DynamicLocation["VertexID$4", Automatic, Center]}}]}, {
+                    Directive[
+                    Hue[0.6, 0.2, 0.8], 
+                    EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.7]]]], 
+                    Directive[
+                    GrayLevel[0]], 
+                    TagBox[
+                    StyleBox[
+                    DiskBox[{-1., 0.}, 0.23570226039551584`], {
+                    RGBColor[
+                    0.33290064250309015`, 0.7632909547361731, 
+                    0.4736702194023489]}, StripOnInput -> False], 
+                    "DynamicName", BoxID -> "VertexID$1"], 
+                    TagBox[
+                    StyleBox[
+                    DiskBox[{0., 1.}, 0.059240632823306], {
+                    RGBColor[
+                    0.12128694287456669`, 0.01481314491557412, 
+                    0.4006549267511438]}, StripOnInput -> False], 
+                    "DynamicName", BoxID -> "VertexID$2"], 
+                    TagBox[
+                    StyleBox[
+                    DiskBox[{1., 0.}, 0.15644621553702887`], {
+                    Directive[
+                    RGBColor[
+                    0.09443663792317081, 0.2054851644922418, 
+                    0.4794539612799101], 
+                    EdgeForm[{
+                    Thickness[Large], 
+                    RGBColor[1, 0, 0]}]]}, StripOnInput -> False], 
+                    "DynamicName", BoxID -> "VertexID$3"], 
+                    TagBox[
+                    StyleBox[
+                    DiskBox[{0., -1.}, 0.10207094150652267`], {
+                    RGBColor[
+                    0.115915012274997, 0.05296082548381298, 
+                    0.41642022049986976`]}, StripOnInput -> False], 
+                    "DynamicName", BoxID -> "VertexID$4"]}}], {
+                 ImageSize -> 48, BaseStyle -> GrayLevel[0], FormatType -> 
+                  TraditionalForm, FrameTicks -> None}], 
+                RowBox[{"\[LeftAssociation]", 
+                  RowBox[{
+                    RowBox[{"\"s\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    TagBox[
+                    
+                    GridBox[{{"1.`"}, {"0.063`"}, {"0.441`"}, {"0.188`"}}, 
+                    ColumnAlignments -> Center, RowSpacings -> 1, 
+                    ColumnAlignments -> Left], Column], "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                    RowBox[{"\"T\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    
+                    GridBox[{{"0.985`", "0.015`", "0.008`", "0.008`"}, {
+                    "0.005`", "0.985`", "0.`", "0.`"}, {
+                    "0.005`", "0.`", "0.985`", "0.008`"}, {
+                    "0.005`", "0.`", "0.008`", "0.985`"}}, RowSpacings -> 1, 
+                    ColumnSpacings -> 1, RowAlignments -> Baseline, 
+                    ColumnAlignments -> Center], "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                    RowBox[{"\"pr\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    TagBox[
+                    
+                    GridBox[{{"0.534`"}, {"0.003`"}, {"0.097`"}, {"0.022`"}}, 
+                    ColumnAlignments -> Center, RowSpacings -> 1, 
+                    ColumnAlignments -> Left], Column], "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                    RowBox[{"\"i\"", "\[Rule]", 
+                    TagBox["3", 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}]}], "\[RightAssociation]"}]], 
+               Annotation[#, 
+                Association[
+                "s" -> MatrixForm[{1., 0.063, 0.441, 0.188}], "T" -> 
+                 MatrixForm[{{0.985, 0.015, 0.008, 0.008}, {0.005, 0.985, 0., 
+                   0.}, {0.005, 0., 0.985, 0.008}, {0.005, 0., 0.008, 
+                   0.985}}], "pr" -> MatrixForm[{0.534, 0.003, 0.097, 0.022}],
+                  "i" -> MatrixForm[3]], "Tooltip"]& ]}, {
+              InterpretationBox[
+               Cell[
+                BoxData[
+                 FormBox[
+                  StyleBox[
+                  "\"t=1\"", 11, FontFamily -> "Source Serif Pro", 
+                   StripOnInput -> False], TextForm]], "InlineText"], 
+               Text[
+                Style["t=1", 11, FontFamily -> "Source Serif Pro"]]]}}, 
+            GridBoxAlignment -> {"Columns" -> {Center}, "Rows" -> {Center}}, 
+            DefaultBaseStyle -> "Column", 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+            GridBoxSpacings -> {"Columns" -> {{0}}, "Rows" -> {{0.75}}}], 
+           "Column"]}, "RowDefault"], StripOnInput -> False]}, {
+       InterpretationBox[
+        Cell[
+         BoxData[
+          FormBox[
+           StyleBox[
+           "\"Centralizing\"", 11, FontFamily -> "Source Serif Pro", 
+            StripOnInput -> False], TextForm]], "InlineText"], 
+        Text[
+         Style["Centralizing", 11, FontFamily -> "Source Serif Pro"]]]}}, 
+     GridBoxAlignment -> {"Columns" -> {Center}, "Rows" -> {Center}}, 
+     DefaultBaseStyle -> "Column", 
+     GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+      GridBoxSpacings -> {"Columns" -> {{0}}, "Rows" -> {{0.75}}}], "Column"], 
+   TemplateBox[{50}, "Spacer1"], 
+   TagBox[
+    GridBox[{{
+       FrameBox[
+        TemplateBox[{
+          TagBox[
+           GridBox[{{
+              TagBox[
+               TooltipBox[
+                GraphicsBox[
+                 NamespaceBox[{{
+                    Directive[
+                    Opacity[0.7], 
+                    Hue[0.6, 0.7, 0.5]], 
+                    Directive[
+                    GrayLevel[0]], 
+                    StyleBox[
+                    LineBox[{
+                    DynamicLocation["VertexID$1", Automatic, Center], 
+                    DynamicLocation["VertexID$2", Automatic, Center]}], {{
+                    Dashing[{Small, Small}]}}, StripOnInput -> False], 
+                    LineBox[{
+                    DynamicLocation["VertexID$1", Automatic, Center], 
+                    DynamicLocation["VertexID$3", Automatic, Center]}], 
+                    StyleBox[
+                    LineBox[{
+                    DynamicLocation["VertexID$1", Automatic, Center], 
+                    DynamicLocation["VertexID$4", Automatic, Center]}], {{
+                    Dashing[{Small, Small}]}}, StripOnInput -> False]}, {
+                    Directive[
+                    Hue[0.6, 0.2, 0.8], 
+                    EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.7]]]], 
+                    Directive[
+                    GrayLevel[0]], 
+                    TagBox[
+                    StyleBox[
+                    DiskBox[{-1., 0.}, 0.23570226039551584`], {
+                    RGBColor[
+                    0.37339289303399886`, 0.7762853013819597, 
+                    0.4625618012921586]}, StripOnInput -> False], 
+                    "DynamicName", BoxID -> "VertexID$1"], 
+                    TagBox[
+                    StyleBox[
+                    DiskBox[{0., 1.}, 0.09735326586014167], {
+                    RGBColor[
+                    0.12117596755121401`, 0.015601213768614362`, 
+                    0.40098061200323076`]}, StripOnInput -> False], 
+                    "DynamicName", BoxID -> "VertexID$2"], 
+                    TagBox[
+                    StyleBox[
+                    DiskBox[{1., 0.}, 0.15355483287318036`], {
+                    RGBColor[
+                    0.09447656585094483, 0.2052016243745424, 
+                    0.47933678264208746`]}, StripOnInput -> False], 
+                    "DynamicName", BoxID -> "VertexID$3"], 
+                    TagBox[
+                    StyleBox[
+                    DiskBox[{0., -1.}, 0.06877107528805074], {
+                    RGBColor[
+                    0.12202049703745681`, 0.009603958131278048, 
+                    0.3985021258829624]}, StripOnInput -> False], 
+                    "DynamicName", BoxID -> "VertexID$4"]}}], {
+                 ImageSize -> 48, BaseStyle -> GrayLevel[0], FormatType -> 
+                  TraditionalForm, FrameTicks -> None}], 
+                RowBox[{"\[LeftAssociation]", 
+                  RowBox[{
+                    RowBox[{"\"s\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    TagBox[
+                    
+                    GridBox[{{"1.`"}, {"0.171`"}, {"0.424`"}, {"0.085`"}}, 
+                    ColumnAlignments -> Center, RowSpacings -> 1, 
+                    ColumnAlignments -> Left], Column], "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                    RowBox[{"\"T\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    GridBox[{{"0.985`", 
+                    RowBox[{"-", "0.015`"}], "0.015`", 
+                    RowBox[{"-", "0.015`"}]}, {
+                    RowBox[{"-", "0.005`"}], "0.985`", "0.`", "0.`"}, {
+                    "0.005`", "0.`", "0.985`", "0.`"}, {
+                    RowBox[{"-", "0.005`"}], "0.`", "0.`", "0.985`"}}, 
+                    RowSpacings -> 1, ColumnSpacings -> 1, RowAlignments -> 
+                    Baseline, ColumnAlignments -> Center], "\[NoBreak]", 
+                    ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                    RowBox[{"\"pr\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    TagBox[
+                    
+                    GridBox[{{"0.553`"}, {"0.003`"}, {"0.096`"}, {"0.`"}}, 
+                    ColumnAlignments -> Center, RowSpacings -> 1, 
+                    ColumnAlignments -> Left], Column], "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                    RowBox[{"\"i\"", "\[Rule]", 
+                    TagBox["3", 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}]}], "\[RightAssociation]"}]], 
+               Annotation[#, 
+                Association[
+                "s" -> MatrixForm[{1., 0.171, 0.424, 0.085}], "T" -> 
+                 MatrixForm[{{0.985, -0.015, 0.015, -0.015}, {-0.005, 0.985, 
+                   0., 0.}, {0.005, 0., 0.985, 0.}, {-0.005, 0., 0., 0.985}}],
+                  "pr" -> MatrixForm[{0.553, 0.003, 0.096, 0.}], "i" -> 
+                 MatrixForm[3]], "Tooltip"]& ]}, {
+              InterpretationBox[
+               Cell[
+                BoxData[
+                 FormBox[
+                  StyleBox[
+                  "\"t=0\"", 11, FontFamily -> "Source Serif Pro", 
+                   StripOnInput -> False], TextForm]], "InlineText"], 
+               Text[
+                Style["t=0", 11, FontFamily -> "Source Serif Pro"]]]}}, 
+            GridBoxAlignment -> {"Columns" -> {Center}, "Rows" -> {Center}}, 
+            DefaultBaseStyle -> "Column", 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+            GridBoxSpacings -> {"Columns" -> {{0}}, "Rows" -> {{0.75}}}], 
+           "Column"], 
+          TemplateBox[{15}, "Spacer1"], 
+          TagBox[
+           GridBox[{{
+              TagBox[
+               TooltipBox[
+                GraphicsBox[
+                 NamespaceBox[{{
+                    Directive[
+                    Opacity[0.7], 
+                    Hue[0.6, 0.7, 0.5]], 
+                    Directive[
+                    GrayLevel[0]], 
+                    StyleBox[
+                    LineBox[{
+                    DynamicLocation["VertexID$1", Automatic, Center], 
+                    DynamicLocation["VertexID$2", Automatic, Center]}], {{
+                    Dashing[{Small, Small}]}}, StripOnInput -> False], 
+                    LineBox[{
+                    DynamicLocation["VertexID$1", Automatic, Center], 
+                    DynamicLocation["VertexID$3", Automatic, Center]}], 
+                    LineBox[{
+                    DynamicLocation["VertexID$1", Automatic, Center], 
+                    DynamicLocation["VertexID$4", Automatic, Center]}]}, {
+                    Directive[
+                    Hue[0.6, 0.2, 0.8], 
+                    EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.7]]]], 
+                    Directive[
+                    GrayLevel[0]], 
+                    TagBox[
+                    StyleBox[
+                    DiskBox[{-1., 0.}, 0.23570226039551584`], {
+                    RGBColor[
+                    0.3758617350377953, 0.7770775761602292, 
+                    0.46188451295015265`]}, StripOnInput -> False], 
+                    "DynamicName", BoxID -> "VertexID$1"], 
+                    TagBox[
+                    StyleBox[
+                    DiskBox[{0., 1.}, 0.08966655930279785], {
+                    RGBColor[
+                    0.12158746203887888`, 0.012679068744572607`, 
+                    0.39977297699124126`]}, StripOnInput -> False], 
+                    "DynamicName", BoxID -> "VertexID$2"], 
+                    TagBox[
+                    StyleBox[
+                    DiskBox[{1., 0.}, 0.15519247067125203`], {
+                    RGBColor[
+                    0.09510191801292689, 0.20076081225387568`, 
+                    0.4775015280074058]}, StripOnInput -> False], 
+                    "DynamicName", BoxID -> "VertexID$3"], 
+                    TagBox[
+                    StyleBox[
+                    DiskBox[{0., -1.}, 0.07268341944376572], {
+                    Directive[
+                    RGBColor[
+                    0.1205165426733523, 0.020283986401870967`, 
+                    0.40291586167036914`], 
+                    EdgeForm[{
+                    Thickness[Large], 
+                    RGBColor[1, 0, 0]}]]}, StripOnInput -> False], 
+                    "DynamicName", BoxID -> "VertexID$4"]}}], {
+                 ImageSize -> 48, BaseStyle -> GrayLevel[0], FormatType -> 
+                  TraditionalForm, FrameTicks -> None}], 
+                RowBox[{"\[LeftAssociation]", 
+                  RowBox[{
+                    RowBox[{"\"s\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    TagBox[
+                    
+                    GridBox[{{"1.`"}, {"0.145`"}, {"0.434`"}, {"0.095`"}}, 
+                    ColumnAlignments -> Center, RowSpacings -> 1, 
+                    ColumnAlignments -> Left], Column], "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                    RowBox[{"\"T\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    GridBox[{{"0.985`", 
+                    RowBox[{"-", "0.015`"}], "0.015`", "0.015`"}, {
+                    RowBox[{"-", "0.005`"}], "0.985`", "0.`", "0.`"}, {
+                    "0.005`", "0.`", "0.985`", "0.`"}, {
+                    "0.005`", "0.`", "0.`", "0.985`"}}, RowSpacings -> 1, 
+                    ColumnSpacings -> 1, RowAlignments -> Baseline, 
+                    ColumnAlignments -> Center], "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                    RowBox[{"\"pr\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    TagBox[
+                    
+                    GridBox[{{"0.556`"}, {"0.002`"}, {"0.094`"}, {"0.006`"}}, 
+                    ColumnAlignments -> Center, RowSpacings -> 1, 
+                    ColumnAlignments -> Left], Column], "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                    RowBox[{"\"i\"", "\[Rule]", 
+                    TagBox["4", 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}]}], "\[RightAssociation]"}]], 
+               Annotation[#, 
+                Association[
+                "s" -> MatrixForm[{1., 0.145, 0.434, 0.095}], "T" -> 
+                 MatrixForm[{{0.985, -0.015, 0.015, 0.015}, {-0.005, 0.985, 
+                   0., 0.}, {0.005, 0., 0.985, 0.}, {0.005, 0., 0., 0.985}}], 
+                 "pr" -> MatrixForm[{0.556, 0.002, 0.094, 0.006}], "i" -> 
+                 MatrixForm[4]], "Tooltip"]& ]}, {
+              InterpretationBox[
+               Cell[
+                BoxData[
+                 FormBox[
+                  StyleBox[
+                  "\"t=1\"", 11, FontFamily -> "Source Serif Pro", 
+                   StripOnInput -> False], TextForm]], "InlineText"], 
+               Text[
+                Style["t=1", 11, FontFamily -> "Source Serif Pro"]]]}}, 
+            GridBoxAlignment -> {"Columns" -> {Center}, "Rows" -> {Center}}, 
+            DefaultBaseStyle -> "Column", 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+            GridBoxSpacings -> {"Columns" -> {{0}}, "Rows" -> {{0.75}}}], 
+           "Column"]}, "RowDefault"], StripOnInput -> False]}, {
+       InterpretationBox[
+        Cell[
+         BoxData[
+          FormBox[
+           StyleBox[
+           "\"Appeasing\"", 11, FontFamily -> "Source Serif Pro", 
+            StripOnInput -> False], TextForm]], "InlineText"], 
+        Text[
+         Style["Appeasing", 11, FontFamily -> "Source Serif Pro"]]]}}, 
+     GridBoxAlignment -> {"Columns" -> {Center}, "Rows" -> {Center}}, 
+     DefaultBaseStyle -> "Column", 
+     GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+      GridBoxSpacings -> {"Columns" -> {{0}}, "Rows" -> {{0.75}}}], "Column"]},
+  "RowDefault"]], "Output",
+ CellChangeTimes->{
+  3.813004987685185*^9, 3.81300502951744*^9, {3.813005327066936*^9, 
+   3.813005374873209*^9}},
+ CellLabel->
+  "Out[801]=",ExpressionUUID->"0475731f-886e-449d-a29c-c50bc9832ca9"]
+}, {2}]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Diminishing", "Subsubsection",
+ CellChangeTimes->{{3.813005426580469*^9, 
+  3.813005429298946*^9}},ExpressionUUID->"8a83fe71-def9-49a5-88dd-\
+8585c2b70560"],
+
+Cell["TODO", "Text",
+ CellChangeTimes->{{3.813005531696024*^9, 
+  3.813005532159374*^9}},ExpressionUUID->"6a7c41fa-a937-4e47-9e41-\
+668e5440dcaa"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Punishing", "Subsubsection",
+ CellChangeTimes->{{3.813005431799757*^9, 
+  3.813005432717679*^9}},ExpressionUUID->"8e4f1815-fd19-4522-9d50-\
+756281798175"],
+
+Cell["TODO", "Text",
+ CellChangeTimes->{{3.813005534677988*^9, 
+  3.813005536364296*^9}},ExpressionUUID->"0591cead-ab48-4888-94e9-\
+6b22f3363770"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Softening", "Subsubsection",
+ CellChangeTimes->{{3.8130054359245043`*^9, 
+  3.8130054371335373`*^9}},ExpressionUUID->"74c24d62-6545-4242-938f-\
+51c77b84b3e9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AddCaption", "[", 
+  RowBox[{
+   RowBox[{"Framed", "[", 
+    RowBox[{"ShowMoveSequence", "[", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<sim\>\"", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"\[LeftAssociation]", 
+           RowBox[{
+            RowBox[{"\"\<s\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "0.801777402523712`", ",", "0.33276736689793784`", ",", 
+               "0.457945877102246`"}], "}"}]}], ",", 
+            RowBox[{"\"\<T\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"1.`", ",", "0.`", ",", "0.`"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"0.`", ",", "1.`", ",", "0.`"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"0.`", ",", "0.`", ",", "1.`"}], "}"}]}], "}"}]}], 
+            ",", 
+            RowBox[{"\"\<pr\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "0.23192665205515187`", ",", "0.032066106106493825`", ",", 
+               "0.06577508642269463`"}], "}"}]}], ",", 
+            RowBox[{"\"\<i\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"1", ",", "3", ",", "1"}], "}"}]}]}], 
+           "\[RightAssociation]"}], ",", 
+          RowBox[{"\[LeftAssociation]", 
+           RowBox[{
+            RowBox[{"\"\<s\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "0.7668935365008702`", ",", "0.33110353006344817`", ",", 
+               "0.4110107161133818`"}], "}"}]}], ",", 
+            RowBox[{"\"\<T\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"0.99`", ",", "0.`", ",", 
+                 RowBox[{"-", "0.010000000000000009`"}]}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"0.`", ",", "1.`", ",", "0.`"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "0.010000000000000009`"}], ",", "0.`", ",", 
+                 "0.99`"}], "}"}]}], "}"}]}], ",", 
+            RowBox[{"\"\<pr\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "0.23751632375075724`", ",", "0.0450148374091881`", ",", 
+               "0.0356059238342222`"}], "}"}]}], ",", 
+            RowBox[{"\"\<i\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"1", ",", "1", ",", "1"}], "}"}]}]}], 
+           "\[RightAssociation]"}], ",", 
+          RowBox[{"\[LeftAssociation]", 
+           RowBox[{
+            RowBox[{"\"\<s\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "0.7636486924524498`", ",", "0.32944801241313093`", ",", 
+               "0.42020397663750414`"}], "}"}]}], ",", 
+            RowBox[{"\"\<T\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"0.99`", ",", "0.`", ",", "0.010000000000000009`"}], 
+                "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"0.`", ",", "1.`", ",", "0.`"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"0.010000000000000009`", ",", "0.`", ",", "0.99`"}], 
+                "}"}]}], "}"}]}], ",", 
+            RowBox[{"\"\<pr\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "0.22451663351893264`", ",", "0.03357138209502582`", ",", 
+               "0.06805442489779295`"}], "}"}]}], ",", 
+            RowBox[{"\"\<i\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"3", ",", "1", ",", "3"}], "}"}]}]}], 
+           "\[RightAssociation]"}]}], "}"}]}], ",", 
+       RowBox[{"\"\<seq\>\"", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", 
+          RowBox[{"{", "1", "}"}], ",", 
+          RowBox[{"{", "3", "}"}]}], "}"}]}], ",", 
+       RowBox[{"\"\<plies\>\"", "\[Rule]", "3"}], ",", 
+       RowBox[{"\"\<b\>\"", "\[Rule]", "8"}], ",", 
+       RowBox[{"\"\<params\>\"", "\[Rule]", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\"\<\[Beta]\>\"", "\[Rule]", "2.`"}], ",", 
+          RowBox[{"\"\<\[Mu]\>\"", "\[Rule]", "5.`"}], ",", 
+          RowBox[{"\"\<\[Lambda]\>\"", "\[Rule]", "0.995`"}], ",", 
+          RowBox[{"\"\<\[Alpha]\>\"", "\[Rule]", "2.25`"}], ",", 
+          RowBox[{"\"\<\[Delta]\>\"", "\[Rule]", "0.9`"}], ",", 
+          RowBox[{"\"\<\[Rho]\>\"", "\[Rule]", "0.99`"}], ",", 
+          RowBox[{"\"\<k\>\"", "\[Rule]", "5"}], ",", 
+          RowBox[{"\"\<\[CapitalDelta]\>\"", "\[Rule]", "0.5`"}]}], 
+         "\[RightAssociation]"}]}]}], "\[RightAssociation]"}], "]"}], "]"}], 
+   ",", "\"\<Softening\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.813005442220105*^9, 3.81300546227104*^9}},
+ CellLabel->
+  "In[803]:=",ExpressionUUID->"4674087a-c8f0-4e15-9637-680115583768"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     FrameBox[
+      TemplateBox[{
+        TagBox[
+         GridBox[{{
+            TagBox[
+             TooltipBox[
+              GraphicsBox[
+               NamespaceBox[{{}, {
+                  Directive[
+                   Hue[0.6, 0.2, 0.8], 
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.7]]]], 
+                  Directive[
+                   GrayLevel[0]], 
+                  TagBox[
+                   StyleBox[
+                    DiskBox[{-1., 0.}, 0.258485557708052], {
+                    RGBColor[
+                    0.21641273283664675`, 0.6814705129003354, 
+                    0.514180759673188]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$1"], 
+                  TagBox[
+                   StyleBox[
+                    DiskBox[{0.5, 0.8660254037844386}, 0.16652511494714986`], {
+                    RGBColor[
+                    0.10489658770755658`, 0.13120594294635457`, 
+                    0.44875658388620837`]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$2"], 
+                  TagBox[
+                   StyleBox[
+                    DiskBox[{0.5, -0.8660254037844386}, 0.1953513665813146], {
+                    
+                    RGBColor[
+                    0.08680862244753551, 0.25965397630776066`, 
+                    0.5018403086952791]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$3"]}}], {
+               ImageSize -> 36, BaseStyle -> GrayLevel[0], FormatType -> 
+                TraditionalForm, FrameTicks -> None}], 
+              RowBox[{"\[LeftAssociation]", 
+                RowBox[{
+                  RowBox[{"\"s\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    TagBox[
+                    
+                    GridBox[{{"0.802`"}, {"0.333`"}, {"0.458`"}}, 
+                    ColumnAlignments -> Center, RowSpacings -> 1, 
+                    ColumnAlignments -> Left], Column], "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                  RowBox[{"\"T\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    
+                    GridBox[{{"1", "0", "0"}, {"0", "1", "0"}, {
+                    "0", "0", "1"}}, RowSpacings -> 1, ColumnSpacings -> 1, 
+                    RowAlignments -> Baseline, ColumnAlignments -> Center], 
+                    "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                  RowBox[{"\"pr\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    TagBox[
+                    
+                    GridBox[{{"0.232`"}, {"0.032`"}, {"0.066`"}}, 
+                    ColumnAlignments -> Center, RowSpacings -> 1, 
+                    ColumnAlignments -> Left], Column], "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                  RowBox[{"\"i\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    TagBox[
+                    
+                    GridBox[{{"1"}, {"3"}, {"1"}}, ColumnAlignments -> Center,
+                     RowSpacings -> 1, ColumnAlignments -> Left], Column], 
+                    "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}]}], "\[RightAssociation]"}]], 
+             Annotation[#, 
+              Association[
+              "s" -> MatrixForm[{0.802, 0.333, 0.458}], "T" -> 
+               MatrixForm[{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}], "pr" -> 
+               MatrixForm[{0.232, 0.032, 0.066}], "i" -> 
+               MatrixForm[{1, 3, 1}]], "Tooltip"]& ]}, {
+            InterpretationBox[
+             Cell[
+              BoxData[
+               FormBox[
+                StyleBox[
+                "\"t=0\"", 11, FontFamily -> "Source Serif Pro", StripOnInput -> 
+                 False], TextForm]], "InlineText"], 
+             Text[
+              Style["t=0", 11, FontFamily -> "Source Serif Pro"]]]}}, 
+          GridBoxAlignment -> {"Columns" -> {Center}, "Rows" -> {Center}}, 
+          DefaultBaseStyle -> "Column", 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          GridBoxSpacings -> {"Columns" -> {{0}}, "Rows" -> {{0.75}}}], 
+         "Column"], 
+        TemplateBox[{15}, "Spacer1"], 
+        TagBox[
+         GridBox[{{
+            TagBox[
+             TooltipBox[
+              GraphicsBox[
+               NamespaceBox[{{
+                  Directive[
+                   Opacity[0.7], 
+                   Hue[0.6, 0.7, 0.5]], 
+                  Directive[
+                   GrayLevel[0]], 
+                  StyleBox[
+                   LineBox[{
+                    DynamicLocation["VertexID$1", Automatic, Center], 
+                    DynamicLocation["VertexID$3", Automatic, Center]}], {{
+                    Dashing[{Small, Small}]}}, StripOnInput -> False]}, {
+                  Directive[
+                   Hue[0.6, 0.2, 0.8], 
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.7]]]], 
+                  Directive[
+                   GrayLevel[0]], 
+                  TagBox[
+                   StyleBox[
+                    DiskBox[{-1., 0.}, 0.25279991042009065`], {
+                    Directive[
+                    RGBColor[
+                    0.22991841961488585`, 0.6911105422211706, 
+                    0.5094543524289707], 
+                    EdgeForm[{
+                    Thickness[Large], 
+                    RGBColor[1, 0, 0]}]]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$1"], 
+                  TagBox[
+                   StyleBox[
+                    DiskBox[{0.5, 0.8660254037844386}, 0.1661082804637405], {
+                    RGBColor[
+                    0.09645378277067859, 0.19116081761613735`, 
+                    0.47353413777041853`]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$2"], 
+                  TagBox[
+                   StyleBox[
+                    
+                    DiskBox[{0.5, -0.8660254037844386}, 
+                    0.18506996787552668`], {
+                    RGBColor[
+                    0.10545159156227288`, 0.12726469512651972`, 
+                    0.4471277842137073]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$3"]}}], {
+               ImageSize -> 36, BaseStyle -> GrayLevel[0], FormatType -> 
+                TraditionalForm, FrameTicks -> None}], 
+              RowBox[{"\[LeftAssociation]", 
+                RowBox[{
+                  RowBox[{"\"s\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    TagBox[
+                    
+                    GridBox[{{"0.767`"}, {"0.331`"}, {
+                    "0.41100000000000003`"}}, ColumnAlignments -> Center, 
+                    RowSpacings -> 1, ColumnAlignments -> Left], Column], 
+                    "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                  RowBox[{"\"T\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    GridBox[{{"0.99`", "0.`", 
+                    RowBox[{"-", "0.01`"}]}, {"0.`", "1.`", "0.`"}, {
+                    RowBox[{"-", "0.01`"}], "0.`", "0.99`"}}, RowSpacings -> 
+                    1, ColumnSpacings -> 1, RowAlignments -> Baseline, 
+                    ColumnAlignments -> Center], "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                  RowBox[{"\"pr\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    TagBox[
+                    
+                    GridBox[{{"0.23800000000000002`"}, {"0.045`"}, {
+                    "0.036000000000000004`"}}, ColumnAlignments -> Center, 
+                    RowSpacings -> 1, ColumnAlignments -> Left], Column], 
+                    "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                  RowBox[{"\"i\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    TagBox[
+                    
+                    GridBox[{{"1"}, {"1"}, {"1"}}, ColumnAlignments -> Center,
+                     RowSpacings -> 1, ColumnAlignments -> Left], Column], 
+                    "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}]}], "\[RightAssociation]"}]], 
+             Annotation[#, 
+              Association[
+              "s" -> MatrixForm[{0.767, 0.331, 0.41100000000000003`}], "T" -> 
+               MatrixForm[{{0.99, 0., -0.01}, {0., 1., 0.}, {-0.01, 0., 
+                 0.99}}], "pr" -> 
+               MatrixForm[{0.23800000000000002`, 0.045, 
+                 0.036000000000000004`}], "i" -> MatrixForm[{1, 1, 1}]], 
+              "Tooltip"]& ]}, {
+            InterpretationBox[
+             Cell[
+              BoxData[
+               FormBox[
+                StyleBox[
+                "\"t=1\"", 11, FontFamily -> "Source Serif Pro", StripOnInput -> 
+                 False], TextForm]], "InlineText"], 
+             Text[
+              Style["t=1", 11, FontFamily -> "Source Serif Pro"]]]}}, 
+          GridBoxAlignment -> {"Columns" -> {Center}, "Rows" -> {Center}}, 
+          DefaultBaseStyle -> "Column", 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          GridBoxSpacings -> {"Columns" -> {{0}}, "Rows" -> {{0.75}}}], 
+         "Column"], 
+        TemplateBox[{15}, "Spacer1"], 
+        TagBox[
+         GridBox[{{
+            TagBox[
+             TooltipBox[
+              GraphicsBox[
+               NamespaceBox[{{
+                  Directive[
+                   Opacity[0.7], 
+                   Hue[0.6, 0.7, 0.5]], 
+                  Directive[
+                   GrayLevel[0]], 
+                  LineBox[{
+                    DynamicLocation["VertexID$1", Automatic, Center], 
+                    DynamicLocation["VertexID$3", Automatic, Center]}]}, {
+                  Directive[
+                   Hue[0.6, 0.2, 0.8], 
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.7]]]], 
+                  Directive[
+                   GrayLevel[0]], 
+                  TagBox[
+                   StyleBox[
+                    DiskBox[{-1., 0.}, 0.2522645259201225], {
+                    RGBColor[
+                    0.19697983636704808`, 0.6675997860849079, 
+                    0.5209814343932638]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$1"], 
+                  TagBox[
+                   StyleBox[
+                    DiskBox[{0.5, 0.8660254037844386}, 0.16569248937241413`], {
+                    RGBColor[
+                    0.10428635745656803`, 0.13553936986919177`, 
+                    0.45054745943511515`]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$2"], 
+                  TagBox[
+                   StyleBox[
+                    
+                    DiskBox[{0.5, -0.8660254037844386}, 
+                    0.18712829303214767`], {
+                    Directive[
+                    RGBColor[
+                    0.08439742104983403, 0.27677663621564835`, 
+                    0.5089165911634754], 
+                    EdgeForm[{
+                    Thickness[Large], 
+                    RGBColor[1, 0, 0]}]]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$3"]}}], {
+               ImageSize -> 36, BaseStyle -> GrayLevel[0], FormatType -> 
+                TraditionalForm, FrameTicks -> None}], 
+              RowBox[{"\[LeftAssociation]", 
+                RowBox[{
+                  RowBox[{"\"s\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    TagBox[
+                    
+                    GridBox[{{"0.764`"}, {"0.329`"}, {"0.42`"}}, 
+                    ColumnAlignments -> Center, RowSpacings -> 1, 
+                    ColumnAlignments -> Left], Column], "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                  RowBox[{"\"T\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    
+                    GridBox[{{"0.99`", "0.`", "0.01`"}, {
+                    "0.`", "1.`", "0.`"}, {"0.01`", "0.`", "0.99`"}}, 
+                    RowSpacings -> 1, ColumnSpacings -> 1, RowAlignments -> 
+                    Baseline, ColumnAlignments -> Center], "\[NoBreak]", 
+                    ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                  RowBox[{"\"pr\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    TagBox[
+                    
+                    GridBox[{{"0.225`"}, {"0.034`"}, {"0.068`"}}, 
+                    ColumnAlignments -> Center, RowSpacings -> 1, 
+                    ColumnAlignments -> Left], Column], "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                  RowBox[{"\"i\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    TagBox[
+                    
+                    GridBox[{{"3"}, {"1"}, {"3"}}, ColumnAlignments -> Center,
+                     RowSpacings -> 1, ColumnAlignments -> Left], Column], 
+                    "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}]}], "\[RightAssociation]"}]], 
+             Annotation[#, 
+              Association[
+              "s" -> MatrixForm[{0.764, 0.329, 0.42}], "T" -> 
+               MatrixForm[{{0.99, 0., 0.01}, {0., 1., 0.}, {0.01, 0., 0.99}}],
+                "pr" -> MatrixForm[{0.225, 0.034, 0.068}], "i" -> 
+               MatrixForm[{3, 1, 3}]], "Tooltip"]& ]}, {
+            InterpretationBox[
+             Cell[
+              BoxData[
+               FormBox[
+                StyleBox[
+                "\"t=2\"", 11, FontFamily -> "Source Serif Pro", StripOnInput -> 
+                 False], TextForm]], "InlineText"], 
+             Text[
+              Style["t=2", 11, FontFamily -> "Source Serif Pro"]]]}}, 
+          GridBoxAlignment -> {"Columns" -> {Center}, "Rows" -> {Center}}, 
+          DefaultBaseStyle -> "Column", 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          GridBoxSpacings -> {"Columns" -> {{0}}, "Rows" -> {{0.75}}}], 
+         "Column"]},
+       "RowDefault"],
+      StripOnInput->False]},
+    {
+     InterpretationBox[Cell[BoxData[
+       FormBox[
+        StyleBox["\<\"Softening\"\>",
+         StripOnInput->False,
+         FontFamily->"Source Serif Pro",
+         FontSize->11], TextForm]], "InlineText",ExpressionUUID->
+       "75cdf095-18d8-46e5-b0a6-9c4449a945cd"],
+      Text[
+       Style["Softening", 11, FontFamily -> "Source Serif Pro"]]]}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {Center}, "Rows" -> {Center}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+   GridBoxSpacings->{"Columns" -> {{0}}, "Rows" -> {{0.75}}}],
+  "Column"]], "Output",
+ CellChangeTimes->{{3.813005454265739*^9, 3.813005462758691*^9}},
+ CellLabel->
+  "Out[803]=",ExpressionUUID->"56935a75-7b0e-4f73-88be-633ac11a54d5"]
+}, {2}]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Status quo", "Subsubsection",
+ CellChangeTimes->{{3.8130054738023663`*^9, 
+  3.813005474982897*^9}},ExpressionUUID->"3d1e16f7-2b06-467e-8b1b-\
+0f4690421166"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AddCaption", "[", 
+  RowBox[{
+   RowBox[{"Framed", "[", 
+    RowBox[{"ShowMoveSequence", "[", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<sim\>\"", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"\[LeftAssociation]", 
+           RowBox[{
+            RowBox[{"\"\<s\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "1.`", ",", "0.025649846104249807`", ",", 
+               "0.41825773057531923`", ",", "0.1387645869774182`"}], "}"}]}], 
+            ",", 
+            RowBox[{"\"\<T\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                "0.985`", ",", "0.015000000000000013`", ",", 
+                 "0.015000000000000013`", ",", "0.015000000000000013`"}], 
+                "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                "0.0050000000000000044`", ",", "0.985`", ",", "0.`", ",", 
+                 "0.`"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                "0.0050000000000000044`", ",", "0.`", ",", "0.985`", ",", 
+                 "0.`"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                "0.0050000000000000044`", ",", "0.`", ",", "0.`", ",", 
+                 "0.985`"}], "}"}]}], "}"}]}], ",", 
+            RowBox[{"\"\<pr\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "0.5701693920932847`", ",", "0.0011267964478664984`", ",", 
+               "0.08353343758507399`", ",", "0.00992703842339012`"}], "}"}]}],
+             ",", 
+            RowBox[{"\"\<i\>\"", "\[Rule]", "3"}]}], "\[RightAssociation]"}], 
+          ",", 
+          RowBox[{"\[LeftAssociation]", 
+           RowBox[{
+            RowBox[{"\"\<s\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "1.`", ",", "0.03522489197256887`", ",", "0.42095310621905707`",
+                ",", "0.14635752258884635`"}], "}"}]}], ",", 
+            RowBox[{"\"\<T\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                "0.985`", ",", "0.015000000000000013`", ",", 
+                 "0.015000000000000013`", ",", "0.015000000000000013`"}], 
+                "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                "0.0050000000000000044`", ",", "0.985`", ",", "0.`", ",", 
+                 "0.`"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                "0.0050000000000000044`", ",", "0.`", ",", "0.985`", ",", 
+                 "0.`"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                "0.0050000000000000044`", ",", "0.`", ",", "0.`", ",", 
+                 "0.985`"}], "}"}]}], "}"}]}], ",", 
+            RowBox[{"\"\<pr\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "0.568285431071404`", ",", "0.0014771461338516623`", ",", 
+               "0.08400979088969988`", ",", "0.010819697523195086`"}], 
+              "}"}]}], ",", 
+            RowBox[{"\"\<i\>\"", "\[Rule]", "4"}]}], 
+           "\[RightAssociation]"}]}], "}"}]}], ",", 
+       RowBox[{"\"\<seq\>\"", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", 
+          RowBox[{"{", "4", "}"}]}], "}"}]}], ",", 
+       RowBox[{"\"\<plies\>\"", "\[Rule]", "5"}], ",", 
+       RowBox[{"\"\<b\>\"", "\[Rule]", "8"}], ",", 
+       RowBox[{"\"\<params\>\"", "\[Rule]", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\"\<\[Beta]\>\"", "\[Rule]", "2.`"}], ",", 
+          RowBox[{"\"\<\[Mu]\>\"", "\[Rule]", "5.`"}], ",", 
+          RowBox[{"\"\<\[Lambda]\>\"", "\[Rule]", "0.995`"}], ",", 
+          RowBox[{"\"\<\[Alpha]\>\"", "\[Rule]", "2.25`"}], ",", 
+          RowBox[{"\"\<\[Delta]\>\"", "\[Rule]", "0.8`"}], ",", 
+          RowBox[{"\"\<\[Rho]\>\"", "\[Rule]", "0.985`"}], ",", 
+          RowBox[{"\"\<k\>\"", "\[Rule]", "9"}], ",", 
+          RowBox[{"\"\<\[CapitalDelta]\>\"", "\[Rule]", "0.05`"}]}], 
+         "\[RightAssociation]"}]}]}], "\[RightAssociation]"}], "]"}], "]"}], 
+   ",", "\"\<Status quo\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.813005494730747*^9, 3.8130054953626833`*^9}},
+ CellLabel->
+  "In[805]:=",ExpressionUUID->"48aa9ab8-440c-49b5-bb83-491825a7b6a4"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     FrameBox[
+      TemplateBox[{
+        TagBox[
+         GridBox[{{
+            TagBox[
+             TooltipBox[
+              GraphicsBox[
+               NamespaceBox[{{
+                  Directive[
+                   Opacity[0.7], 
+                   Hue[0.6, 0.7, 0.5]], 
+                  Directive[
+                   GrayLevel[0]], 
+                  LineBox[{{
+                    DynamicLocation["VertexID$1", Automatic, Center], 
+                    DynamicLocation["VertexID$2", Automatic, Center]}, {
+                    DynamicLocation["VertexID$1", Automatic, Center], 
+                    DynamicLocation["VertexID$3", Automatic, Center]}, {
+                    DynamicLocation["VertexID$1", Automatic, Center], 
+                    DynamicLocation["VertexID$4", Automatic, Center]}}]}, {
+                  Directive[
+                   Hue[0.6, 0.2, 0.8], 
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.7]]]], 
+                  Directive[
+                   GrayLevel[0]], 
+                  TagBox[
+                   StyleBox[
+                    DiskBox[{-1., 0.}, 0.23570226039551584`], {
+                    RGBColor[
+                    0.397284315668665, 0.7839522851505913, 
+                    0.45600756169338524`]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$1"], 
+                  TagBox[
+                   StyleBox[
+                    DiskBox[{0., 1.}, 0.03774905893179459], {
+                    RGBColor[
+                    0.12178069058856164`, 0.011306895211550315`, 
+                    0.3992058987704926]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$2"], 
+                  TagBox[
+                   StyleBox[
+                    DiskBox[{1., 0.}, 0.1524353652782639], {
+                    RGBColor[
+                    0.09820905433266484, 0.17869611100534663`, 
+                    0.4683828478811346]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$3"], 
+                  TagBox[
+                   StyleBox[
+                    DiskBox[{0., -1.}, 0.08780172960123096], {
+                    RGBColor[
+                    0.11926346503551992`, 0.029182464252471257`, 
+                    0.4065933360316294]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$4"]}}], {
+               ImageSize -> 48, BaseStyle -> GrayLevel[0], FormatType -> 
+                TraditionalForm, FrameTicks -> None}], 
+              RowBox[{"\[LeftAssociation]", 
+                RowBox[{
+                  RowBox[{"\"s\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    TagBox[
+                    
+                    GridBox[{{"1.`"}, {"0.026000000000000002`"}, {"0.418`"}, {
+                    "0.139`"}}, ColumnAlignments -> Center, RowSpacings -> 1, 
+                    ColumnAlignments -> Left], Column], "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                  RowBox[{"\"T\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    
+                    GridBox[{{"0.985`", "0.015`", "0.015`", "0.015`"}, {
+                    "0.005`", "0.985`", "0.`", "0.`"}, {
+                    "0.005`", "0.`", "0.985`", "0.`"}, {
+                    "0.005`", "0.`", "0.`", "0.985`"}}, RowSpacings -> 1, 
+                    ColumnSpacings -> 1, RowAlignments -> Baseline, 
+                    ColumnAlignments -> Center], "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                  RowBox[{"\"pr\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    TagBox[
+                    
+                    GridBox[{{"0.5700000000000001`"}, {"0.001`"}, {
+                    "0.084`"}, {"0.01`"}}, ColumnAlignments -> Center, 
+                    RowSpacings -> 1, ColumnAlignments -> Left], Column], 
+                    "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                  RowBox[{"\"i\"", "\[Rule]", 
+                    TagBox["3", 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}]}], "\[RightAssociation]"}]], 
+             Annotation[#, 
+              Association[
+              "s" -> MatrixForm[{1., 0.026000000000000002`, 0.418, 0.139}], 
+               "T" -> MatrixForm[{{0.985, 0.015, 0.015, 0.015}, {0.005, 0.985,
+                  0., 0.}, {0.005, 0., 0.985, 0.}, {0.005, 0., 0., 0.985}}], 
+               "pr" -> MatrixForm[{0.5700000000000001, 0.001, 0.084, 0.01}], 
+               "i" -> MatrixForm[3]], "Tooltip"]& ]}, {
+            InterpretationBox[
+             Cell[
+              BoxData[
+               FormBox[
+                StyleBox[
+                "\"t=0\"", 11, FontFamily -> "Source Serif Pro", StripOnInput -> 
+                 False], TextForm]], "InlineText"], 
+             Text[
+              Style["t=0", 11, FontFamily -> "Source Serif Pro"]]]}}, 
+          GridBoxAlignment -> {"Columns" -> {Center}, "Rows" -> {Center}}, 
+          DefaultBaseStyle -> "Column", 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          GridBoxSpacings -> {"Columns" -> {{0}}, "Rows" -> {{0.75}}}], 
+         "Column"], 
+        TemplateBox[{15}, "Spacer1"], 
+        TagBox[
+         GridBox[{{
+            TagBox[
+             TooltipBox[
+              GraphicsBox[
+               NamespaceBox[{{
+                  Directive[
+                   Opacity[0.7], 
+                   Hue[0.6, 0.7, 0.5]], 
+                  Directive[
+                   GrayLevel[0]], 
+                  LineBox[{{
+                    DynamicLocation["VertexID$1", Automatic, Center], 
+                    DynamicLocation["VertexID$2", Automatic, Center]}, {
+                    DynamicLocation["VertexID$1", Automatic, Center], 
+                    DynamicLocation["VertexID$3", Automatic, Center]}, {
+                    DynamicLocation["VertexID$1", Automatic, Center], 
+                    DynamicLocation["VertexID$4", Automatic, Center]}}]}, {
+                  Directive[
+                   Hue[0.6, 0.2, 0.8], 
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.7]]]], 
+                  Directive[
+                   GrayLevel[0]], 
+                  TagBox[
+                   StyleBox[
+                    DiskBox[{-1., 0.}, 0.23570226039551584`], {
+                    RGBColor[
+                    0.3936968456204335, 0.7828010320397643, 
+                    0.4569917282124361]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$1"], 
+                  TagBox[
+                   StyleBox[
+                    DiskBox[{0., 1.}, 0.04423729696670551], {
+                    RGBColor[
+                    0.12168054179836231`, 0.012018081625262647`, 
+                    0.3994998108132503]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$2"], 
+                  TagBox[
+                   StyleBox[
+                    DiskBox[{1., 0.}, 0.15292574563766725`], {
+                    RGBColor[
+                    0.09807651787620425, 0.17963729189199296`, 
+                    0.46877180975057575`]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$3"], 
+                  TagBox[
+                   StyleBox[
+                    DiskBox[{0., -1.}, 0.09017191068818566], {
+                    Directive[
+                    RGBColor[
+                    0.11900860747297615`, 0.03099228377752218, 
+                    0.4073412802321574], 
+                    EdgeForm[{
+                    Thickness[Large], 
+                    RGBColor[1, 0, 0]}]]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$4"]}}], {
+               ImageSize -> 48, BaseStyle -> GrayLevel[0], FormatType -> 
+                TraditionalForm, FrameTicks -> None}], 
+              RowBox[{"\[LeftAssociation]", 
+                RowBox[{
+                  RowBox[{"\"s\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    TagBox[
+                    
+                    GridBox[{{"1.`"}, {"0.035`"}, {"0.421`"}, {"0.146`"}}, 
+                    ColumnAlignments -> Center, RowSpacings -> 1, 
+                    ColumnAlignments -> Left], Column], "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                  RowBox[{"\"T\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    
+                    GridBox[{{"0.985`", "0.015`", "0.015`", "0.015`"}, {
+                    "0.005`", "0.985`", "0.`", "0.`"}, {
+                    "0.005`", "0.`", "0.985`", "0.`"}, {
+                    "0.005`", "0.`", "0.`", "0.985`"}}, RowSpacings -> 1, 
+                    ColumnSpacings -> 1, RowAlignments -> Baseline, 
+                    ColumnAlignments -> Center], "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                  RowBox[{"\"pr\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    TagBox[
+                    
+                    GridBox[{{"0.5680000000000001`"}, {"0.001`"}, {
+                    "0.084`"}, {"0.011`"}}, ColumnAlignments -> Center, 
+                    RowSpacings -> 1, ColumnAlignments -> Left], Column], 
+                    "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                  RowBox[{"\"i\"", "\[Rule]", 
+                    TagBox["4", 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}]}], "\[RightAssociation]"}]], 
+             Annotation[#, 
+              Association[
+              "s" -> MatrixForm[{1., 0.035, 0.421, 0.146}], "T" -> 
+               MatrixForm[{{0.985, 0.015, 0.015, 0.015}, {0.005, 0.985, 0., 
+                 0.}, {0.005, 0., 0.985, 0.}, {0.005, 0., 0., 0.985}}], "pr" -> 
+               MatrixForm[{0.5680000000000001, 0.001, 0.084, 0.011}], "i" -> 
+               MatrixForm[4]], "Tooltip"]& ]}, {
+            InterpretationBox[
+             Cell[
+              BoxData[
+               FormBox[
+                StyleBox[
+                "\"t=1\"", 11, FontFamily -> "Source Serif Pro", StripOnInput -> 
+                 False], TextForm]], "InlineText"], 
+             Text[
+              Style["t=1", 11, FontFamily -> "Source Serif Pro"]]]}}, 
+          GridBoxAlignment -> {"Columns" -> {Center}, "Rows" -> {Center}}, 
+          DefaultBaseStyle -> "Column", 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          GridBoxSpacings -> {"Columns" -> {{0}}, "Rows" -> {{0.75}}}], 
+         "Column"]},
+       "RowDefault"],
+      StripOnInput->False]},
+    {
+     InterpretationBox[Cell[BoxData[
+       FormBox[
+        StyleBox["\<\"Status quo\"\>",
+         StripOnInput->False,
+         FontFamily->"Source Serif Pro",
+         FontSize->11], TextForm]], "InlineText",ExpressionUUID->
+       "0d6f2f5e-7578-41c7-88e8-388ec50daf53"],
+      Text[
+       Style["Status quo", 11, FontFamily -> "Source Serif Pro"]]]}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {Center}, "Rows" -> {Center}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+   GridBoxSpacings->{"Columns" -> {{0}}, "Rows" -> {{0.75}}}],
+  "Column"]], "Output",
+ CellChangeTimes->{{3.813005491616559*^9, 3.813005495796623*^9}},
+ CellLabel->
+  "Out[805]=",ExpressionUUID->"e03e1775-771e-42c6-a4e6-6f89eaf976b7"]
+}, {2}]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Redirecting", "Subsubsection",
+ CellChangeTimes->{{3.813005476942572*^9, 
+  3.813005478079743*^9}},ExpressionUUID->"8f643853-3099-48ea-9258-\
+e49020f08f0d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AddCaption", "[", 
+  RowBox[{
+   RowBox[{"Framed", "[", 
+    RowBox[{"ShowMoveSequence", "[", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<sim\>\"", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"\[LeftAssociation]", 
+           RowBox[{
+            RowBox[{"\"\<s\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "1.`", ",", "0.27712049241759706`", ",", "0.35482168470228437`",
+                ",", "0.1995820048839651`"}], "}"}]}], ",", 
+            RowBox[{"\"\<T\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"0.985`", ",", 
+                 RowBox[{"-", "0.015000000000000013`"}], ",", 
+                 "0.015000000000000013`", ",", 
+                 RowBox[{"-", "0.015000000000000013`"}]}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "0.0050000000000000044`"}], ",", "0.985`", ",", 
+                 "0.`", ",", "0.`"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                "0.0050000000000000044`", ",", "0.`", ",", "0.985`", ",", 
+                 "0.`"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "0.0050000000000000044`"}], ",", "0.`", ",", 
+                 "0.`", ",", "0.985`"}], "}"}]}], "}"}]}], ",", 
+            RowBox[{"\"\<pr\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "0.5354041061092735`", ",", "0.01593782656536176`", ",", 
+               "0.07520360829409026`", ",", "0.005732056137450088`"}], 
+              "}"}]}], ",", 
+            RowBox[{"\"\<i\>\"", "\[Rule]", "4"}]}], "\[RightAssociation]"}], 
+          ",", 
+          RowBox[{"\[LeftAssociation]", 
+           RowBox[{
+            RowBox[{"\"\<s\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "1.`", ",", "0.24790144578523385`", ",", "0.37386342727458255`",
+                ",", "0.167427298190381`"}], "}"}]}], ",", 
+            RowBox[{"\"\<T\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"0.985`", ",", 
+                 RowBox[{"-", "0.015000000000000013`"}], ",", "0.`", ",", 
+                 RowBox[{"-", "0.015000000000000013`"}]}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "0.007500000000000007`"}], ",", "0.985`", ",", 
+                 "0.`", ",", "0.`"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"0.`", ",", "0.`", ",", "1.`", ",", "0.`"}], "}"}], 
+               ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "0.007500000000000007`"}], ",", "0.`", ",", 
+                 "0.`", ",", "0.985`"}], "}"}]}], "}"}]}], ",", 
+            RowBox[{"\"\<pr\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "0.5424290514087264`", ",", "0.00804720269507078`", ",", 
+               "0.08048917131765135`", ",", "0.0020791421543310262`"}], 
+              "}"}]}], ",", 
+            RowBox[{"\"\<i\>\"", "\[Rule]", "1"}]}], 
+           "\[RightAssociation]"}]}], "}"}]}], ",", 
+       RowBox[{"\"\<seq\>\"", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", 
+          RowBox[{"{", "1", "}"}]}], "}"}]}], ",", 
+       RowBox[{"\"\<plies\>\"", "\[Rule]", "5"}], ",", 
+       RowBox[{"\"\<b\>\"", "\[Rule]", "8"}], ",", 
+       RowBox[{"\"\<params\>\"", "\[Rule]", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\"\<\[Beta]\>\"", "\[Rule]", "2.`"}], ",", 
+          RowBox[{"\"\<\[Mu]\>\"", "\[Rule]", "5.`"}], ",", 
+          RowBox[{"\"\<\[Lambda]\>\"", "\[Rule]", "0.995`"}], ",", 
+          RowBox[{"\"\<\[Alpha]\>\"", "\[Rule]", "2.25`"}], ",", 
+          RowBox[{"\"\<\[Delta]\>\"", "\[Rule]", "0.8`"}], ",", 
+          RowBox[{"\"\<\[Rho]\>\"", "\[Rule]", "0.985`"}], ",", 
+          RowBox[{"\"\<k\>\"", "\[Rule]", "9"}], ",", 
+          RowBox[{"\"\<\[CapitalDelta]\>\"", "\[Rule]", "0.05`"}]}], 
+         "\[RightAssociation]"}]}]}], "\[RightAssociation]"}], "]"}], "]"}], 
+   ",", "\"\<Redirecting\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.8130055096396427`*^9, 3.8130055102446537`*^9}},
+ CellLabel->
+  "In[807]:=",ExpressionUUID->"bbab9d6e-8783-4d66-9c22-210406fc1eed"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     FrameBox[
+      TemplateBox[{
+        TagBox[
+         GridBox[{{
+            TagBox[
+             TooltipBox[
+              GraphicsBox[
+               NamespaceBox[{{
+                  Directive[
+                   Opacity[0.7], 
+                   Hue[0.6, 0.7, 0.5]], 
+                  Directive[
+                   GrayLevel[0]], 
+                  StyleBox[
+                   LineBox[{
+                    DynamicLocation["VertexID$1", Automatic, Center], 
+                    DynamicLocation["VertexID$2", Automatic, Center]}], {{
+                    Dashing[{Small, Small}]}}, StripOnInput -> False], 
+                  LineBox[{
+                    DynamicLocation["VertexID$1", Automatic, Center], 
+                    DynamicLocation["VertexID$3", Automatic, Center]}], 
+                  StyleBox[
+                   LineBox[{
+                    DynamicLocation["VertexID$1", Automatic, Center], 
+                    DynamicLocation["VertexID$4", Automatic, Center]}], {{
+                    Dashing[{Small, Small}]}}, StripOnInput -> False]}, {
+                  Directive[
+                   Hue[0.6, 0.2, 0.8], 
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.7]]]], 
+                  Directive[
+                   GrayLevel[0]], 
+                  TagBox[
+                   StyleBox[
+                    DiskBox[{-1., 0.}, 0.23570226039551584`], {
+                    RGBColor[
+                    0.3454460594609645, 0.7673168978395853, 
+                    0.47022857970320786`]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$1"], 
+                  TagBox[
+                   StyleBox[
+                    DiskBox[{0., 1.}, 0.12407893822921248`], {
+                    RGBColor[
+                    0.11749073773093226`, 0.04177112929505809, 
+                    0.4117958542278717]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$2"], 
+                  TagBox[
+                   StyleBox[
+                    DiskBox[{1., 0.}, 0.14040055490201445`], {
+                    RGBColor[
+                    0.10033975871925827`, 0.16356534398992353`, 
+                    0.4621297550826098]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$3"], 
+                  TagBox[
+                   StyleBox[
+                    DiskBox[{0., -1.}, 0.10529904634050721`], {
+                    RGBColor[
+                    0.12044419500933726`, 0.020797748730990592`, 
+                    0.4031281842523702]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$4"]}}], {
+               ImageSize -> 48, BaseStyle -> GrayLevel[0], FormatType -> 
+                TraditionalForm, FrameTicks -> None}], 
+              RowBox[{"\[LeftAssociation]", 
+                RowBox[{
+                  RowBox[{"\"s\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    TagBox[
+                    
+                    GridBox[{{"1.`"}, {"0.277`"}, {"0.355`"}, {"0.2`"}}, 
+                    ColumnAlignments -> Center, RowSpacings -> 1, 
+                    ColumnAlignments -> Left], Column], "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                  RowBox[{"\"T\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    GridBox[{{"0.985`", 
+                    RowBox[{"-", "0.015`"}], "0.015`", 
+                    RowBox[{"-", "0.015`"}]}, {
+                    RowBox[{"-", "0.005`"}], "0.985`", "0.`", "0.`"}, {
+                    "0.005`", "0.`", "0.985`", "0.`"}, {
+                    RowBox[{"-", "0.005`"}], "0.`", "0.`", "0.985`"}}, 
+                    RowSpacings -> 1, ColumnSpacings -> 1, RowAlignments -> 
+                    Baseline, ColumnAlignments -> Center], "\[NoBreak]", 
+                    ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                  RowBox[{"\"pr\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    TagBox[
+                    
+                    GridBox[{{"0.535`"}, {"0.016`"}, {"0.075`"}, {"0.006`"}}, 
+                    ColumnAlignments -> Center, RowSpacings -> 1, 
+                    ColumnAlignments -> Left], Column], "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                  RowBox[{"\"i\"", "\[Rule]", 
+                    TagBox["4", 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}]}], "\[RightAssociation]"}]], 
+             Annotation[#, 
+              Association[
+              "s" -> MatrixForm[{1., 0.277, 0.355, 0.2}], "T" -> 
+               MatrixForm[{{0.985, -0.015, 0.015, -0.015}, {-0.005, 0.985, 0.,
+                  0.}, {0.005, 0., 0.985, 0.}, {-0.005, 0., 0., 0.985}}], 
+               "pr" -> MatrixForm[{0.535, 0.016, 0.075, 0.006}], "i" -> 
+               MatrixForm[4]], "Tooltip"]& ]}, {
+            InterpretationBox[
+             Cell[
+              BoxData[
+               FormBox[
+                StyleBox[
+                "\"t=0\"", 11, FontFamily -> "Source Serif Pro", StripOnInput -> 
+                 False], TextForm]], "InlineText"], 
+             Text[
+              Style["t=0", 11, FontFamily -> "Source Serif Pro"]]]}}, 
+          GridBoxAlignment -> {"Columns" -> {Center}, "Rows" -> {Center}}, 
+          DefaultBaseStyle -> "Column", 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          GridBoxSpacings -> {"Columns" -> {{0}}, "Rows" -> {{0.75}}}], 
+         "Column"], 
+        TemplateBox[{15}, "Spacer1"], 
+        TagBox[
+         GridBox[{{
+            TagBox[
+             TooltipBox[
+              GraphicsBox[
+               NamespaceBox[{{
+                  Directive[
+                   Opacity[0.7], 
+                   Hue[0.6, 0.7, 0.5]], 
+                  Directive[
+                   GrayLevel[0]], 
+                  StyleBox[
+                   LineBox[{
+                    DynamicLocation["VertexID$1", Automatic, Center], 
+                    DynamicLocation["VertexID$2", Automatic, Center]}], {{
+                    Dashing[{Small, Small}]}}, StripOnInput -> False], 
+                  StyleBox[
+                   LineBox[{
+                    DynamicLocation["VertexID$1", Automatic, Center], 
+                    DynamicLocation["VertexID$4", Automatic, Center]}], {{
+                    Dashing[{Small, Small}]}}, StripOnInput -> False]}, {
+                  Directive[
+                   Hue[0.6, 0.2, 0.8], 
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.7]]]], 
+                  Directive[
+                   GrayLevel[0]], 
+                  TagBox[
+                   StyleBox[
+                    DiskBox[{-1., 0.}, 0.23570226039551584`], {
+                    Directive[
+                    RGBColor[
+                    0.36028485518044306`, 0.7720788079052591, 
+                    0.46615778726903956`], 
+                    EdgeForm[{
+                    Thickness[Large], 
+                    RGBColor[1, 0, 0]}]]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$1"], 
+                  TagBox[
+                   StyleBox[
+                    DiskBox[{0., 1.}, 0.11735545382990985`], {
+                    RGBColor[
+                    0.11976976011399398`, 0.02558711197289286, 
+                    0.4051074846253739]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$2"], 
+                  TagBox[
+                   StyleBox[
+                    DiskBox[{1., 0.}, 0.14411866778507035`], {
+                    RGBColor[
+                    0.09876563022988712, 0.17474369964304853`, 
+                    0.4667494346509129]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$3"], 
+                  TagBox[
+                   StyleBox[
+                    DiskBox[{0., -1.}, 0.09644437031850163], {
+                    RGBColor[
+                    0.12150016475563202`, 0.013298992776361611`, 
+                    0.40002917302511454`]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$4"]}}], {
+               ImageSize -> 48, BaseStyle -> GrayLevel[0], FormatType -> 
+                TraditionalForm, FrameTicks -> None}], 
+              RowBox[{"\[LeftAssociation]", 
+                RowBox[{
+                  RowBox[{"\"s\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    TagBox[
+                    
+                    GridBox[{{"1.`"}, {"0.248`"}, {"0.374`"}, {"0.167`"}}, 
+                    ColumnAlignments -> Center, RowSpacings -> 1, 
+                    ColumnAlignments -> Left], Column], "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                  RowBox[{"\"T\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    GridBox[{{"0.985`", 
+                    RowBox[{"-", "0.015`"}], "0.`", 
+                    RowBox[{"-", "0.015`"}]}, {
+                    RowBox[{"-", "0.008`"}], "0.985`", "0.`", "0.`"}, {
+                    "0.`", "0.`", "1.`", "0.`"}, {
+                    RowBox[{"-", "0.008`"}], "0.`", "0.`", "0.985`"}}, 
+                    RowSpacings -> 1, ColumnSpacings -> 1, RowAlignments -> 
+                    Baseline, ColumnAlignments -> Center], "\[NoBreak]", 
+                    ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                  RowBox[{"\"pr\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    TagBox[
+                    
+                    GridBox[{{"0.542`"}, {"0.008`"}, {"0.08`"}, {"0.002`"}}, 
+                    ColumnAlignments -> Center, RowSpacings -> 1, 
+                    ColumnAlignments -> Left], Column], "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                  RowBox[{"\"i\"", "\[Rule]", 
+                    TagBox["1", 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}]}], "\[RightAssociation]"}]], 
+             Annotation[#, 
+              Association[
+              "s" -> MatrixForm[{1., 0.248, 0.374, 0.167}], "T" -> 
+               MatrixForm[{{0.985, -0.015, 0., -0.015}, {-0.008, 0.985, 0., 
+                 0.}, {0., 0., 1., 0.}, {-0.008, 0., 0., 0.985}}], "pr" -> 
+               MatrixForm[{0.542, 0.008, 0.08, 0.002}], "i" -> MatrixForm[1]],
+               "Tooltip"]& ]}, {
+            InterpretationBox[
+             Cell[
+              BoxData[
+               FormBox[
+                StyleBox[
+                "\"t=1\"", 11, FontFamily -> "Source Serif Pro", StripOnInput -> 
+                 False], TextForm]], "InlineText"], 
+             Text[
+              Style["t=1", 11, FontFamily -> "Source Serif Pro"]]]}}, 
+          GridBoxAlignment -> {"Columns" -> {Center}, "Rows" -> {Center}}, 
+          DefaultBaseStyle -> "Column", 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          GridBoxSpacings -> {"Columns" -> {{0}}, "Rows" -> {{0.75}}}], 
+         "Column"]},
+       "RowDefault"],
+      StripOnInput->False]},
+    {
+     InterpretationBox[Cell[BoxData[
+       FormBox[
+        StyleBox["\<\"Redirecting\"\>",
+         StripOnInput->False,
+         FontFamily->"Source Serif Pro",
+         FontSize->11], TextForm]], "InlineText",ExpressionUUID->
+       "c48399fa-78cd-46db-917b-4021e0094273"],
+      Text[
+       Style["Redirecting", 11, FontFamily -> "Source Serif Pro"]]]}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {Center}, "Rows" -> {Center}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+   GridBoxSpacings->{"Columns" -> {{0}}, "Rows" -> {{0.75}}}],
+  "Column"]], "Output",
+ CellChangeTimes->{{3.813005506955624*^9, 3.813005510595809*^9}},
+ CellLabel->
+  "Out[807]=",ExpressionUUID->"805656ba-9fab-4ea3-8282-7323826e558f"]
+}, {2}]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Blunder", "Subsubsection",
+ CellChangeTimes->{{3.813005480731545*^9, 
+  3.8130054816210413`*^9}},ExpressionUUID->"4f79fe36-e976-46e0-948c-\
+ca73a5eb587d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AddCaption", "[", 
+  RowBox[{
+   RowBox[{"Framed", "[", 
+    RowBox[{"ShowMoveSequence", "[", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<sim\>\"", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"\[LeftAssociation]", 
+           RowBox[{
+            RowBox[{"\"\<s\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"1.`", ",", "0.35`", ",", "0.3`", ",", "0.2`"}], 
+              "}"}]}], ",", 
+            RowBox[{"\"\<T\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                "0.98`", ",", "0.020000000000000018`", ",", 
+                 "0.020000000000000018`", ",", "0.020000000000000018`"}], 
+                "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                "0.006666666666666672`", ",", "0.98`", ",", "0.`", ",", 
+                 "0.`"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                "0.006666666666666672`", ",", "0.`", ",", "0.98`", ",", 
+                 "0.`"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                "0.006666666666666672`", ",", "0.`", ",", "0.`", ",", 
+                 "0.98`"}], "}"}]}], "}"}]}]}], "\[RightAssociation]"}], ",", 
+          
+          RowBox[{"\[LeftAssociation]", 
+           RowBox[{
+            RowBox[{"\"\<s\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "0.9999999999999999`", ",", "0.32825974763244126`", ",", 
+               "0.31380538280907283`", ",", "0.21264418238587982`"}], "}"}]}],
+             ",", 
+            RowBox[{"\"\<T\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"0.985`", ",", 
+                 RowBox[{"-", "0.015000000000000013`"}], ",", 
+                 "0.015000000000000013`", ",", "0.015000000000000013`"}], 
+                "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "0.0050000000000000044`"}], ",", "0.985`", ",", 
+                 "0.`", ",", "0.`"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                "0.0050000000000000044`", ",", "0.`", ",", "0.985`", ",", 
+                 "0.`"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                "0.0050000000000000044`", ",", "0.`", ",", "0.`", ",", 
+                 "0.985`"}], "}"}]}], "}"}]}], ",", 
+            RowBox[{"\"\<pr\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "0.53710513620292`", ",", "0.023786507071268687`", ",", 
+               "0.05243539742425986`", ",", "0.024471474282568007`"}], 
+              "}"}]}], ",", 
+            RowBox[{"\"\<i\>\"", "\[Rule]", "2"}]}], 
+           "\[RightAssociation]"}]}], "}"}]}], ",", 
+       RowBox[{"\"\<seq\>\"", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", 
+          RowBox[{"{", "2", "}"}]}], "}"}]}], ",", 
+       RowBox[{"\"\<plies\>\"", "\[Rule]", "5"}], ",", 
+       RowBox[{"\"\<b\>\"", "\[Rule]", "8"}], ",", 
+       RowBox[{"\"\<params\>\"", "\[Rule]", 
+        RowBox[{"\[LeftAssociation]", 
+         RowBox[{
+          RowBox[{"\"\<\[Beta]\>\"", "\[Rule]", "2.`"}], ",", 
+          RowBox[{"\"\<\[Mu]\>\"", "\[Rule]", "5.`"}], ",", 
+          RowBox[{"\"\<\[Lambda]\>\"", "\[Rule]", "0.995`"}], ",", 
+          RowBox[{"\"\<\[Alpha]\>\"", "\[Rule]", "2.25`"}], ",", 
+          RowBox[{"\"\<\[Delta]\>\"", "\[Rule]", "0.8`"}], ",", 
+          RowBox[{"\"\<\[Rho]\>\"", "\[Rule]", "0.985`"}], ",", 
+          RowBox[{"\"\<k\>\"", "\[Rule]", "9"}], ",", 
+          RowBox[{"\"\<\[CapitalDelta]\>\"", "\[Rule]", "0.05`"}]}], 
+         "\[RightAssociation]"}]}]}], "\[RightAssociation]"}], "]"}], "]"}], 
+   ",", "\"\<Blunder\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.813005520809372*^9, 3.813005521337079*^9}},
+ CellLabel->
+  "In[808]:=",ExpressionUUID->"da36e814-b304-4572-ae74-62f293ebd33f"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     FrameBox[
+      TemplateBox[{
+        TagBox[
+         GridBox[{{
+            TagBox[
+             TooltipBox[
+              GraphicsBox[
+               NamespaceBox[{{
+                  Directive[
+                   Opacity[0.7], 
+                   Hue[0.6, 0.7, 0.5]], 
+                  Directive[
+                   GrayLevel[0]], 
+                  LineBox[{{
+                    DynamicLocation["VertexID$1", Automatic, Center], 
+                    DynamicLocation["VertexID$2", Automatic, Center]}, {
+                    DynamicLocation["VertexID$1", Automatic, Center], 
+                    DynamicLocation["VertexID$3", Automatic, Center]}, {
+                    DynamicLocation["VertexID$1", Automatic, Center], 
+                    DynamicLocation["VertexID$4", Automatic, Center]}}]}, {
+                  Directive[
+                   Hue[0.6, 0.2, 0.8], 
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.7]]]], 
+                  Directive[
+                   GrayLevel[0]], 
+                  TagBox[
+                   StyleBox[
+                    DiskBox[{-1., 0.}, 0.23570226039551584`], {
+                    RGBColor[
+                    0.3602230731953981, 0.7720589814811998, 
+                    0.466174736194144]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$1"], 
+                  TagBox[
+                   StyleBox[
+                    DiskBox[{0., 1.}, 0.13944333775567927`], {
+                    RGBColor[
+                    0.1069212863764568, 0.11682795413273689`, 
+                    0.44281459177066923`]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$2"], 
+                  TagBox[
+                   StyleBox[
+                    DiskBox[{1., 0.}, 0.12909944487358055`], {
+                    RGBColor[
+                    0.11085633072893557`, 0.08888403114306968, 
+                    0.4312662053979819]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$3"], 
+                  TagBox[
+                   StyleBox[
+                    DiskBox[{0., -1.}, 0.10540925533894598`], {
+                    RGBColor[
+                    0.11680545799909707`, 0.046637504953751636`, 
+                    0.4138069815259971]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$4"]}}], {
+               ImageSize -> 48, BaseStyle -> GrayLevel[0], FormatType -> 
+                TraditionalForm, FrameTicks -> None}], 
+              RowBox[{"\[LeftAssociation]", 
+                RowBox[{
+                  RowBox[{"\"s\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    TagBox[
+                    
+                    GridBox[{{"1.`"}, {"0.35000000000000003`"}, {"0.3`"}, {
+                    "0.2`"}}, ColumnAlignments -> Center, RowSpacings -> 1, 
+                    ColumnAlignments -> Left], Column], "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                  RowBox[{"\"T\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    
+                    GridBox[{{"0.98`", "0.02`", "0.02`", "0.02`"}, {
+                    "0.007`", "0.98`", "0.`", "0.`"}, {
+                    "0.007`", "0.`", "0.98`", "0.`"}, {
+                    "0.007`", "0.`", "0.`", "0.98`"}}, RowSpacings -> 1, 
+                    ColumnSpacings -> 1, RowAlignments -> Baseline, 
+                    ColumnAlignments -> Center], "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}]}], "\[RightAssociation]"}]], 
+             Annotation[#, 
+              Association[
+              "s" -> MatrixForm[{1., 0.35000000000000003`, 0.3, 0.2}], "T" -> 
+               MatrixForm[{{0.98, 0.02, 0.02, 0.02}, {0.007, 0.98, 0., 0.}, {
+                 0.007, 0., 0.98, 0.}, {0.007, 0., 0., 0.98}}]], 
+              "Tooltip"]& ]}, {
+            InterpretationBox[
+             Cell[
+              BoxData[
+               FormBox[
+                StyleBox[
+                "\"t=0\"", 11, FontFamily -> "Source Serif Pro", StripOnInput -> 
+                 False], TextForm]], "InlineText"], 
+             Text[
+              Style["t=0", 11, FontFamily -> "Source Serif Pro"]]]}}, 
+          GridBoxAlignment -> {"Columns" -> {Center}, "Rows" -> {Center}}, 
+          DefaultBaseStyle -> "Column", 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          GridBoxSpacings -> {"Columns" -> {{0}}, "Rows" -> {{0.75}}}], 
+         "Column"], 
+        TemplateBox[{15}, "Spacer1"], 
+        TagBox[
+         GridBox[{{
+            TagBox[
+             TooltipBox[
+              GraphicsBox[
+               NamespaceBox[{{
+                  Directive[
+                   Opacity[0.7], 
+                   Hue[0.6, 0.7, 0.5]], 
+                  Directive[
+                   GrayLevel[0]], 
+                  StyleBox[
+                   LineBox[{
+                    DynamicLocation["VertexID$1", Automatic, Center], 
+                    DynamicLocation["VertexID$2", Automatic, Center]}], {{
+                    Dashing[{Small, Small}]}}, StripOnInput -> False], 
+                  LineBox[{
+                    DynamicLocation["VertexID$1", Automatic, Center], 
+                    DynamicLocation["VertexID$3", Automatic, Center]}], 
+                  LineBox[{
+                    DynamicLocation["VertexID$1", Automatic, Center], 
+                    DynamicLocation["VertexID$4", Automatic, Center]}]}, {
+                  Directive[
+                   Hue[0.6, 0.2, 0.8], 
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.7]]]], 
+                  Directive[
+                   GrayLevel[0]], 
+                  TagBox[
+                   StyleBox[
+                    DiskBox[{-1., 0.}, 0.2357022603955158], {
+                    RGBColor[
+                    0.34414421358166164`, 0.7668991231687965, 
+                    0.4705857208389243]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$1"], 
+                  TagBox[
+                   StyleBox[
+                    DiskBox[{0., 1.}, 0.13504315105271628`], {
+                    Directive[
+                    RGBColor[
+                    0.1152502663403522, 0.057681384527501434`, 
+                    0.41837108615863056`], 
+                    EdgeForm[{
+                    Thickness[Large], 
+                    RGBColor[1, 0, 0]}]]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$2"], 
+                  TagBox[
+                   StyleBox[
+                    DiskBox[{1., 0.}, 0.1320364812401551], {
+                    RGBColor[
+                    0.10699671256529468`, 0.1162923302811373, 
+                    0.44259323447624116`]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$3"], 
+                  TagBox[
+                   StyleBox[
+                    DiskBox[{0., -1.}, 0.10869022811690311`], {
+                    RGBColor[
+                    0.11505293186620842`, 0.05908271545410367, 
+                    0.41895021425679996`]}, StripOnInput -> False], 
+                   "DynamicName", BoxID -> "VertexID$4"]}}], {
+               ImageSize -> 48, BaseStyle -> GrayLevel[0], FormatType -> 
+                TraditionalForm, FrameTicks -> None}], 
+              RowBox[{"\[LeftAssociation]", 
+                RowBox[{
+                  RowBox[{"\"s\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    TagBox[
+                    
+                    GridBox[{{"1.`"}, {"0.328`"}, {"0.314`"}, {"0.213`"}}, 
+                    ColumnAlignments -> Center, RowSpacings -> 1, 
+                    ColumnAlignments -> Left], Column], "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                  RowBox[{"\"T\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    GridBox[{{"0.985`", 
+                    RowBox[{"-", "0.015`"}], "0.015`", "0.015`"}, {
+                    RowBox[{"-", "0.005`"}], "0.985`", "0.`", "0.`"}, {
+                    "0.005`", "0.`", "0.985`", "0.`"}, {
+                    "0.005`", "0.`", "0.`", "0.985`"}}, RowSpacings -> 1, 
+                    ColumnSpacings -> 1, RowAlignments -> Baseline, 
+                    ColumnAlignments -> Center], "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                  RowBox[{"\"pr\"", "\[Rule]", 
+                    TagBox[
+                    RowBox[{"(", "\[NoBreak]", 
+                    TagBox[
+                    
+                    GridBox[{{"0.537`"}, {"0.024`"}, {
+                    "0.052000000000000005`"}, {"0.024`"}}, ColumnAlignments -> 
+                    Center, RowSpacings -> 1, ColumnAlignments -> Left], 
+                    Column], "\[NoBreak]", ")"}], 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}], ",", 
+                  RowBox[{"\"i\"", "\[Rule]", 
+                    TagBox["2", 
+                    Function[BoxForm`e$, 
+                    MatrixForm[BoxForm`e$]]]}]}], "\[RightAssociation]"}]], 
+             Annotation[#, 
+              Association[
+              "s" -> MatrixForm[{1., 0.328, 0.314, 0.213}], "T" -> 
+               MatrixForm[{{0.985, -0.015, 0.015, 0.015}, {-0.005, 0.985, 0., 
+                 0.}, {0.005, 0., 0.985, 0.}, {0.005, 0., 0., 0.985}}], "pr" -> 
+               MatrixForm[{0.537, 0.024, 0.052000000000000005`, 0.024}], "i" -> 
+               MatrixForm[2]], "Tooltip"]& ]}, {
+            InterpretationBox[
+             Cell[
+              BoxData[
+               FormBox[
+                StyleBox[
+                "\"t=1\"", 11, FontFamily -> "Source Serif Pro", StripOnInput -> 
+                 False], TextForm]], "InlineText"], 
+             Text[
+              Style["t=1", 11, FontFamily -> "Source Serif Pro"]]]}}, 
+          GridBoxAlignment -> {"Columns" -> {Center}, "Rows" -> {Center}}, 
+          DefaultBaseStyle -> "Column", 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          GridBoxSpacings -> {"Columns" -> {{0}}, "Rows" -> {{0.75}}}], 
+         "Column"]},
+       "RowDefault"],
+      StripOnInput->False]},
+    {
+     InterpretationBox[Cell[BoxData[
+       FormBox[
+        StyleBox["\<\"Blunder\"\>",
+         StripOnInput->False,
+         FontFamily->"Source Serif Pro",
+         FontSize->11], TextForm]], "InlineText",ExpressionUUID->
+       "2b7e15b2-ce32-4394-8493-76df5e320f7a"],
+      Text[
+       Style["Blunder", 11, FontFamily -> "Source Serif Pro"]]]}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {Center}, "Rows" -> {Center}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+   GridBoxSpacings->{"Columns" -> {{0}}, "Rows" -> {{0.75}}}],
+  "Column"]], "Output",
+ CellChangeTimes->{3.813005521750894*^9},
+ CellLabel->
+  "Out[808]=",ExpressionUUID->"3ae75b4e-5067-4786-bba9-17f84034b92e"]
+}, {2}]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1312, 913},
+WindowMargins->{{Automatic, -1727}, {Automatic, 110}},
+Magnification:>1.25 Inherited,
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"a0714754-5f04-489a-a611-0f84e01a51e8"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 159, 3, 84, "Section",ExpressionUUID->"535848ef-cc80-429e-89ae-7487116d82d0"],
+Cell[CellGroupData[{
+Cell[764, 29, 179, 3, 56, "Subsubsection",ExpressionUUID->"a2e07a00-6ff2-44c0-b421-99e265ddeb9c"],
+Cell[CellGroupData[{
+Cell[968, 36, 10523, 223, 896, "Input",ExpressionUUID->"8a68ba77-2a4d-452e-baaf-b3cc39850f10"],
+Cell[11494, 261, 25165, 533, 151, "Output",ExpressionUUID->"0475731f-886e-449d-a29c-c50bc9832ca9"]
+}, {2}]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36705, 800, 162, 3, 56, "Subsubsection",ExpressionUUID->"8a83fe71-def9-49a5-88dd-8585c2b70560"],
+Cell[36870, 805, 146, 3, 44, "Text",ExpressionUUID->"6a7c41fa-a937-4e47-9e41-668e5440dcaa"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[37053, 813, 160, 3, 56, "Subsubsection",ExpressionUUID->"8e4f1815-fd19-4522-9d50-756281798175"],
+Cell[37216, 818, 146, 3, 44, "Text",ExpressionUUID->"0591cead-ab48-4888-94e9-6b22f3363770"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[37399, 826, 164, 3, 56, "Subsubsection",ExpressionUUID->"74c24d62-6545-4242-938f-51c77b84b3e9"],
+Cell[CellGroupData[{
+Cell[37588, 833, 4909, 113, 402, "Input",ExpressionUUID->"4674087a-c8f0-4e15-9637-680115583768"],
+Cell[42500, 948, 16169, 363, 145, "Output",ExpressionUUID->"56935a75-7b0e-4f73-88be-633ac11a54d5"]
+}, {2}]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[58715, 1317, 163, 3, 56, "Subsubsection",ExpressionUUID->"3d1e16f7-2b06-467e-8b1b-0f4690421166"],
+Cell[CellGroupData[{
+Cell[58903, 1324, 4403, 102, 428, "Input",ExpressionUUID->"48aa9ab8-440c-49b5-bb83-491825a7b6a4"],
+Cell[63309, 1428, 12141, 264, 151, "Output",ExpressionUUID->"e03e1775-771e-42c6-a4e6-6f89eaf976b7"]
+}, {2}]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[75496, 1698, 162, 3, 56, "Subsubsection",ExpressionUUID->"8f643853-3099-48ea-9258-e49020f08f0d"],
+Cell[CellGroupData[{
+Cell[75683, 1705, 4440, 99, 402, "Input",ExpressionUUID->"bbab9d6e-8783-4d66-9c22-210406fc1eed"],
+Cell[80126, 1806, 12564, 275, 153, "Output",ExpressionUUID->"805656ba-9fab-4ea3-8282-7323826e558f"]
+}, {2}]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[92736, 2087, 160, 3, 56, "Subsubsection",ExpressionUUID->"4f79fe36-e976-46e0-948c-ca73a5eb587d"],
+Cell[CellGroupData[{
+Cell[92921, 2094, 4049, 94, 428, "Input",ExpressionUUID->"da36e814-b304-4572-ae74-62f293ebd33f"],
+Cell[96973, 2190, 11480, 252, 153, "Output",ExpressionUUID->"3ae75b4e-5067-4786-bba9-17f84034b92e"]
+}, {2}]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
