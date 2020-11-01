@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   2999711,      49701]
-NotebookOptionsPosition[   2995004,      49606]
-NotebookOutlinePosition[   2995400,      49622]
-CellTagsIndexPosition[   2995357,      49619]
+NotebookDataLength[   3007380,      49875]
+NotebookOptionsPosition[   3002298,      49773]
+NotebookOutlinePosition[   3002697,      49789]
+CellTagsIndexPosition[   3002654,      49786]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -49596,6 +49596,173 @@ Cell[BoxData[
  CellLabel->
   "Out[421]=",ExpressionUUID->"29538726-a487-4e49-a96a-4e2e23475334"]
 }, {2}]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Gravitized tactics", "Subsubsection",
+ CellChangeTimes->{{3.8132333276158953`*^9, 
+  3.813233330979829*^9}},ExpressionUUID->"e53d0782-9423-42d4-813f-\
+d3f897808148"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SetParameters", "[", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\"\<\[Beta]\>\"", "\[Rule]", "2.`"}], ",", 
+     RowBox[{"\"\<\[Mu]\>\"", "\[Rule]", "5.`"}], ",", 
+     RowBox[{"\"\<\[Lambda]\>\"", "\[Rule]", "0.995`"}], ",", 
+     RowBox[{"\"\<\[Alpha]\>\"", "\[Rule]", "2.25`"}], ",", 
+     RowBox[{"\"\<\[Delta]\>\"", "\[Rule]", "0.8`"}], ",", 
+     RowBox[{"\"\<\[Rho]\>\"", "\[Rule]", "0.8"}], ",", 
+     RowBox[{"\"\<k\>\"", "\[Rule]", "9"}]}], "\[RightAssociation]"}], "]"}], 
+  ";", 
+  RowBox[{"s", "=", 
+   RowBox[{"{", 
+    RowBox[{".8", ",", "1", ",", ".2", ",", ".3", ",", ".6", ",", ".3"}], 
+    "}"}]}], ";", 
+  RowBox[{"ShowPowerStructure", "[", 
+   RowBox[{
+    RowBox[{"PowerStructure", "[", 
+     RowBox[{"s", ",", 
+      RowBox[{"GravitizeTernaryT", "[", 
+       RowBox[{
+        RowBox[{"(", GridBox[{
+           {"0", "0", "0", "0", "0", "0"},
+           {"1", "1", "0", "0", "0", "0"},
+           {"1", "0", "1", "0", "0", "0"},
+           {
+            RowBox[{"-", "1"}], "0", "0", "1", "0", "0"},
+           {"1", "0", "0", "0", "1", "0"},
+           {"1", "0", "0", "0", "0", "1"}
+          },
+          GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+          
+          GridBoxSpacings->{"Columns" -> {
+              Offset[0.27999999999999997`], {
+               Offset[0.7]}, 
+              Offset[0.27999999999999997`]}, "Rows" -> {
+              Offset[0.2], {
+               Offset[0.4]}, 
+              Offset[0.2]}}], ")"}], ",", "s"}], "]"}]}], "]"}], ",", 
+    RowBox[{"<|", 
+     RowBox[{
+      RowBox[{"\"\<ternary\>\"", "\[Rule]", "False"}], ",", 
+      RowBox[{"\"\<size\>\"", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"175", ",", "175"}], "}"}]}], ",", 
+      RowBox[{"\"\<circular\>\"", "\[Rule]", "True"}]}], "|>"}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.8132333485250587`*^9, 3.813233449722739*^9}, 
+   3.813233482421859*^9, 3.813234419523945*^9, {3.8132345085639067`*^9, 
+   3.813234517242262*^9}, {3.813234574318247*^9, 3.813234611581254*^9}},
+ CellLabel->
+  "In[910]:=",ExpressionUUID->"33a41918-49ce-440b-a054-75eb8ac9f2ec"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox[{
+    {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[Medium], 
+     {GrayLevel[0], Thickness[0.01333333333333333], Arrowheads[
+      0.1333333333333333], 
+      ArrowBox[{
+       DynamicLocation["VertexID$1", Automatic, Center], DynamicLocation[
+        "VertexID$2", Automatic, Center]}]}, 
+     {GrayLevel[0], Thickness[0.002666666666666667], Arrowheads[0.06], 
+      ArrowBox[{
+       DynamicLocation["VertexID$1", Automatic, Center], DynamicLocation[
+        "VertexID$3", Automatic, Center]}]}, 
+     {GrayLevel[0], Thickness[0.003999999999999999], Dashing[{Small, Small}], 
+      Arrowheads[0.06], 
+      ArrowBox[{
+       DynamicLocation["VertexID$1", Automatic, Center], DynamicLocation[
+        "VertexID$4", Automatic, Center]}]}, 
+     {GrayLevel[0], Thickness[0.007999999999999998], Arrowheads[
+      0.07999999999999999], 
+      ArrowBox[{
+       DynamicLocation["VertexID$1", Automatic, Center], DynamicLocation[
+        "VertexID$5", Automatic, Center]}]}, 
+     {GrayLevel[0], Thickness[0.003999999999999999], Arrowheads[0.06], 
+      ArrowBox[{
+       DynamicLocation["VertexID$1", Automatic, Center], DynamicLocation[
+        "VertexID$6", Automatic, Center]}]}, 
+     {GrayLevel[1], Thickness[0.002], Opacity[0], Arrowheads[0.06], 
+      LineBox[{DynamicLocation["VertexID$2", Automatic, Center], 
+        DynamicLocation["VertexID$3", Automatic, Center]}]}, 
+     {GrayLevel[1], Thickness[0.002], Opacity[0], Arrowheads[0.06], 
+      LineBox[{DynamicLocation["VertexID$2", Automatic, Center], 
+        DynamicLocation["VertexID$4", Automatic, Center]}]}, 
+     {GrayLevel[1], Thickness[0.002], Opacity[0], Arrowheads[0.06], 
+      LineBox[{DynamicLocation["VertexID$2", Automatic, Center], 
+        DynamicLocation["VertexID$5", Automatic, Center]}]}, 
+     {GrayLevel[1], Thickness[0.002], Opacity[0], Arrowheads[0.06], 
+      LineBox[{DynamicLocation["VertexID$2", Automatic, Center], 
+        DynamicLocation["VertexID$6", Automatic, Center]}]}, 
+     {GrayLevel[1], Thickness[0.002], Opacity[0], Arrowheads[0.06], 
+      LineBox[{
+       DynamicLocation["VertexID$3", Automatic, Center], DynamicLocation[
+        "VertexID$4", Automatic, Center]}]}, 
+     {GrayLevel[1], Thickness[0.002], Opacity[0], Arrowheads[0.06], 
+      LineBox[{DynamicLocation["VertexID$3", Automatic, Center], 
+        DynamicLocation["VertexID$5", Automatic, Center]}]}, 
+     {GrayLevel[1], Thickness[0.002], Opacity[0], Arrowheads[0.06], 
+      LineBox[{DynamicLocation["VertexID$3", Automatic, Center], 
+        DynamicLocation["VertexID$6", Automatic, Center]}]}, 
+     {GrayLevel[1], Thickness[0.002], Opacity[0], Arrowheads[0.06], 
+      LineBox[{DynamicLocation["VertexID$4", Automatic, Center], 
+        DynamicLocation["VertexID$5", Automatic, Center]}]}, 
+     {GrayLevel[1], Thickness[0.002], Opacity[0], Arrowheads[0.06], 
+      LineBox[{DynamicLocation["VertexID$4", Automatic, Center], 
+        DynamicLocation["VertexID$6", Automatic, Center]}]}, 
+     {GrayLevel[1], Thickness[0.002], Opacity[0], Arrowheads[0.06], 
+      LineBox[{DynamicLocation["VertexID$5", Automatic, Center], 
+        DynamicLocation["VertexID$6", Automatic, Center]}]}}, 
+    {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+     TagBox[
+      {RGBColor[0.09654777630892306, 0.1904933414814465, 0.4732582898767349], 
+       DiskBox[{-1., 0.}, 0.14907119849998596]},
+      "DynamicName",
+      BoxID -> "VertexID$1"], 
+     TagBox[
+      {RGBColor[0.14848191080028963`, 0.5987351340436388, 0.5353276430118895],
+        DiskBox[{-0.5, 0.8660254037844386}, 0.16666666666666666]},
+      "DynamicName",
+      BoxID -> "VertexID$2"], 
+     TagBox[
+      {RGBColor[0.1193988306255241, 0.028221192845163, 0.4061960713517662], 
+       DiskBox[{0.5, 0.8660254037844386}, 0.07453559924999298]},
+      "DynamicName",
+      BoxID -> "VertexID$3"], 
+     TagBox[
+      {RGBColor[
+       0.12177776960791488`, 0.011327637965871731`, 0.39921447112954994`], 
+       DiskBox[{1., 0.}, 0.09128709291752768]},
+      "DynamicName",
+      BoxID -> "VertexID$4"], 
+     TagBox[
+      {RGBColor[
+       0.09007301663667244, 0.23647254004981905`, 0.4922601154389662], 
+       DiskBox[{0.5, -0.8660254037844386}, 0.12909944487358055]},
+      "DynamicName",
+      BoxID -> "VertexID$5"], 
+     TagBox[
+      {RGBColor[
+       0.11536952545228543`, 0.05683449002234052, 0.4180210900265155], 
+       DiskBox[{-0.5, -0.8660254037844386}, 0.09128709291752768]},
+      "DynamicName",
+      BoxID -> "VertexID$6"]}}],
+  FormatType->TraditionalForm,
+  FrameTicks->None,
+  ImageSize->{175, 175}]], "Output",
+ CellChangeTimes->{{3.81323339267642*^9, 3.813233450087687*^9}, 
+   3.813233483158155*^9, 3.813234420931429*^9, 3.813234518426035*^9, {
+   3.813234578890379*^9, 3.813234612465416*^9}},
+ CellLabel->
+  "Out[910]=",ExpressionUUID->"cd7e6774-7e9b-4528-820f-edeca22b75ac"]
+}, {2}]]
 }, Open  ]]
 }, Open  ]],
 
@@ -49605,7 +49772,7 @@ Cell["Parameters", "Section",
 24d37d36d56e"]
 },
 WindowSize->{1177, 819},
-WindowMargins->{{Automatic, 43}, {-107, Automatic}},
+WindowMargins->{{Automatic, -1679}, {-109, Automatic}},
 FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"a9e21ee7-0a62-4802-a4fb-b3b347d35fcf"
@@ -49700,9 +49867,16 @@ Cell[CellGroupData[{
 Cell[2992287, 49531, 440, 12, 29, "Input",ExpressionUUID->"5844856c-734e-4d7f-9ef7-f09be0aa5c5a"],
 Cell[2992730, 49545, 2077, 51, 65, "Output",ExpressionUUID->"29538726-a487-4e49-a96a-4e2e23475334"]
 }, {2}]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2994853, 49602, 171, 3, 45, "Subsubsection",ExpressionUUID->"e53d0782-9423-42d4-813f-d3f897808148"],
+Cell[CellGroupData[{
+Cell[2995049, 49609, 2165, 53, 201, "Input",ExpressionUUID->"33a41918-49ce-440b-a054-75eb8ac9f2ec"],
+Cell[2997217, 49664, 4884, 99, 192, "Output",ExpressionUUID->"cd7e6774-7e9b-4528-820f-edeca22b75ac"]
+}, {2}]]
 }, Open  ]]
 }, Open  ]],
-Cell[2994843, 49601, 157, 3, 67, "Section",ExpressionUUID->"503f3710-b23c-4508-832d-24d37d36d56e"]
+Cell[3002137, 49768, 157, 3, 67, "Section",ExpressionUUID->"503f3710-b23c-4508-832d-24d37d36d56e"]
 }
 ]
 *)
