@@ -10,16 +10,23 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      6983,        173]
-NotebookOptionsPosition[      6415,        155]
-NotebookOutlinePosition[      6809,        171]
-CellTagsIndexPosition[      6766,        168]
+NotebookDataLength[      6736,        168]
+NotebookOptionsPosition[      6127,        148]
+NotebookOutlinePosition[      6524,        164]
+CellTagsIndexPosition[      6481,        161]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
+Cell["\[Mu] as a function of p", "Subsubsection",
+ CellChangeTimes->{{3.8161776627656183`*^9, 
+  3.816177671238722*^9}},ExpressionUUID->"dc5540fc-5975-4405-af3c-\
+6cbbe284b0f2"],
+
+Cell[CellGroupData[{
+
 Cell[BoxData[
  RowBox[{"Plot", "[", 
   RowBox[{
@@ -30,18 +37,15 @@ Cell[BoxData[
       RowBox[{"n", ",", "1000"}], "}"}]}], "]"}], ",", 
    RowBox[{"{", 
     RowBox[{"p", ",", "0.0000000001", ",", ".9999"}], "}"}], ",", 
-   RowBox[{
-   "PlotLabel", "\[Rule]", 
-    "\"\<\[Mu] as a Function of the Offense-Defense Balance\>\""}], ",", 
    RowBox[{"AxesLabel", "\[Rule]", 
     RowBox[{"{", 
-     RowBox[{"\"\<ODB\>\"", ",", "\"\<\[Mu]\>\""}], "}"}]}]}], "]"}]], "Input",\
-
+     RowBox[{"\"\<p\>\"", ",", "\"\<\[Mu]\>\""}], "}"}]}]}], "]"}]], "Input",
  CellChangeTimes->{{3.8161753188371477`*^9, 3.81617533769561*^9}, {
   3.816175413370422*^9, 3.8161754391016283`*^9}, {3.816175470077713*^9, 
-  3.816175659427156*^9}, {3.816176071107565*^9, 3.8161760954304647`*^9}},
+  3.816175659427156*^9}, {3.816176071107565*^9, 3.8161760954304647`*^9}, {
+  3.81617747855136*^9, 3.816177486027144*^9}},
  CellLabel->
-  "In[251]:=",ExpressionUUID->"03d6fd18-97d1-4aeb-a895-f74d1b04c65d"],
+  "In[254]:=",ExpressionUUID->"8824a14a-d3a8-4ee7-a052-e3520a2f8980"],
 
 Cell[BoxData[
  GraphicsBox[{{{}, {}, 
@@ -94,11 +98,11 @@ b/awbX4DFzUYDxsWq4hB0b1ScPoNF10cPk4xVcVg9NNTfuY8F1ubA11/1BJD
 j9rFUm87HXxceUzj3EYx5F3L7Ls6oYPxN47ncz3EEF3poGizWw+39FZH/Pa9
 8xXa0soc9fBfnGa+Ng==
        "]]},
-     Annotation[#, "Charting`Private`Tag$2409931#1"]& ]}, {}},
+     Annotation[#, "Charting`Private`Tag$2413506#1"]& ]}, {}},
   AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
   Axes->{True, True},
   AxesLabel->{
-    FormBox["\"ODB\"", TraditionalForm], 
+    FormBox["\"p\"", TraditionalForm], 
     FormBox["\"\[Mu]\"", TraditionalForm]},
   AxesOrigin->{0, 0},
   DisplayFunction->Identity,
@@ -109,7 +113,6 @@ j9rFUm87HXxceUzj3EYx5F3L7Ls6oYPxN47ncz3EEF3poGizWw+39FZH/Pa9
   GridLinesStyle->Directive[
     GrayLevel[0.5, 0.4]],
   ImagePadding->All,
-  ImageSize->{338.109375, Automatic},
   Method->{
    "DefaultBoundaryStyle" -> Automatic, 
     "DefaultGraphicsInteraction" -> {
@@ -129,9 +132,6 @@ j9rFUm87HXxceUzj3EYx5F3L7Ls6oYPxN47ncz3EEF3poGizWw+39FZH/Pa9
          Part[#, 1]], 
         (Identity[#]& )[
          Part[#, 2]]}& )}},
-  PlotLabel->FormBox[
-   "\"\[Mu] as a Function of the Offense-Defense Balance\"", TraditionalForm],
-  
   PlotRange->{{1.*^-10, 0.9999}, {0., 11.161541694430413`}},
   PlotRangeClipping->True,
   PlotRangePadding->{{
@@ -140,21 +140,14 @@ j9rFUm87HXxceUzj3EYx5F3L7Ls6oYPxN47ncz3EEF3poGizWw+39FZH/Pa9
      Scaled[0.05], 
      Scaled[0.05]}},
   Ticks->{Automatic, Automatic}]], "Output",
- CellChangeTimes->{
-  3.8161753384625273`*^9, {3.816175480815741*^9, 3.8161754853390913`*^9}, {
-   3.816175565815178*^9, 3.816175659957266*^9}, {3.8161760736127853`*^9, 
-   3.816176097771673*^9}},
+ CellChangeTimes->{3.816177486552702*^9, 3.816177571555217*^9},
  CellLabel->
-  "Out[251]=",ExpressionUUID->"5ad144ce-0866-4e80-8cb4-efd5485ea62c"]
-}, Open  ]],
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.816175145247747*^9, 
-  3.816175148188385*^9}},ExpressionUUID->"4f6b4eae-8d1b-418a-b919-\
-bfda1e38dd0c"]
+  "Out[254]=",ExpressionUUID->"01f26ff6-7cdf-487f-9619-5a1c4f85dc76"]
+}, Open  ]]
+}, Open  ]]
 },
-WindowSize->{808, 755},
-WindowMargins->{{210, Automatic}, {-7, Automatic}},
+WindowSize->{1149, 855},
+WindowMargins->{{Automatic, -1557}, {Automatic, 40}},
 FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"a87bbeeb-429e-4dd9-bb90-46d666cbc46e"
@@ -171,13 +164,13 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 827, 21, 52, "Input",ExpressionUUID->"03d6fd18-97d1-4aeb-a895-f74d1b04c65d"],
-Cell[1410, 45, 4834, 102, 245, "Output",ExpressionUUID->"5ad144ce-0866-4e80-8cb4-efd5485ea62c"]
-}, Open  ]],
-Cell[6259, 150, 152, 3, 30, "Input",ExpressionUUID->"4f6b4eae-8d1b-418a-b919-bfda1e38dd0c"]
+Cell[580, 22, 177, 3, 45, "Subsubsection",ExpressionUUID->"dc5540fc-5975-4405-af3c-6cbbe284b0f2"],
+Cell[CellGroupData[{
+Cell[782, 29, 757, 18, 30, "Input",ExpressionUUID->"8824a14a-d3a8-4ee7-a052-e3520a2f8980"],
+Cell[1542, 49, 4557, 95, 251, "Output",ExpressionUUID->"01f26ff6-7cdf-487f-9619-5a1c4f85dc76"]
+}, Open  ]]
+}, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
