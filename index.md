@@ -1,37 +1,40 @@
-## Welcome to GitHub Pages
+## Overview
 
-You can use the [editor on GitHub](https://github.com/mpoulshock/QuantitativeRealism/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This project explores a computational model of international relations, called **quantitative realism**, in which the international system is represented as an abstract power structure, like this:
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<img src="https://github.com/mpoulshock/QuantitativeRealism/blob/main/Supplementary%20Materials/Wiki%20Images/Introduction/Random%20power%20structure.png" width="150" />
 
-### Markdown
+In this diagram, larger nodes are more powerful, solid lines represent cooperation, and dashed lines represent conflict.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The major questions are:
 
-```markdown
-Syntax highlighted code block
+1. How do power structures evolve in time?
+1. Does the abstract model say anything meaningful about historical power struggles?
+1. What is the nature of the current world power structure?
 
-# Header 1
-## Header 2
-### Header 3
+The project uses the Wolfram Language and C++ to investigate these questions.
 
-- Bulleted
-- List
+## Content Summary
 
-1. Numbered
-2. List
+1. **Introduction**
+   1. [Preface](https://github.com/mpoulshock/QuantitativeRealism/wiki/Preface)
+   1. [Power and World Order](https://github.com/mpoulshock/QuantitativeRealism/wiki/Power-and-World-Order)
+   1. [About This Project](https://github.com/mpoulshock/QuantitativeRealism/wiki/About-This-Project)
+   1. [Research Questions](https://github.com/mpoulshock/QuantitativeRealism/wiki/Research-Questions)
+1. **Methods**
+   1. [Conceptual Foundations](https://github.com/mpoulshock/QuantitativeRealism/wiki/Conceptual-Foundations)
+   1. [Power in Motion](https://github.com/mpoulshock/QuantitativeRealism/wiki/Power-in-Motion)
+   1. [Foreign Policy Formation](https://github.com/mpoulshock/QuantitativeRealism/wiki/Foreign-Policy-Formation)
+   1. [Systemic Metrics](https://github.com/mpoulshock/QuantitativeRealism/wiki/Systemic-Metrics)
+1. **Results and Discussion**
+   1. [Abstract Results](https://github.com/mpoulshock/QuantitativeRealism/wiki/Abstract-Results)
+   1. [Historical Modeling](https://github.com/mpoulshock/QuantitativeRealism/wiki/Historical-Modeling)
+   1. [The World Power Structure](https://github.com/mpoulshock/QuantitativeRealism/wiki/The-World-Power-Structure)
+1. **Conclusions**
+   1. [Tentative Conclusions](https://github.com/mpoulshock/QuantitativeRealism/wiki/Tentative-Conclusions)
+1. **Supporting Material**
+   1. [References](https://github.com/mpoulshock/QuantitativeRealism/wiki/References)
+   1. [Data Sources](https://github.com/mpoulshock/QuantitativeRealism/wiki/Data-Sources)
+   1. [Prior Work](https://github.com/mpoulshock/QuantitativeRealism/wiki/Prior-Work)
+   1. [Essays, etc.](https://github.com/mpoulshock/QuantitativeRealism/wiki/Essays%2C-etc.)
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mpoulshock/QuantitativeRealism/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
