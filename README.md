@@ -19,8 +19,4 @@ The project uses the Wolfram Language and C++ to investigate these questions.
 
 ## More Information
 
-For more information, please see the [project wiki](https://github.com/mpoulshock/QuantitativeRealism/wiki).
-
-## About Me
-
-Here's my [LinkedIn profile](https://www.linkedin.com/in/mpoulshock/).
+For more information, please see the [project wiki](https://realpolitik.io).
